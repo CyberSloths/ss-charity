@@ -17,5 +17,5 @@
 /themes/app/dist/app.js
 /themes/app/dist/app.css
 /vendor/
-/fulltextsearch-localsolr/server/logs
-/fulltextsearch-localsolr/server/solr-webapp
+/fulltextsearch-localsolr
+*.solr
