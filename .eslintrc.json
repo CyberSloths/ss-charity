@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:vue/essential"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "rules": {
+        "indent": "off",
+        "vue/script-indent": ["error", 2, { "baseIndent": 1 }]
+      }
+    }
+  ]
+}

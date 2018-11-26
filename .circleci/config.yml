@@ -1,0 +1,77 @@
+# PHP CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-php/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      - image: bmanu/silverstripe-web-node:7.1-platform-java
+        environment:
+          - DISPLAY=:99
+          - CHROME_BIN=/usr/bin/google-chrome
+      - image: circleci/mysql:5.7
+        environment:
+          - MYSQL_USER=root
+          - MYSQL_ROOT_PASSWORD=ubuntu
+          - MYSQL_DATABASE=circle_test
+          - MYSQL_HOST=127.0.0.1
+
+    working_directory: /var/www/html
+
+    steps:
+      # Start Apache and Xvfb
+      - run: /etc/init.d/apache2 start
+      - run:
+          command: Xvfb :99 -screen 0 1280x1024x24
+          background: true
+
+      - checkout
+
+      # Composer Cache + Installation
+      - restore_cache:
+          keys:
+            - v1-composer-{{ checksum "composer.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-composer-
+      - run: composer install -n --prefer-dist
+      # Save all dependancies to cache
+      - save_cache:
+          key: v1-composer-{{ checksum "composer.lock" }}
+          paths:
+            - vendor
+            - resources
+
+      # NPM Cache + Installation
+      - restore_cache:
+          keys:
+            - v1-npm-deps-{{ checksum "package.json" }}
+            - v1-npm-deps-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - ./node_modules
+          key: v1-npm-deps-{{ checksum "package.json" }}
+
+      - run: mv .circleci/.env.circleci .env
+      - run: mkdir /var/www/html/assets
+      - run: chown -R www-data:www-data /var/www/html
+
+      # JS and SCSS Linting
+      - run: yarn dev
+      - run: yarn lint
+
+      # dev/build
+      - run: vendor/bin/sake dev/build flush=1
+
+      # PHP Tests
+      - run: vendor/bin/phpunit --verbose
+
+      # JS E2E tests
+      - run: yarn nightwatch -- --url http://localhost/
+
+      - store_artifacts:
+          path: app/tests/nightwatch_screenshots
+          destination: nightwatch_screenshots

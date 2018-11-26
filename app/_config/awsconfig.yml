@@ -1,0 +1,5 @@
+---
+Name: awsconfig
+---
+SilverStripe\EnvironmentCheck\Controllers\DevCheckController:
+  permission: ''

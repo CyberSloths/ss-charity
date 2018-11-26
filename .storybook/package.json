@@ -1,0 +1,28 @@
+{
+  "name": "storybook",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.5.17"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006 -c .",
+    "build-storybook": "build-storybook -c ."
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^4.0.0-alpha.21",
+    "@storybook/addon-knobs": "^3.4.10",
+    "@storybook/addon-links": "^4.0.0-alpha.21",
+    "@storybook/addon-viewport": "^3.4.10",
+    "@storybook/addons": "^4.0.0-alpha.21",
+    "@storybook/vue": "^4.0.0-alpha.21",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-vue": "^2.0.2",
+    "storybook-addon-vue-info": "^0.6.1",
+    "style-loader": "^0.23.0",
+    "vue-eslint-parser": "^3.2.2",
+    "vue-loader": "^15.4.1",
+    "vue-template-compiler": "^2.5.17"
+  }
+}

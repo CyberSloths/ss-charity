@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Federant;
+    font-style: normal;
+    font-weight: normal;
+    src: url('./webfonts/Federant-Regular.woff');
+}
+
+body {
+    font-family: Federant, serif;
+    background-image: url('./images/rain.gif');
+    background-color: #000;
+    color: #FFF;
+}
