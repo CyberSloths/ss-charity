@@ -1,0 +1,6 @@
+---
+Name: SSCharitySearch
+---
+SilverStripe\FullTextSearch\Search\FullTextSearch:
+  indexes:
+    - App\Search\SSCharityIndex
