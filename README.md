@@ -6,8 +6,9 @@ The purpose of this codebase is to create a new website for the charity, [Wellin
 **SilverStripe Version used** : SS4
 
 ## Installation
-This installation process only needs to be performed once when cloning this repository to a local machine. 
+The installation process only needs to be performed once when cloning this repository to a local machine. 
 
+### Cloning Repository
 ```
 # Checkout the repo
 git clone git@github.com:silverstripeltd/project-skeleton.git <yourproject> -o skeleton
@@ -20,6 +21,22 @@ git remote remove skeleton
 git remote add origin git://git@whatever.com/your/project.git
 ```
 
+## Project setup
+After cloning the project down, there is a set of commands needed to be exceuted in order to view the website/CMS **locally**. There are two methods of setting up the project locally.
+
+**NOTE** : Run all commands in root directory of project. 
+
+### Automated Setup using **Makefile**
+Run the following command to setup the project with the makefile.
+
+```
+make init
+```
+
+### Manual Setup
+Run the following commands to setup up the project manually.
+
+```
 # Run composer
 composer install
 
