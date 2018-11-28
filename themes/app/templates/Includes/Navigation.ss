@@ -18,3 +18,9 @@
         <% end_if %>
     </ul>
 </nav>
+<form action="$absoluteBaseURL\search/SearchForm" method="GET" class="header__search-form">
+    <input type="text" class="header__search-input" placeholder="Search..." name="q" aria-label="header search input">
+    <button type="submit" class="header__search-button" aria-label="header search button">
+        <i class="icon icon--search-black"></i>
+    </button>
+</form>

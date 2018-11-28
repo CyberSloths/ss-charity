@@ -1,6 +1,10 @@
 <?php
 
+use App\Search\SSCharityIndex;
+use SilverStripe\CMS\Search\SearchForm;
 use SilverStripe\CMS\Controllers\ContentController;
+use SilverStripe\FullTextSearch\Search\Queries\SearchQuery;
+use SilverStripe\Control\HTTPRequest;
 
 class PageController extends ContentController
 {
@@ -19,12 +23,30 @@ class PageController extends ContentController
      *
      * @var array
      */
-    private static $allowed_actions = [];
+    private static $allowed_actions = [
+        'SearchForm'
+    ];
 
     protected function init()
     {
         parent::init();
         // You can include any CSS or JS required by your project here.
         // See: http://doc.silverstripe.org/framework/en/reference/requirements
+    }
+
+    /**
+     * Site search form
+     *
+     * @return SearchForm
+     */
+    public function SearchForm(HTTPRequest $request)
+    {
+        $query = SearchQuery::create()->addSearchTerm($request->getVar('q'));
+        $solrResult = SSCharityIndex::singleton()->search($query);
+
+        return $this->customise([
+            'Query' => $request->getVar('q'),
+            'SearchResult' => $solrResult,
+        ])->renderWith(['ResultsPage', 'Page']);
     }
 }
