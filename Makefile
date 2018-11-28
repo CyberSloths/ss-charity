@@ -7,9 +7,14 @@ init:
 	yarn dev
 	cd .storybook && yarn
 
-.PHONY: setup_style
-setup_style:
+.PHONY: style_dev
+style_dev:
 	yarn dev
+	vagrant ssh -- "cd $(SERVER_DIR) && sudo composer selfupdate -n -v && composer vendor-expose"
+
+.PHONY: style_prod
+style_prod:
+	yarn production
 	vagrant ssh -- "cd $(SERVER_DIR) && sudo composer selfupdate -n -v && composer vendor-expose"
 
 .PHONY: storybook
