@@ -59,8 +59,13 @@
             <div class="col-lg-3 col-md-6 order-md-12 order-lg-1">
                 $SiteConfig.FooterSentence2
             </div>
+<<<<<<< HEAD
             <div class="col-lg-3 col-md-6 order-md-1 order-lg-12">
                 $SiteConfig.FooterLogo
+=======
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <img class="img-fluid logo" width="inherit" height="auto" src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+>>>>>>> added placeholder logo
             </div>
         </div>
     </div>
