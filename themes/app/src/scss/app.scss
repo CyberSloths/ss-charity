@@ -50,8 +50,14 @@
  */
 @import 'typography';
 @import 'base';
+<<<<<<< HEAD
 @import 'components/navigation';
 @import 'components/footer';
+=======
+@import 'navigation';
+@import 'staff';
+@import 'footer';
+>>>>>>> added placeholder logo
 
 /**
  * Include components, i.e. Vue or React
