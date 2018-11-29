@@ -66,11 +66,6 @@ class FooterConfig extends DataExtension
 
         $fields->addFieldToTab('Root.Main', TextField::create(
             'FooterSentence1',
-            'Footer Sentence 1'
-        ));
-
-        $fields->addFieldToTab('Root.Main', TextField::create(
-            'FooterSentence2',
             'Footer Sentence 2'
         ));
 
