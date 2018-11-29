@@ -32,26 +32,26 @@
     export default {
         name: 'flyout-panel',
         props: {
-        open: {
-            type: Boolean,
-            default: false,
-        },
-        slideFrom: {
-            type: String,
-            validator(val) {
-            return ['right', 'left'].indexOf(val) !== -1;
+            open: {
+                type: Boolean,
+                default: false,
             },
-            default: 'right',
-        },
+            slideFrom: {
+                type: String,
+                validator(val) {
+                    return ['right', 'left'].indexOf(val) !== -1;
+                },
+                default: 'right',
+            },
         },
         computed: {
             panelDirection() {
                 let value = '';
 
                 if (this.slideFrom === 'right') {
-                value = 'flyout-panel--right';
+                    value = 'flyout-panel--right';
                 } else if (this.slideFrom === 'left') {
-                value = 'flyout-panel--left';
+                    value = 'flyout-panel--left';
                 }
 
                 return value;
