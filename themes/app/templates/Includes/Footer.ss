@@ -1,5 +1,5 @@
 <footer>
-    <div class="container footer-partners">
+    <div class="container footer__partners">
         <div class="row">
             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6 ">
                 Our Partners
@@ -7,40 +7,40 @@
         </div>
         <div class="row">
             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
-                    <img class="img-fluid " src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+                    $SiteConfig.SponsorLogo1
             </div>
             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
-                    <img class="img-fluid " src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+                    $SiteConfig.SponsorLogo2
             </div>
             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
-                    <img class="img-fluid " src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+                    $SiteConfig.SponsorLogo3
             </div>
             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
-                    <img class="img-fluid " src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+                    $SiteConfig.SponsorLogo4
             </div>
             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
-                    <img class="img-fluid " src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+                    $SiteConfig.SponsorLogo5
             </div>
             <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
-                    <img class="img-fluid " src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+                    $SiteConfig.SponsorLogo6
             </div>
         </div>
     </div>
-    <div class="container-fluid footer-info">
+    <div class="container-fluid footer__info">
         <div class="row">
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                04 385 9546 </br>
-                info@wellingtonnightshelter.org</br>
-                WNShelter
+                $SiteConfig.PhoneNumber </br>
+                $SiteConfig.Email</br>
+                $SiteConfig.Facebook
             </div>
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                The Wellington Night Shelter Trust is a registered charitable entity.
+                $SiteConfig.FooterSentence1
             </div>
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 order-md-12 order-lg-1">
-                See our Charity Summary page on the Charities Register
+                $SiteConfig.FooterSentence2
             </div>
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 order-md-1 order-lg-12">
-                <img src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+                $SiteConfig.FooterLogo
             </div>
         </div>
     </div>
