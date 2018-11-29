@@ -9,6 +9,10 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class HomePage extends Page
 {
+<<<<<<< HEAD
+=======
+    private static $description = "Home page";
+>>>>>>> Updated footer to take only user inputs from the CMS
 
     private static $description = "Home page";
 
