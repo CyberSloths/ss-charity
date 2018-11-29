@@ -1,5 +1,5 @@
 <footer>
-    <div class="container-fluid">
+    <div class="container-fluid footer-info">
         <div class="row">
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                 04 385 9546 </br>
