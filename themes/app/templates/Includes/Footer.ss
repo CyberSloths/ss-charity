@@ -1,4 +1,31 @@
 <footer>
+    <div class="container footer-partners">
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6 ">
+                Our Partners
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
+                    <img class="img-fluid " src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
+                    <img class="img-fluid " src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
+                    <img class="img-fluid " src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
+                    <img class="img-fluid " src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
+                    <img class="img-fluid " src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
+                    <img class="img-fluid " src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg" alt="logo placeholder">
+            </div>
+        </div>
+    </div>
     <div class="container-fluid footer-info">
         <div class="row">
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
