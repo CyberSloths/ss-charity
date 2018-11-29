@@ -11,10 +11,11 @@
   },
   "overrides": [
     {
-      "files": ["*.vue"],
+      "files": ["*.js", "*.vue"],
       "rules": {
         "indent": "off",
-        "vue/script-indent": ["error", 2, { "baseIndent": 1 }]
+        "no-new": "off",
+        "vue/script-indent": ["error", 4, { "baseIndent": 1 }]
       }
     }
   ]

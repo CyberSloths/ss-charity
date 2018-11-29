@@ -1,0 +1,114 @@
+$menuBorderColor: gray;
+$menuBorderWidth: 2px;
+$tablet: 768px;
+$desktop: 1080px;
+
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    border-color: $menuBorderColor;
+    border-style: solid;
+    border-width: 0 0 $menuBorderWidth;
+}
+
+#logo {
+    background: url('./images/logo-small.png') no-repeat;
+    margin: 10px 20px;
+    height: 50px;
+    width: 144px;
+}
+
+#hamburger {
+    background-color: transparent;
+    align-content: center;
+    margin-right: 10px;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.custom-search {
+    padding: 10px 20px;
+    width: 100%;
+    border-color: $menuBorderColor;
+    border-style: solid;
+    border-width: 0 0 $menuBorderWidth;
+
+    input,
+    button {
+        border-radius: 0;
+    }
+}
+
+.donate {
+    border-radius: 0;
+    margin: 10px 20px;
+    width: 150px;
+}
+
+.custom-menu {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+
+    li {
+        border-color: $menuBorderColor;
+        border-style: solid;
+        border-width: 0 0 $menuBorderWidth;
+        padding: 20px;
+    }
+}
+
+@media only screen and (min-width: $desktop) {
+    .custom-nav {
+        align-items: center;
+    }
+
+    #logo {
+        background: url('./images/logo.png') no-repeat;
+        height: 80px;
+        width: 231px;
+    }
+
+    .top-menu {
+        border-style: none;
+    }
+
+    .right-menu {
+        align-items: center;
+        display: flex;
+    }
+
+    .custom-search {
+        border-style: none;
+        height: 70px;
+        width: 300px;
+    }
+
+    .donate {
+        height: 50px;
+        margin: 10px 20px 10px 0;
+    }
+
+    .custom-menu {
+        border-color: $menuBorderColor;
+        border-style: solid;
+        border-width: 0 0 $menuBorderWidth;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0 20px;
+        position: static;
+        width: 100%;
+        z-index: 0;
+
+        li {
+            border-style: none;
+        }
+    }
+}

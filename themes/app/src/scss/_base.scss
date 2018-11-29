@@ -14,42 +14,6 @@ p {
     margin: 0;
 }
 
-.topbar {
-    display: flex;
-}
-
-.primary {
-    display: flex;
-    list-style: none;
-    width: 100%;
-
-    li {
-        a {
-            color: #FFF;
-            display: block;
-            padding: 20px;
-            text-transform: uppercase;
-
-            &.current {
-                background-color: #FFF;
-                color: grey;
-            }
-
-            &:hover {
-                background-color: #EEE;
-                color: grey;
-            }
-        }
-    }
-}
-
-.user-status {
-    color: #FFF;
-    margin-left: auto;
-    padding: 20px 20px 0 0;
-    float: right;
-}
-
 main {
     margin: 0 20px;
     text-align: center;
