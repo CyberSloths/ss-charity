@@ -24,7 +24,7 @@
     const desktop = 992;
 
     export default {
-        name: 'customnav',
+        name: 'main-nav',
         data: () => ({
             isMobile: window.innerWidth < desktop,
             menuDisplay: window.innerWidth >= desktop,
