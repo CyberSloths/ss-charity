@@ -15,6 +15,7 @@
       "rules": {
         "indent": "off",
         "no-new": "off",
+        "quote-props": "off",
         "vue/script-indent": ["error", 4, { "baseIndent": 1 }]
       }
     }
