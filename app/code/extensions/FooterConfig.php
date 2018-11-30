@@ -39,7 +39,7 @@ class FooterConfig extends DataExtension
         'SponsorLogo4',
         'SponsorLogo5',
         'SponsorLogo6'
-        ];
+    ];
 
 
     /**
@@ -52,73 +52,61 @@ class FooterConfig extends DataExtension
     {
         $fields->addFieldToTab('Root.Main', TextField::create(
             'PhoneNumber',
-
             'Phone Number'
         ));
 
         $fields->addFieldToTab('Root.Main', TextField::create(
             'Email',
-
             'Email'
         ));
 
         $fields->addFieldToTab('Root.Main', TextField::create(
             'Facebook',
-
             'Facebook'
         ));
 
         $fields->addFieldToTab('Root.Main', TextField::create(
             'FooterSentence1',
-
             'Footer Sentence 1'
         ));
 
         $fields->addFieldToTab('Root.Main', TextField::create(
             'FooterSentence2',
-
             'Footer Sentence 2'
         ));
 
         $fields->addFieldToTab('Root.Main', $footerLogo = UploadField::create(
             'FooterLogo',
-
             'Footer Logo'
         ));
 
         $fields->addFieldToTab('Root.Main', $sponsorLogo1 = UploadField::create(
             'SponsorLogo1',
-
             'Sponsor Logo 1'
         ));
 
         $fields->addFieldToTab('Root.Main', $sponsorLogo2 = UploadField::create(
             'SponsorLogo2',
-
             'Sponsor Logo 2'
         ));
 
         $fields->addFieldToTab('Root.Main', $sponsorLogo3 = UploadField::create(
             'SponsorLogo3',
-
             'Sponsor Logo 3'
         ));
 
         $fields->addFieldToTab('Root.Main', $sponsorLogo4 = UploadField::create(
             'SponsorLogo4',
-
             'Sponsor Logo 4'
         ));
 
         $fields->addFieldToTab('Root.Main', $sponsorLogo5 = UploadField::create(
             'SponsorLogo5',
-
             'Sponsor Logo 5'
         ));
 
         $fields->addFieldToTab('Root.Main', $sponsorLogo6 = UploadField::create(
             'SponsorLogo6',
-
             'Sponsor Logo 6'
         ));
 
