@@ -70,8 +70,8 @@ jobs:
       - run: vendor/bin/phpunit --verbose
 
       # JS E2E tests
-      - run: yarn nightwatch -- --url http://localhost/
+      # - run: yarn nightwatch -- --url http://localhost/
 
-      - store_artifacts:
-          path: app/tests/nightwatch_screenshots
-          destination: nightwatch_screenshots
+      # - store_artifacts:
+      #     path: app/tests/nightwatch_screenshots
+      #     destination: nightwatch_screenshots
