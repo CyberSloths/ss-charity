@@ -1,5 +1,5 @@
 <header>
-    <customnav>
+    <main-nav>
         <form slot="form" action="$absoluteBaseURL\search/SearchForm" method="GET" class="customnav__search input-group">
             <input type="text" class="form-control" placeholder="Search..." name="q" aria-label="Search" aria-describedby="customnav-search">
             <div class="input-group-append">
@@ -16,5 +16,5 @@
             <% end_if %>
         <% end_loop %>
         <button slot="button" class="customnav__donate btn btn-outline-secondary" type="button">DONATE NOW</button>
-    </customnav>
+    </main-nav>
 </header>
