@@ -9,11 +9,6 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class HomePage extends Page
 {
-<<<<<<< HEAD
-=======
-    private static $description = "Home page";
->>>>>>> Updated footer to take only user inputs from the CMS
-
     private static $description = "Home page";
 
     private static $db = [
@@ -34,14 +29,12 @@ class HomePage extends Page
 
         $fields->addFieldToTab('Root.Banner', TextField::create(
             'BannerText',
-
             'Banner text'
         ));
 
 
         $fields->addFieldToTab('Root.Banner', $bannerImage = UploadField::create(
             'BannerImage',
-
             'Banner image'
         ));
 
