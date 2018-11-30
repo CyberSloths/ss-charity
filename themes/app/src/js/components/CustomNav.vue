@@ -1,18 +1,18 @@
 <template>
-    <nav class="customnav">
-        <div class="customnav__top-menu">
-            <a class="customnav__logo" href="/"><img/></a>
+    <nav class="main-nav">
+        <div class="main-nav__top-menu">
+            <a class="main-nav__logo" href="/"><img/></a>
             <button v-if="isMobile"
-                class="customnav__menu-hamburger btn"
+                class="main-nav__menu-hamburger btn"
                 @click="hamClicked" type="button">
                 &#9776;
             </button>
-            <div v-if="!isMobile" class="customnav__right-menu">
+            <div v-if="!isMobile" class="main-nav__right-menu">
                 <slot name="form"></slot>
                 <slot name="button"></slot>
             </div>
         </div>
-        <ul v-if="menuDisplay" class="customnav__main-menu">
+        <ul v-if="menuDisplay" class="main-nav__main-menu">
             <slot v-if="isMobile" name="form"></slot>
             <slot/>
             <slot v-if="isMobile" name="button"></slot>

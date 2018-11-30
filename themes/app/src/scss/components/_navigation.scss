@@ -1,7 +1,7 @@
 $menuBorderColor: gray;
 $menuBorderWidth: 2px;
 
-.customnav__top-menu {
+.main-nav__top-menu {
     display: flex;
     justify-content: space-between;
     border-color: $menuBorderColor;
@@ -9,7 +9,7 @@ $menuBorderWidth: 2px;
     border-width: 0 0 $menuBorderWidth;
 }
 
-.customnav__logo {
+.main-nav__logo {
     img {
         background: url('./images/logo-small.png') no-repeat;
         margin: 10px 20px;
@@ -18,7 +18,7 @@ $menuBorderWidth: 2px;
     }
 }
 
-.customnav__menu-hamburger {
+.main-nav__menu-hamburger {
     background-color: transparent;
     align-content: center;
     margin-right: 10px;
@@ -28,7 +28,7 @@ $menuBorderWidth: 2px;
     }
 }
 
-.customnav__search {
+.main-nav__search {
     padding: 10px 20px;
     width: 100%;
     border-color: $menuBorderColor;
@@ -41,13 +41,13 @@ $menuBorderWidth: 2px;
     }
 }
 
-.customnav__donate {
+.main-nav__donate {
     border-radius: 0;
     margin: 10px 20px;
     width: 150px;
 }
 
-.customnav__main-menu {
+.main-nav__main-menu {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -66,11 +66,11 @@ $menuBorderWidth: 2px;
 }
 
 @include media-breakpoint-up(lg) {
-    .customnav {
+    .main-nav {
         align-items: center;
     }
 
-    .customnav__logo {
+    .main-nav__logo {
         img {
             background: url('./images/logo.png') no-repeat;
             height: 80px;
@@ -78,27 +78,27 @@ $menuBorderWidth: 2px;
         }
     }
 
-    .customnav__top-menu {
+    .main-nav__top-menu {
         border-style: none;
     }
 
-    .customnav__right-menu {
+    .main-nav__right-menu {
         align-items: center;
         display: flex;
     }
 
-    .customnav__search {
+    .main-nav__search {
         border-style: none;
         height: 70px;
         width: 300px;
     }
 
-    .customnav__donate {
+    .main-nav__donate {
         height: 50px;
         margin: 10px 20px 10px 0;
     }
 
-    .customnav__main-menu {
+    .main-nav__main-menu {
         border-color: $menuBorderColor;
         border-style: solid;
         border-width: 0 0 $menuBorderWidth;
