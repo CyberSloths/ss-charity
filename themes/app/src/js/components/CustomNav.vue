@@ -1,18 +1,18 @@
 <template>
-    <nav class="custom-nav">
-        <div class="top-menu">
-            <a href="/"><img id="logo"/></a>
+    <nav class="main-nav">
+        <div class="main-nav__top-menu">
+            <a class="main-nav__logo" href="/"><img/></a>
             <button v-if="isMobile"
-                id="hamburger" class="btn"
+                class="main-nav__menu-hamburger btn"
                 @click="hamClicked" type="button">
                 &#9776;
             </button>
-            <div v-if="!isMobile" class="right-menu">
+            <div v-if="!isMobile" class="main-nav__right-menu">
                 <slot name="form"></slot>
                 <slot name="button"></slot>
             </div>
         </div>
-        <ul v-if="menuDisplay" class="custom-menu">
+        <ul v-if="menuDisplay" class="main-nav__main-menu">
             <slot v-if="isMobile" name="form"></slot>
             <slot/>
             <slot v-if="isMobile" name="button"></slot>
@@ -21,17 +21,19 @@
 </template>
 
 <script>
+    const desktop = 992;
+
     export default {
-        name: 'custom-nav',
+        name: 'main-nav',
         data: () => ({
-            isMobile: window.innerWidth < 1080,
-            menuDisplay: window.innerWidth >= 1080,
+            isMobile: window.innerWidth < desktop,
+            menuDisplay: window.innerWidth >= desktop,
         }),
         mounted() {
             this.$nextTick(() => {
                 window.addEventListener('resize', () => {
-                    this.isMobile = window.innerWidth < 1080;
-                    this.menuDisplay = window.innerWidth >= 1080;
+                    this.isMobile = window.innerWidth < desktop;
+                    this.menuDisplay = window.innerWidth >= desktop;
                 });
             });
         },
