@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Pagetype;
+namespace App\PageType;
 
 use Page;
 use SilverStripe\Forms\TextField;
@@ -9,6 +9,11 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class HomePage extends Page
 {
+    private static $description = "Home page";
+
+    private static $db = [
+      'BannerText' => 'Varchar',
+    ];
 
     private static $has_one = [
         'BannerImage' => Image::class,
