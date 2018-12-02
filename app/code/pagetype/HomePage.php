@@ -9,6 +9,7 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class HomePage extends Page
 {
+
     private static $description = "Home page";
 
     private static $db = [
