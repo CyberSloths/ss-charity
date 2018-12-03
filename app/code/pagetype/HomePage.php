@@ -110,7 +110,6 @@ class HomePage extends Page
             'Step 3'
         ));
 
-
         // Image upload validations
         $bannerImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $accom1->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
