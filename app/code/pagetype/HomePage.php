@@ -23,7 +23,8 @@ class HomePage extends Page
      * @var array
      */
     private static $db = [
-      'BannerText' => 'Varchar',
+      'BannerHeading' => 'Varchar',
+      'BannerDesc' => 'Varchar',
       'AccomTextHead' => 'Varchar',
       'AccomTextDesc1' => 'Varchar',
       'AccomTextDesc2' => 'Varchar',
@@ -65,8 +66,13 @@ class HomePage extends Page
 
         // Banner Tab
         $fields->addFieldToTab('Root.Banner', TextField::create(
-            'BannerText',
-            'Banner text'
+            'BannerHeading',
+            'Banner Heading'
+        ));
+
+        $fields->addFieldToTab('Root.Banner', TextField::create(
+            'BannerDesc',
+            'Banner Heading'
         ));
 
         $fields->addFieldToTab('Root.Banner', $bannerImage = UploadField::create(

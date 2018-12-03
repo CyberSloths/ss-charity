@@ -17,3 +17,30 @@
 .banner {
     background-color: $gray;
 }
+
+.banner__heading {
+    font-size: 24px;
+}
+
+@media (min-width: 576px) {
+    .banner__heading {
+        font-size: 28px;
+    }
+
+    .banner__text {
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner__heading {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .banner__heading {
+        font-size: 35px;
+    }
+}
