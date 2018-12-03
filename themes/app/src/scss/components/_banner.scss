@@ -1,6 +1,8 @@
 .banner__text {
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 .banner__images,
@@ -22,7 +24,7 @@
     font-size: 24px;
 }
 
-@media (min-width: 576px) {
+@include media-breakpoint-up(sm) {
     .banner__heading {
         font-size: 28px;
     }
@@ -33,25 +35,15 @@
     }
 }
 
-@media (min-width: 768px) {
+@include media-breakpoint-up(md) {
     .banner__heading {
         font-size: 30px;
     }
 }
 
-@media (min-width: 992px) {
+@include media-breakpoint-up(lg) {
     .banner__heading {
         font-size: 35px;
     }
 }
 
-@media (max-width: 575px) {
-    .banner__heading {
-        font-size: 24px;
-    }
-
-    .banner__text {
-        padding-top: 3%;
-        padding-bottom: 3%;
-    }
-}
