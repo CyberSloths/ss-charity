@@ -1,27 +1,27 @@
 <footer>
     <div class="container footer__partners">
-        <div class="row">
-            <div class="col-lg-2 col-md-3 col-sm-6">
+        <div class="row justify-content-center">
+            <div class="">
                 Our Partners
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-2 col-md-3 col-6">
+            <div class="col-lg-2 col-md-3 col-6" align="center">
                     $SiteConfig.SponsorLogo1
             </div>
-            <div class="col-lg-2 col-md-3 col-6">
+            <div class="col-lg-2 col-md-3 col-6" align="center">
                     $SiteConfig.SponsorLogo2
             </div>
-            <div class="col-lg-2 col-md-3 col-6">
+            <div class="col-lg-2 col-md-3 col-6" align="center">
                     $SiteConfig.SponsorLogo3
             </div>
-            <div class="col-lg-2 col-md-3 col-6">
+            <div class="col-lg-2 col-md-3 col-6" align="center">
                     $SiteConfig.SponsorLogo4
             </div>
-            <div class="col-lg-2 col-md-3 col-6">
+            <div class="col-lg-2 col-md-3 col-6" align="center">
                     $SiteConfig.SponsorLogo5
             </div>
-            <div class="col-lg-2 col-md-3 col-6">
+            <div class="col-lg-2 col-md-3 col-6" align="center">
                     $SiteConfig.SponsorLogo6
             </div>
         </div>
