@@ -6,15 +6,32 @@
                 <button id="main-nav-search" class="btn btn-outline-secondary" type="submit" aria-label="Search button">&#x1F50D;</button>
             </div>
         </form>
-        <% loop $Menu(1) %>
-            <% if $MenuTitle != "Home" %>
-                <a class="<% if $IsCurrent %>current<% end_if %>" href="$Link">
-                    <li>
-                        <span>$MenuTitle</span>
-                    </li>
-                </a>
-            <% end_if %>
-        <% end_loop %>
-        <button slot="button" class="main-nav__donate btn btn-outline-secondary" type="button">DONATE NOW</button>
+        <ul slot="pages-mobile">
+            <% loop $Menu(1) %>
+                <% if $MenuTitle != "Home" %>
+                    <div class="main-nav__main-items">
+                        <li class="container">
+                            <a class="row" href="$Link">
+                                <span class="col-12">$MenuTitle</span>
+                            </a>
+                        </li>
+                    </div>
+                <% end_if %>
+            <% end_loop %>
+        </ul>
+        <div slot="pages-desktop" class="container">
+            <div class="d-flex justify-content-between">
+                <% loop $Menu(1) %>
+                    <% if $MenuTitle != "Home" %>
+                        <a href="$Link">
+                            <span>$MenuTitle</span>
+                        </a>
+                    <% end_if %>
+                <% end_loop %>
+            </div>
+        </div>
+        <div slot="button" class="main-nav__donate">
+            <button class="btn btn-outline-secondary" type="button">DONATE NOW</button>
+        </div>
     </main-nav>
 </header>

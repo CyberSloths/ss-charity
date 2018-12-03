@@ -1,38 +1,62 @@
 <template>
     <nav class="main-nav">
-        <div class="main-nav__top-menu">
-            <a class="main-nav__logo" href="/"><img/></a>
-            <button v-if="isMobile"
-                class="main-nav__menu-hamburger btn"
-                @click="hamClicked" type="button">
-                &#9776;
-            </button>
-            <div v-if="!isMobile" class="main-nav__right-menu">
-                <slot name="form"></slot>
-                <slot name="button"></slot>
+        <div class="container">
+            <div class="main-nav__top-menu row justify-content-between">
+                <a class="main-nav__logo col-md-6 col-6" href="/"><img/></a>
+                <div class="main-nav__right-menu col-md-6 col-6">
+                    <button v-if="isTablet"
+                        class="main-nav__menu-hamburger btn"
+                        @click="hamClicked" type="button">
+                        &#9776;
+                    </button>
+                    <div v-if="!isMobile" class="main-nav__slot-group">
+                        <slot name="form"></slot>
+                        <slot v-if="!isTablet" name="button"></slot>
+                    </div>
+                </div>
             </div>
         </div>
-        <ul v-if="menuDisplay" class="main-nav__main-menu">
-            <slot v-if="isMobile" name="form"></slot>
-            <slot/>
-            <slot v-if="isMobile" name="button"></slot>
-        </ul>
+        <div v-if="menuDisplay" class="main-nav__main-menu">
+            <div v-if="isMobile" class="main-nav__main-items">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <slot name="form"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <slot v-if="isTablet" name="pages-mobile"/>
+            <slot v-else-if="!isTablet" name="pages-desktop"/>
+            <div v-if="isTablet" class="main-nav__main-items">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-12">
+                            <slot name="button"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
 </template>
 
 <script>
+    const tablet = 768;
     const desktop = 992;
 
     export default {
         name: 'main-nav',
         data: () => ({
-            isMobile: window.innerWidth < desktop,
+            isMobile: window.innerWidth < tablet,
+            isTablet: window.innerWidth < desktop,
             menuDisplay: window.innerWidth >= desktop,
         }),
         mounted() {
             this.$nextTick(() => {
                 window.addEventListener('resize', () => {
-                    this.isMobile = window.innerWidth < desktop;
+                    this.isMobile = window.innerWidth < tablet;
+                    this.isTablet = window.innerWidth < desktop;
                     this.menuDisplay = window.innerWidth >= desktop;
                 });
             });
