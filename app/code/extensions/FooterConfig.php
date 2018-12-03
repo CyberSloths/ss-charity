@@ -41,7 +41,6 @@ class FooterConfig extends DataExtension
         'SponsorLogo6'
     ];
 
-
     /**
      * Create fields in the settings pane of the CMS
      *
