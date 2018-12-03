@@ -26,9 +26,7 @@ class FooterConfig extends DataExtension
         'SponsorLogo1' => Image::class,
         'SponsorLogo2' => Image::class,
         'SponsorLogo3' => Image::class,
-        'SponsorLogo4' => Image::class,
-        'SponsorLogo5' => Image::class,
-        'SponsorLogo6' => Image::class,
+        'SponsorLogo4' => Image::class
     ];
 
     private static $owns = [
@@ -37,8 +35,6 @@ class FooterConfig extends DataExtension
         'SponsorLogo2',
         'SponsorLogo3',
         'SponsorLogo4',
-        'SponsorLogo5',
-        'SponsorLogo6'
     ];
 
     /**
@@ -99,22 +95,10 @@ class FooterConfig extends DataExtension
             'Sponsor Logo 4'
         ));
 
-        $fields->addFieldToTab('Root.Main', $sponsorLogo5 = UploadField::create(
-            'SponsorLogo5',
-            'Sponsor Logo 5'
-        ));
-
-        $fields->addFieldToTab('Root.Main', $sponsorLogo6 = UploadField::create(
-            'SponsorLogo6',
-            'Sponsor Logo 6'
-        ));
-
         $footerLogo->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $sponsorLogo1->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $sponsorLogo2->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $sponsorLogo3->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $sponsorLogo4->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
-        $sponsorLogo5->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
-        $sponsorLogo6->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
     }
 }

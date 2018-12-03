@@ -1,12 +1,26 @@
 footer img {
     width: 100px;
     height: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .footer__partners {
-    padding-top: 5%;
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .footer__info {
-    padding-top: 5%;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.color-bar__footer-partners {
+    background-color: $gray2;
+}
+
+.color-bar__footer-info {
+    background-color: $gray3;
 }
