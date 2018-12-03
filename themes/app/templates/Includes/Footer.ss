@@ -5,7 +5,7 @@
                 Our Partners
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-lg-2 col-md-3 col-6">
                     $SiteConfig.SponsorLogo1
             </div>
