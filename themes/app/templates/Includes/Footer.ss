@@ -1,9 +1,7 @@
 <footer>
     <div class="container footer__partners">
         <div class="row justify-content-center">
-            <div class="">
                 Our Partners
-            </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-2 col-md-3 col-6" align="center">
