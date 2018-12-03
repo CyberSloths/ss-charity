@@ -2,17 +2,17 @@ $menuBorderColor: gray;
 $menuBorderWidth: 2px;
 
 .main-nav__top-menu {
-    display: flex;
-    justify-content: space-between;
     border-color: $menuBorderColor;
     border-style: solid;
     border-width: 0 0 $menuBorderWidth;
+    display: flex;
+    justify-content: space-between;
+    padding: $contentPadding;
 }
 
 .main-nav__logo {
     img {
         background: url('./images/logo-small.png') no-repeat;
-        margin: 10px 20px;
         height: 50px;
         width: 144px;
     }
@@ -21,7 +21,7 @@ $menuBorderWidth: 2px;
 .main-nav__menu-hamburger {
     background-color: transparent;
     align-content: center;
-    margin-right: 10px;
+    padding: 0;
 
     &:focus {
         box-shadow: none;
@@ -29,11 +29,11 @@ $menuBorderWidth: 2px;
 }
 
 .main-nav__search {
-    padding: 10px 20px;
-    width: 100%;
     border-color: $menuBorderColor;
     border-style: solid;
     border-width: 0 0 $menuBorderWidth;
+    padding: $contentPadding;
+    width: 100%;
 
     input,
     button {
@@ -43,7 +43,7 @@ $menuBorderWidth: 2px;
 
 .main-nav__donate {
     border-radius: 0;
-    margin: 10px 20px;
+    margin: $contentPadding;
     width: 150px;
 }
 
@@ -62,13 +62,16 @@ $menuBorderWidth: 2px;
         border-color: $menuBorderColor;
         border-style: solid;
         border-width: 0 0 $menuBorderWidth;
-        padding: 20px;
+        padding: $contentPadding;
     }
 }
 
 @include media-breakpoint-up(lg) {
     .main-nav {
         align-items: center;
+        border-color: $menuBorderColor;
+        border-style: solid;
+        border-width: 0 0 $menuBorderWidth;
     }
 
     .main-nav__logo {
@@ -90,28 +93,28 @@ $menuBorderWidth: 2px;
 
     .main-nav__search {
         border-style: none;
-        height: 70px;
+        height: 50px;
+        margin-right: 20px;
+        padding: 0;
         width: 300px;
     }
 
     .main-nav__donate {
         height: 50px;
-        margin: 10px 20px 10px 0;
+        margin: 0;
     }
 
     .main-nav__main-menu {
-        border-color: $menuBorderColor;
-        border-style: solid;
-        border-width: 0 0 $menuBorderWidth;
         flex-direction: row;
-        justify-content: space-around;
-        padding: 0 20px;
+        justify-content: space-between;
+        padding: $contentPadding;
         position: static;
         width: 100%;
         z-index: 0;
 
         li {
             border-style: none;
+            padding: 0;
         }
     }
 }
