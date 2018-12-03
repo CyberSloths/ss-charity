@@ -1,3 +1,11 @@
+.color-bar__footer-partners {
+    background-color: $gray2;
+}
+
+.color-bar__footer-info {
+    background-color: $gray3;
+}
+
 footer img {
     width: 100px;
     height: auto;
@@ -17,10 +25,10 @@ footer img {
     padding-bottom: 3%;
 }
 
-.color-bar__footer-partners {
-    background-color: $gray2;
+.footer__partners-title {
+    font-size: 16px;
 }
 
-.color-bar__footer-info {
-    background-color: $gray3;
+.footer__info-text {
+    font-size: 16px;
 }
