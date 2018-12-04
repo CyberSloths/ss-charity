@@ -48,16 +48,16 @@
     export default {
         name: 'main-nav',
         data: () => ({
-            isMobile: window.innerWidth < tablet,
-            isTablet: window.innerWidth < desktop,
-            menuDisplay: window.innerWidth >= desktop,
+            isMobile: document.body.clientWidth < tablet,
+            isTablet: document.body.clientWidth < desktop,
+            menuDisplay: document.body.clientWidth >= desktop,
         }),
         mounted() {
             this.$nextTick(() => {
                 window.addEventListener('resize', () => {
-                    this.isMobile = window.innerWidth < tablet;
-                    this.isTablet = window.innerWidth < desktop;
-                    this.menuDisplay = window.innerWidth >= desktop;
+                    this.isMobile = document.body.clientWidth < tablet;
+                    this.isTablet = document.body.clientWidth < desktop;
+                    this.menuDisplay = document.body.clientWidth >= desktop;
                 });
             });
         },
