@@ -6,12 +6,14 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class ExtraConfig extends DataExtension
 {
     private static $db = [
-        'DonateButton' => 'Varchar',
+        'HeaderButtonText' => 'Varchar',
         'PhoneNumber' => 'Varchar',
         'Email' => 'Varchar',
         'Facebook' => 'Varchar',
@@ -20,6 +22,7 @@ class ExtraConfig extends DataExtension
     ];
 
     private static $has_one = [
+        'HeaderButtonLink' => SiteTree::class,
         'FooterLogo' => Image::class,
         'SponsorLogo1' => Image::class,
         'SponsorLogo2' => Image::class,
@@ -28,6 +31,7 @@ class ExtraConfig extends DataExtension
     ];
 
     private static $owns = [
+        'HeaderButtonLink',
         'FooterLogo',
         'SponsorLogo1',
         'SponsorLogo2',
@@ -44,8 +48,14 @@ class ExtraConfig extends DataExtension
     public function updateCMSFields(FieldList $fields)
     {
         $fields->addFieldToTab('Root.Main', TextField::create(
-            'DonateButton',
-            'Donate'
+            'HeaderButtonText',
+            'Header Text'
+        ));
+
+        $fields->addFieldToTab('Root.Main', TreeDropdownField::create(
+            'HeaderButtonLinkID',
+            'Header Link',
+            SiteTree::class
         ));
 
         $fields->addFieldToTab('Root.Main', TextField::create(
