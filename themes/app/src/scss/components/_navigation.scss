@@ -1,13 +1,16 @@
 $menuBorderColor: gray;
 $menuBorderWidth: 2px;
+$verticalGap: 15px;
 
-.main-nav__top-menu {
+.main-nav {
     border-color: $menuBorderColor;
     border-style: solid;
     border-width: 0 0 $menuBorderWidth;
-    display: flex;
-    justify-content: space-between;
-    padding: $contentPadding;
+}
+
+.main-nav__top-menu {
+    align-items: center;
+    padding: $verticalGap 0;
 }
 
 .main-nav__logo {
@@ -18,9 +21,12 @@ $menuBorderWidth: 2px;
     }
 }
 
+.main-nav__right-menu {
+    text-align: right;
+}
+
 .main-nav__menu-hamburger {
     background-color: transparent;
-    align-content: center;
     padding: 0;
 
     &:focus {
@@ -28,12 +34,37 @@ $menuBorderWidth: 2px;
     }
 }
 
-.main-nav__search {
+.main-nav__main-menu {
+    background-color: white;
+    margin-top: calc(#{$menuBorderWidth} + 1px);
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    ul {
+        margin-bottom: 0;
+        padding-inline-start: 0;
+    }
+}
+
+.main-nav__main-items {
     border-color: $menuBorderColor;
     border-style: solid;
     border-width: 0 0 $menuBorderWidth;
-    padding: $contentPadding;
-    width: 100%;
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        padding-top: $verticalGap;
+        padding-bottom: $verticalGap;
+    }
+}
+
+.main-nav__search {
+    padding-top: $verticalGap;
+    padding-bottom: $verticalGap;
 
     input,
     button {
@@ -42,38 +73,15 @@ $menuBorderWidth: 2px;
 }
 
 .main-nav__donate {
-    border-radius: 0;
-    margin: $contentPadding;
-    width: 150px;
-}
+    padding-top: $verticalGap;
+    padding-bottom: $verticalGap;
 
-.main-nav__main-menu {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-
-    li {
-        border-color: $menuBorderColor;
-        border-style: solid;
-        border-width: 0 0 $menuBorderWidth;
-        padding: $contentPadding;
+    button {
+        border-radius: 0;
     }
 }
 
-@include media-breakpoint-up(lg) {
-    .main-nav {
-        align-items: center;
-        border-color: $menuBorderColor;
-        border-style: solid;
-        border-width: 0 0 $menuBorderWidth;
-    }
-
+@include media-breakpoint-up(md) {
     .main-nav__logo {
         img {
             background: url('./images/logo.png') no-repeat;
@@ -82,39 +90,31 @@ $menuBorderWidth: 2px;
         }
     }
 
-    .main-nav__top-menu {
-        border-style: none;
+    .main-nav__right-menu {
+        display: flex;
+        flex-direction: row-reverse;
     }
 
-    .main-nav__right-menu {
-        align-items: center;
+    .main-nav__menu-hamburger {
+        margin-left: 20px;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .main-nav {
+        padding-bottom: $verticalGap;
+    }
+
+    .main-nav__slot-group {
         display: flex;
     }
 
     .main-nav__search {
-        border-style: none;
-        height: 50px;
         margin-right: 20px;
-        padding: 0;
-        width: 300px;
-    }
-
-    .main-nav__donate {
-        height: 50px;
-        margin: 0;
     }
 
     .main-nav__main-menu {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: $contentPadding;
         position: static;
         width: 100%;
-        z-index: 0;
-
-        li {
-            border-style: none;
-            padding: 0;
-        }
     }
 }
