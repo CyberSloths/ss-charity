@@ -1,19 +1,17 @@
 <?php
 
-namespace App\extensions;
+namespace App\Extensions;
 
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
-use SilverStripe\Forms\NumericField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
-class FooterConfig extends DataExtension
+class ExtraConfig extends DataExtension
 {
-
     private static $db = [
+        'DonateButton' => 'Varchar',
         'PhoneNumber' => 'Varchar',
         'Email' => 'Varchar',
         'Facebook' => 'Varchar',
@@ -45,6 +43,11 @@ class FooterConfig extends DataExtension
      */
     public function updateCMSFields(FieldList $fields)
     {
+        $fields->addFieldToTab('Root.Main', TextField::create(
+            'DonateButton',
+            'Donate'
+        ));
+
         $fields->addFieldToTab('Root.Main', TextField::create(
             'PhoneNumber',
             'Phone Number'
