@@ -23,7 +23,8 @@ class HomePage extends Page
      * @var array
      */
     private static $db = [
-      'BannerText' => 'Varchar',
+      'BannerHeading' => 'Varchar',
+      'BannerDesc' => 'Varchar',
     ];
 
     /**
@@ -53,17 +54,23 @@ class HomePage extends Page
     {
         $fields = parent::getCMSFields();
 
+        // Banner Tab
         $fields->addFieldToTab('Root.Banner', TextField::create(
-            'BannerText',
-            'Banner text'
+            'BannerHeading',
+            'Banner Heading'
         ));
 
+        $fields->addFieldToTab('Root.Banner', TextField::create(
+            'BannerDesc',
+            'Banner Description'
+        ));
 
         $fields->addFieldToTab('Root.Banner', $bannerImage = UploadField::create(
             'BannerImage',
             'Banner image'
         ));
 
+        // Image upload validations
         $bannerImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
 
         return $fields;
