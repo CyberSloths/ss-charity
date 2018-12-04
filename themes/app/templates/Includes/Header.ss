@@ -31,7 +31,7 @@
             </div>
         </div>
         <div slot="button" class="main-nav__donate">
-            <button class="btn btn-outline-secondary" type="button">DONATE NOW</button>
+            <button class="btn btn-outline-secondary" type="button">$SiteConfig.DonateButton</button>
         </div>
     </main-nav>
 </header>
