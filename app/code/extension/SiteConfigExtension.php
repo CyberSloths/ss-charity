@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Extensions;
+namespace App\Extension;
 
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
@@ -10,8 +10,13 @@ use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
-class ExtraConfig extends DataExtension
+class SiteConfigExtension extends DataExtension
 {
+    /**
+     * Page database
+     *
+     * @var array
+     */
     private static $db = [
         'HeaderButtonText' => 'Varchar',
         'PhoneNumber' => 'Varchar',
@@ -21,6 +26,11 @@ class ExtraConfig extends DataExtension
         'FooterSentence2' => 'Varchar',
     ];
 
+    /**
+     * Page relationship of 1 of each items
+     *
+     * @var array
+     */
     private static $has_one = [
         'HeaderButtonLink' => SiteTree::class,
         'FooterLogo' => Image::class,
@@ -30,6 +40,11 @@ class ExtraConfig extends DataExtension
         'SponsorLogo4' => Image::class
     ];
 
+    /**
+     * Page ownership
+     *
+     * @var array
+     */
     private static $owns = [
         'HeaderButtonLink',
         'FooterLogo',
