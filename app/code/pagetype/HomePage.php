@@ -67,7 +67,7 @@ class HomePage extends Page
 
         $fields->addFieldToTab('Root.Banner', $bannerImage = UploadField::create(
             'BannerImage',
-            'Banner image'
+            'Banner image (Only supports jpg, jpeg, png filetypes)'
         ));
 
         // Image upload validations
