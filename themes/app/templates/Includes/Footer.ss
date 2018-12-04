@@ -34,8 +34,8 @@
                 <div class="col-lg-3 col-md-6 order-md-12 order-lg-1">
                     <h3 class="footer__info-text">$SiteConfig.FooterSentence2</h3>
                 </div>
-                <div class="col-lg-3 col-md-6 order-md-1 order-lg-12">
-                    <h3 class="footer__info-text">$SiteConfig.FooterLogo</h3>
+                <div class="col-lg-3 col-md-6 order-md-1 order-lg-12 text-lg-right text-sm-left" >
+                    $SiteConfig.FooterLogo
                 </div>
             </div>
         </div>
