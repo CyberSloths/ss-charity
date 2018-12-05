@@ -1,121 +1,121 @@
-.accomadation__desc {
+.accommodation__desc {
     color: black;
     text-decoration: underline;
 }
 
-.accomadation__arrow {
+.accommodation__arrow {
     padding-bottom: 0;
     padding-top: 0;
     width: 30px;
     transform: rotate(90deg);
 }
 
-.accomadation__desc h3 {
+.accommodation__desc h3 {
     font-size: 22px;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 0%;
 }
 
-.accomadation__icon {
+.accommodation__icon {
     width: 120px;
     height: 120px;
 }
 
-.accomadation__stage {
+.accommodation__stage {
     padding-top: 20px;
 }
 
 @include media-breakpoint-up(sm) {
-    .accomadation__arrow {
+    .accommodation__arrow {
         padding-bottom: 0;
         padding-top: 0;
         width: 30px;
         transform: rotate(90deg);
     }
 
-    .accomadation__desc h3 {
+    .accommodation__desc h3 {
         font-size: 22px;
         padding-top: 20px;
         padding-bottom: 20px;
         margin-bottom: 0%;
     }
 
-    .accomadation__icon {
+    .accommodation__icon {
         width: 120px;
         height: 120px;
     }
 
-    .accomadation__stage {
+    .accommodation__stage {
         padding-top: 20px;
     }
 }
 
 @include media-breakpoint-up(md) {
-    .accomadation__arrow {
+    .accommodation__arrow {
         padding-top: 80px;
         width: 40px;
         transform: rotate(0deg);
     }
 
-    .accomadation__desc h3 {
+    .accommodation__desc h3 {
         font-size: 22px;
         padding-top: 30px;
         padding-bottom: 30px;
     }
 
-    .accomadation__icon {
+    .accommodation__icon {
         width: 160px;
         height: 160px;
     }
 
-    .accomadation__stage {
+    .accommodation__stage {
         padding-top: 0;
     }
 }
 
 @include media-breakpoint-up(lg) {
-    .accomadation__arrow {
+    .accommodation__arrow {
         padding-top: 101px;
         width: 50px;
         transform: rotate(0deg);
     }
 
-    .accomadation__desc h3 {
+    .accommodation__desc h3 {
         font-size: 24px;
         padding-top: 30px;
         padding-bottom: 30px;
     }
 
-    .accomadation__icon {
+    .accommodation__icon {
         width: 202;
         height: 202;
     }
 
-    .accomadation__stage {
+    .accommodation__stage {
         padding-top: 0;
     }
 }
 
 @include media-breakpoint-up(xl) {
-    .accomadation__arrow {
+    .accommodation__arrow {
         padding-top: 101px;
         width: 50px;
         transform: rotate(0deg);
     }
 
-    .accomadation__desc h3 {
+    .accommodation__desc h3 {
         font-size: 24px;
         padding-top: 30px;
         padding-bottom: 30px;
     }
 
-    .accomadation__icon {
+    .accommodation__icon {
         width: 202px;
         height: 202px;
     }
 
-    .accomadation__stage {
+    .accommodation__stage {
         padding-top: 0;
     }
 }
