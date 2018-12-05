@@ -32,6 +32,10 @@
     padding-top: 20px;
 }
 
+.accommodation__heading {
+    padding-bottom: 0;
+}
+
 @include media-breakpoint-up(sm) {
     .accommodation__arrow {
         padding-bottom: 0;
@@ -83,6 +87,10 @@
         padding-top: 0;
     }
 
+    .accommodation__heading {
+        padding-bottom: 20px;
+    }
+
     .accommodation {
         padding-bottom: 0;
     }
@@ -110,6 +118,10 @@
         padding-top: 0;
     }
 
+    .accommodation__heading {
+        padding-bottom: 20px;
+    }
+
     .accommodation {
         padding-bottom: 0;
     }
@@ -135,6 +147,10 @@
 
     .accommodation__stage {
         padding-top: 0;
+    }
+
+    .accommodation__heading {
+        padding-bottom: 20px;
     }
 
     .accommodation {
