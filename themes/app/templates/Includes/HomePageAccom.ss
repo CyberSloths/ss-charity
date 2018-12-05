@@ -1,31 +1,25 @@
 <div class="accomadation container">
     <div class="row justify-content-center">
-        <h2>$AccomHeading</h2>
+        <h2 class="accomadation__heading">$AccomHeading</h2>
     </div>
     <div class="row justify-content-center">
-        <div class="col-lg-4 col-md-4 col-12" align="center">
-            <picture class="accom__images">
-                <source srcset="$Accom1.Fill(160,160).URL()" media="(min-width: 992px)" />
-                <source srcset="$Accom1.Fill(153,153).URL()" media="(min-width: 768px)" />
-                <source srcset="$Accom1.Fill(149,149).URL()" media="(min-width: 576px)" />
-                <img src="$Accom1.Fill(153,153).URL()" class="accom__img" />
-            </picture>
+        <div class="accomadation__stage col-lg-3 col-md-3 col-12" align="center">
+            <img class="accomadation__icon" src="$ThemeDir/dist/images/House.png" class="accom__img" />
+            <a class="accomadation__desc" href="$Accom1Link.Link"><h3>$AccomStep1</h3></a>
         </div>
-        <div class="col-lg-4 col-md-4 col-12" align="center">
-            <picture class="accom__images">
-                <source srcset="$Accom2.Fill(160,160).URL()" media="(min-width: 992px)" />
-                <source srcset="$Accom2.Fill(153,153).URL()" media="(min-width: 768px)" />
-                <source srcset="$Accom2.Fill(149,149).URL()" media="(min-width: 576px)" />
-                <img src="$Accom2.Fill(153,153).URL()" class="accom__img" />
-            </picture>
+        <div class="col-lg-1 col-md-1 col-12" align="center">
+            <img class="accomadation__arrow" src="$ThemeDir/dist/images/Arrow.png"/>
         </div>
-        <div class="col-lg-4 col-md-4 col-12" align="center">
-            <picture class="accom__images">
-                <source srcset="$Accom3.Fill(160,160).URL()" media="(min-width: 992px)" />
-                <source srcset="$Accom3.Fill(153,153).URL()" media="(min-width: 768px)" />
-                <source srcset="$Accom3.Fill(149,149).URL()" media="(min-width: 576px)" />
-                <img src="$Accom3.Fill(153,153).URL()" class="accom__img" />
-            </picture>
+        <div class="accomadation__stage col-lg-3 col-md-3 col-12" align="center">
+            <img class="accomadation__icon" src="$ThemeDir/dist/images/House.png" class="accom__img" />
+            <a class="accomadation__desc" href="$Accom2Link.Link"><h3>$AccomStep2</h3></a>
+        </div>
+        <div class="col-lg-1 col-md-1 col-12" align="center">
+            <img class="accomadation__arrow" src="$ThemeDir/dist/images/Arrow.png"/>
+        </div>
+        <div class="accomadation__stage col-lg-3 col-md-3 col-12" align="center">
+            <img class="accomadation__icon" src="$ThemeDir/dist/images/House.png" class="accom__img" />
+            <a class="accomadation__desc" href="$Accom3Link.Link"><h3>$AccomStep3</h3></a>
         </div>
     </div>
 </div>
