@@ -1,0 +1,13 @@
+$gap: 20px;
+
+.alert-box {
+    background-color: gray;
+    margin-bottom: $gap;
+    padding: $gap;
+}
+
+@include media-breakpoint-up(lg) {
+    .alert-box {
+        margin-top: $gap;
+    }
+}
