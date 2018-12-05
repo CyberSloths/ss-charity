@@ -1,0 +1,11 @@
+.alert-box {
+    background-color: gray;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+@include media-breakpoint-up(lg) {
+    .alert-box {
+        margin-top: 20px;
+    }
+}

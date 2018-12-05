@@ -9,6 +9,7 @@ use SilverStripe\ORM\DataExtension;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\TextareaField;
 
 class SiteConfigExtension extends DataExtension
 {
@@ -24,6 +25,8 @@ class SiteConfigExtension extends DataExtension
         'Facebook' => 'Varchar',
         'FooterSentence1' => 'Varchar',
         'FooterSentence2' => 'Varchar',
+        'AlertTitle' => 'Varchar',
+        'AlertContent' => 'Text',
     ];
 
     /**
@@ -128,5 +131,15 @@ class SiteConfigExtension extends DataExtension
         $sponsorLogo2->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $sponsorLogo3->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $sponsorLogo4->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+
+        $fields->addFieldToTab('Root.Alert', TextField::create(
+            'AlertTitle',
+            'Alert Title'
+        ));
+
+        $fields->addFieldToTab('Root.Alert', TextareaField::create(
+            'AlertContent',
+            'Alert Content'
+        ));
     }
 }
