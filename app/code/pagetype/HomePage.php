@@ -95,34 +95,34 @@ class HomePage extends Page
         ));
 
         $fields->addFieldToTab('Root.Accomodation', TextField::create(
-            'Accom1',
+            'AccomStep1',
             'Stage 1'
         ));
 
         $fields->addFieldToTab('Root.Accomodation', TreeDropdownField::create(
-            'Accom1Link',
+            'Accom1LinkID',
             'Stage 1 Link',
             SiteTree::class
         ));
 
         $fields->addFieldToTab('Root.Accomodation', TextField::create(
-            'Accom2',
+            'AccomStep2',
             'Stage 2'
         ));
 
         $fields->addFieldToTab('Root.Accomodation', TreeDropdownField::create(
-            'Accom2Link',
+            'Accom2LinkID',
             'Stage 2 Link',
             SiteTree::class
         ));
 
         $fields->addFieldToTab('Root.Accomodation', TextField::create(
-            'Accom3',
+            'AccomStep3',
             'Stage 3'
         ));
 
         $fields->addFieldToTab('Root.Accomodation', TreeDropdownField::create(
-            'Accom3Link',
+            'Accom3LinkID',
             'Stage 3 Link',
             SiteTree::class
         ));
