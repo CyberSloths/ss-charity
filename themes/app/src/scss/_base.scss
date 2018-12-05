@@ -14,11 +14,18 @@ p {
     margin: 0;
 }
 
-main {
-    text-align: center;
-}
-
 .color-bar {
     margin-left: 0%;
     margin-right: 0%;
+}
+
+.page-content__main {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    p {
+        margin: 20px 0;
+    }
 }
