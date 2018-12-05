@@ -1,31 +1,67 @@
 .banner__text {
-    padding-left: 10%;
-    padding-right: 10%;
     padding-top: 3%;
     padding-bottom: 3%;
 }
 
-.banner__images,
-.banner__img {
+.banner__image {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 100%;
+    height: 50%;
 }
 
-// Overriding default bootstrap column padding
+.banner--landing {
+    margin-bottom: 0;
+}
+
+.banner--image {
+    padding-top: 226px;
+    position: relative;
+}
+
 .banner__img-frame {
-    padding-right: 0%;
-    padding-left: 0%;
+    position: static;
+}
+
+.banner__heading {
+    padding-top: 60%;
+    font-size: 24px;
 }
 
 .banner {
     background-color: $gray;
+    padding: 16px 0 15px;
+    margin-bottom: 20px;
 }
 
-.banner__heading {
-    font-size: 24px;
+@media (min-width: 320px) {
+    .banner__heading {
+        padding-top: 50%;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 358px) {
+    .banner__heading {
+        padding-top: 40%;
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 442px) {
+    .banner__heading {
+        padding-top: 30%;
+        font-size: 24px;
+    }
 }
 
 @include media-breakpoint-up(sm) {
     .banner__heading {
+        padding-top: 30%;
         font-size: 28px;
     }
 
@@ -38,12 +74,55 @@
 @include media-breakpoint-up(md) {
     .banner__heading {
         font-size: 30px;
+        padding-top: 0;
+    }
+
+    .banner--landing {
+        margin-bottom: 0;
+    }
+
+    .banner--image {
+        padding-top: 440px;
+    }
+
+    .banner__image {
+        width: 45%;
+        height: 100%;
+    }
+
+    .banner {
+        padding: 20px 0;
+        margin-bottom: 30px;
     }
 }
 
 @include media-breakpoint-up(lg) {
     .banner__heading {
         font-size: 35px;
+        padding-top: 10%;
+    }
+
+    .banner--landing {
+        padding-bottom: 70px;
+    }
+
+    .banner--image {
+        min-height: 300px;
+    }
+
+    .banner__image {
+        width: 45%;
+        height: 100%;
+    }
+
+    .banner {
+        padding-top: 20px;
     }
 }
 
+@include media-breakpoint-up(xl) {
+    .banner__image {
+        width: 45%;
+        height: 100%;
+    }
+}
