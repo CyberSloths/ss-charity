@@ -9,6 +9,15 @@ use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
+/**
+ * The HomePage of the website
+ *
+ * @category Page
+ * @package  Wellington_Night_Shelter
+ * @author   Ishaq Idris <ishaq.idris@silverstripe.com>
+ * @license  BSD https://www.silverstripe.org/software/bsd-license/#bsd
+ * @link     http://sscharity.local/
+ */
 class HomePage extends Page
 {
     /**
@@ -73,59 +82,89 @@ class HomePage extends Page
         $fields = parent::getCMSFields();
 
         // Banner Tab
-        $fields->addFieldToTab('Root.Banner', TextField::create(
-            'BannerHeading',
-            'Banner Heading'
-        ));
+        $fields->addFieldToTab(
+            'Root.Banner',
+            TextField::create(
+                'BannerHeading',
+                'Banner Heading'
+            )
+        );
 
-        $fields->addFieldToTab('Root.Banner', TextField::create(
-            'BannerDesc',
-            'Banner Description'
-        ));
+        $fields->addFieldToTab(
+            'Root.Banner',
+            TextField::create(
+                'BannerDesc',
+                'Banner Description'
+            )
+        );
 
-        $fields->addFieldToTab('Root.Banner', $bannerImage = UploadField::create(
-            'BannerImage',
-            'Banner Image'
-        )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.'));
+        $fields->addFieldToTab(
+            'Root.Banner',
+            $bannerImage = UploadField::create(
+                'BannerImage',
+                'Banner Image'
+            )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.')
+        );
 
         // Accomodaiton configurations
-        $fields->addFieldToTab('Root.Accomodation', TextField::create(
-            'AccomHeading',
-            'Section Heading'
-        ));
+        $fields->addFieldToTab(
+            'Root.Accomodation',
+            TextField::create(
+                'AccomHeading',
+                'Section Heading'
+            )
+        );
 
-        $fields->addFieldToTab('Root.Accomodation', TextField::create(
-            'AccomStep1',
-            'Stage 1'
-        ));
+        $fields->addFieldToTab(
+            'Root.Accomodation',
+            TextField::create(
+                'AccomStep1',
+                'Stage 1'
+            )
+        );
 
-        $fields->addFieldToTab('Root.Accomodation', TreeDropdownField::create(
-            'Accom1LinkID',
-            'Stage 1 Link',
-            SiteTree::class
-        ));
+        $fields->addFieldToTab(
+            'Root.Accomodation',
+            TreeDropdownField::create(
+                'Accom1LinkID',
+                'Stage 1 Link',
+                SiteTree::class
+            )
+        );
 
-        $fields->addFieldToTab('Root.Accomodation', TextField::create(
-            'AccomStep2',
-            'Stage 2'
-        ));
+        $fields->addFieldToTab(
+            'Root.Accomodation',
+            TextField::create(
+                'AccomStep2',
+                'Stage 2'
+            )
+        );
 
-        $fields->addFieldToTab('Root.Accomodation', TreeDropdownField::create(
-            'Accom2LinkID',
-            'Stage 2 Link',
-            SiteTree::class
-        ));
+        $fields->addFieldToTab(
+            'Root.Accomodation',
+            TreeDropdownField::create(
+                'Accom2LinkID',
+                'Stage 2 Link',
+                SiteTree::class
+            )
+        );
 
-        $fields->addFieldToTab('Root.Accomodation', TextField::create(
-            'AccomStep3',
-            'Stage 3'
-        ));
+        $fields->addFieldToTab(
+            'Root.Accomodation',
+            TextField::create(
+                'AccomStep3',
+                'Stage 3'
+            )
+        );
 
-        $fields->addFieldToTab('Root.Accomodation', TreeDropdownField::create(
-            'Accom3LinkID',
-            'Stage 3 Link',
-            SiteTree::class
-        ));
+        $fields->addFieldToTab(
+            'Root.Accomodation',
+            TreeDropdownField::create(
+                'Accom3LinkID',
+                'Stage 3 Link',
+                SiteTree::class
+            )
+        );
 
         // Image upload validations
         $bannerImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
