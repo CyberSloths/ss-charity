@@ -32,6 +32,9 @@ class HomePage extends Page
       'BannerHeading' => 'Varchar',
       'BannerDesc' => 'Varchar',
       'AccomHeading' => 'Varchar',
+      'AccomStep1' => 'Varchar',
+      'AccomStep2' => 'Varchar',
+      'AccomStep3' => 'Varchar',
     ];
 
     /**
@@ -80,6 +83,21 @@ class HomePage extends Page
         $fields->addFieldToTab('Root.Accomodation', TextField::create(
             'AccomHeading',
             'Section Heading'
+        ));
+
+        $fields->addFieldToTab('Root.Accomodation', TextField::create(
+            'Accom1',
+            'Stage 1'
+        ));
+
+        $fields->addFieldToTab('Root.Accomodation', TextField::create(
+            'Accom2',
+            'Stage 2'
+        ));
+
+        $fields->addFieldToTab('Root.Accomodation', TextField::create(
+            'Accom3',
+            'Stage 3'
         ));
 
         // Image upload validations
