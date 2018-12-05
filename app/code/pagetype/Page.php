@@ -6,13 +6,6 @@ use SilverStripe\Forms\TextareaField;
 class Page extends SiteTree
 {
     /**
-     * Page database name
-     *
-     * @var string
-     */
-    private static $table_name = "PageField";
-
-    /**
      * Page database
      *
      * @var array
