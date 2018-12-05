@@ -9,6 +9,12 @@ use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class HomePage extends Page
 {
+    /**
+     * Database name
+     *
+     * @var string
+     */
+    private static $table_name = "Home page";
 
     /**
      * Page description in CMS
@@ -67,8 +73,8 @@ class HomePage extends Page
 
         $fields->addFieldToTab('Root.Banner', $bannerImage = UploadField::create(
             'BannerImage',
-            'Banner Image (only supports jpg, jpeg, png filetypes)'
-        ));
+            'Banner Image'
+        )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.'));
 
         // Image upload validations
         $bannerImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
