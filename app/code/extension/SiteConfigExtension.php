@@ -64,12 +64,12 @@ class SiteConfigExtension extends DataExtension
     {
         $fields->addFieldToTab('Root.Main', TextField::create(
             'HeaderButtonText',
-            'Header Text'
+            'Header Button Text'
         ));
 
         $fields->addFieldToTab('Root.Main', TreeDropdownField::create(
             'HeaderButtonLinkID',
-            'Header Link',
+            'Header Button Link',
             SiteTree::class
         ));
 
