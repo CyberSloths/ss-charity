@@ -1,6 +1,12 @@
+.accommodation {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .accommodation__desc {
-    color: black;
+    color: $black;
     text-decoration: underline;
+    display: inline-block;
 }
 
 .accommodation__arrow {
@@ -49,6 +55,10 @@
     .accommodation__stage {
         padding-top: 20px;
     }
+
+    .accommodation {
+        padding-bottom: 20px;
+    }
 }
 
 @include media-breakpoint-up(md) {
@@ -71,6 +81,10 @@
 
     .accommodation__stage {
         padding-top: 0;
+    }
+
+    .accommodation {
+        padding-bottom: 0;
     }
 }
 
@@ -95,6 +109,10 @@
     .accommodation__stage {
         padding-top: 0;
     }
+
+    .accommodation {
+        padding-bottom: 0;
+    }
 }
 
 @include media-breakpoint-up(xl) {
@@ -117,5 +135,9 @@
 
     .accommodation__stage {
         padding-top: 0;
+    }
+
+    .accommodation {
+        padding-bottom: 0;
     }
 }
