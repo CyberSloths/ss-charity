@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <!-- <%-- $MetaTags have to set to false to set custom title --%> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

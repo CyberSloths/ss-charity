@@ -72,11 +72,11 @@ $verticalGap: 15px;
     }
 }
 
-.main-nav__donate {
+.main-nav__button {
     padding-top: $verticalGap;
     padding-bottom: $verticalGap;
 
-    button {
+    a {
         border-radius: 0;
     }
 }

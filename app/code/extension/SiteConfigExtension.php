@@ -1,19 +1,24 @@
 <?php
 
-namespace App\extensions;
+namespace App\Extension;
 
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
-use SilverStripe\Forms\NumericField;
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 
-class FooterConfig extends DataExtension
+class SiteConfigExtension extends DataExtension
 {
-
+    /**
+     * Page database
+     *
+     * @var array
+     */
     private static $db = [
+        'HeaderButtonText' => 'Varchar',
         'PhoneNumber' => 'Varchar',
         'Email' => 'Varchar',
         'Facebook' => 'Varchar',
@@ -21,7 +26,13 @@ class FooterConfig extends DataExtension
         'FooterSentence2' => 'Varchar',
     ];
 
+    /**
+     * Page relationship of 1 of each items
+     *
+     * @var array
+     */
     private static $has_one = [
+        'HeaderButtonLink' => SiteTree::class,
         'FooterLogo' => Image::class,
         'SponsorLogo1' => Image::class,
         'SponsorLogo2' => Image::class,
@@ -29,7 +40,13 @@ class FooterConfig extends DataExtension
         'SponsorLogo4' => Image::class
     ];
 
+    /**
+     * Page ownership
+     *
+     * @var array
+     */
     private static $owns = [
+        'HeaderButtonLink',
         'FooterLogo',
         'SponsorLogo1',
         'SponsorLogo2',
@@ -45,6 +62,17 @@ class FooterConfig extends DataExtension
      */
     public function updateCMSFields(FieldList $fields)
     {
+        $fields->addFieldToTab('Root.Main', TextField::create(
+            'HeaderButtonText',
+            'Header Text'
+        ));
+
+        $fields->addFieldToTab('Root.Main', TreeDropdownField::create(
+            'HeaderButtonLinkID',
+            'Header Link',
+            SiteTree::class
+        ));
+
         $fields->addFieldToTab('Root.Main', TextField::create(
             'PhoneNumber',
             'Phone Number'
