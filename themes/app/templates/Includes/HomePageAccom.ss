@@ -1,6 +1,6 @@
 <div class="accomadation container">
     <div class="row justify-content-center">
-        <h2>$AccomTextHead</h2>
+        <h2>$AccomHeading</h2>
     </div>
     <div class="row justify-content-center">
         <div class="col-lg-4 col-md-4 col-12" align="center">
