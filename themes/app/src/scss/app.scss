@@ -46,14 +46,11 @@
 @import '~bootstrap/scss/print';
 
 /**
- * Include Typography and other theme styles
+ * Include other styles
  */
 @import 'typography';
 @import 'base';
 @import 'components/navigation';
 @import 'components/footer';
 @import 'components/banner';
-
-/**
- * Include components, i.e. Vue or React
- */
+@import 'components/page-header';
