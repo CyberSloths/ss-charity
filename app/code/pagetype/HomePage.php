@@ -31,6 +31,7 @@ class HomePage extends Page
     private static $db = [
       'BannerHeading' => 'Varchar',
       'BannerDesc' => 'Varchar',
+      'AccomHeading' => 'Varchar',
     ];
 
     /**
@@ -75,6 +76,11 @@ class HomePage extends Page
             'BannerImage',
             'Banner Image'
         )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.'));
+
+        $fields->addFieldToTab('Root.Accomodation', TextField::create(
+            'AccomHeading',
+            'Section Heading'
+        ));
 
         // Image upload validations
         $bannerImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
