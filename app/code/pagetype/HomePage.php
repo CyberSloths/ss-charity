@@ -14,7 +14,7 @@ class HomePage extends Page
      *
      * @var string
      */
-    private static $table_name = "Home page";
+    private static $table_name = "HomePage";
 
     /**
      * Page description in CMS
@@ -52,7 +52,7 @@ class HomePage extends Page
     ];
 
     /**
-     * Create fields in the settings CMS
+     * Create fields in the page settings of the CMS
      *
      * @return void
      */
