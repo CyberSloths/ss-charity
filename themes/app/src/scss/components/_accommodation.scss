@@ -1,0 +1,159 @@
+.accommodation {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.accommodation__desc {
+    color: $black;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.accommodation__arrow {
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 30px;
+    transform: rotate(90deg);
+}
+
+.accommodation__desc h3 {
+    font-size: 22px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0%;
+}
+
+.accommodation__icon {
+    width: 120px;
+    height: 120px;
+}
+
+.accommodation__stage {
+    padding-top: 20px;
+}
+
+.accommodation__heading {
+    padding-bottom: 0;
+}
+
+@include media-breakpoint-up(sm) {
+    .accommodation__arrow {
+        padding-bottom: 0;
+        padding-top: 0;
+        width: 30px;
+        transform: rotate(90deg);
+    }
+
+    .accommodation__desc h3 {
+        font-size: 22px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 0%;
+    }
+
+    .accommodation__icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    .accommodation__stage {
+        padding-top: 20px;
+    }
+
+    .accommodation {
+        padding-bottom: 20px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .accommodation__arrow {
+        padding-top: 80px;
+        width: 40px;
+        transform: rotate(0deg);
+    }
+
+    .accommodation__desc h3 {
+        font-size: 22px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .accommodation__icon {
+        width: 160px;
+        height: 160px;
+    }
+
+    .accommodation__stage {
+        padding-top: 0;
+    }
+
+    .accommodation__heading {
+        padding-bottom: 20px;
+    }
+
+    .accommodation {
+        padding-bottom: 0;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .accommodation__arrow {
+        padding-top: 101px;
+        width: 50px;
+        transform: rotate(0deg);
+    }
+
+    .accommodation__desc h3 {
+        font-size: 24px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .accommodation__icon {
+        width: 202;
+        height: 202;
+    }
+
+    .accommodation__stage {
+        padding-top: 0;
+    }
+
+    .accommodation__heading {
+        padding-bottom: 20px;
+    }
+
+    .accommodation {
+        padding-bottom: 0;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .accommodation__arrow {
+        padding-top: 101px;
+        width: 50px;
+        transform: rotate(0deg);
+    }
+
+    .accommodation__desc h3 {
+        font-size: 24px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .accommodation__icon {
+        width: 202px;
+        height: 202px;
+    }
+
+    .accommodation__stage {
+        padding-top: 0;
+    }
+
+    .accommodation__heading {
+        padding-bottom: 20px;
+    }
+
+    .accommodation {
+        padding-bottom: 0;
+    }
+}
