@@ -37,6 +37,7 @@ class HomePage extends Page
       'AccomStep1' => 'Varchar',
       'AccomStep2' => 'Varchar',
       'AccomStep3' => 'Varchar',
+      'CallToActionHeading' => 'Varchar'
     ];
 
     /**
@@ -127,6 +128,17 @@ class HomePage extends Page
                     'Stage 3 Link',
                     SiteTree::class
                 )
+            ]
+        );
+
+        // call-to-action configurations
+        $fields->addFieldsToTab(
+            'Root.CallToAction',
+            [
+                TextField::create(
+                    'CallToActionHeading',
+                    'Section Heading'
+                ),
             ]
         );
 
