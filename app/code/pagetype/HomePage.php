@@ -51,6 +51,7 @@ class HomePage extends Page
         'Accom1Link' => SiteTree::class,
         'Accom2Link' => SiteTree::class,
         'Accom3Link' => SiteTree::class,
+        'CallToActionImage' => Image::class,
     ];
 
     /**
@@ -63,6 +64,7 @@ class HomePage extends Page
         'Accom1Link',
         'Accom2Link',
         'Accom3Link',
+        'CallToActionImage'
     ];
 
     /**
@@ -90,7 +92,6 @@ class HomePage extends Page
                     'BannerImage',
                     'Banner Image'
                 )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.')
-
             ]
         );
 
@@ -145,11 +146,17 @@ class HomePage extends Page
                     'CallToActionDesc',
                     'Section Subtext'
                 ),
+
+                $callToActionImage = UploadField::create(
+                    'CallToActionImage',
+                    'CallToActionImage'
+                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.')
             ]
         );
 
         // Image upload validations
         $bannerImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+        $callToActionImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
 
         return $fields;
     }
