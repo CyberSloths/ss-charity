@@ -8,6 +8,7 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\TextareaField;
 
 class HomePage extends Page
 {
@@ -40,6 +41,12 @@ class HomePage extends Page
       'CallToActionHeading' => 'Varchar',
       'CallToActionDesc' => 'Varchar',
       'CallToActionButton' => 'Varchar',
+      'ImportantTextHeader1' => 'Varchar',
+      'ImportantTextDesc1' => 'Text',
+      'ImportantTextHeader2' => 'Varchar',
+      'ImportantTextDesc2' => 'Text',
+      'ImportantTextHeader3' => 'Varchar',
+      'ImportantTextDesc3' => 'Text',
     ];
 
     /**
@@ -144,17 +151,14 @@ class HomePage extends Page
                     'CallToActionHeading',
                     'Section Heading'
                 ),
-
                 TextField::create(
                     'CallToActionDesc',
                     'Section Subtext'
                 ),
-
                 $callToActionImage = UploadField::create(
                     'CallToActionImage',
                     'Call to action Image'
                 )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.'),
-
                 TextField::create(
                     'CallToActionButton',
                     'Button Text'
@@ -164,6 +168,29 @@ class HomePage extends Page
                     'Button Link',
                     SiteTree::class
                 )
+            ]
+        );
+
+        // call-to-action configurations
+        $fields->addFieldsToTab(
+            'Root.ImportantItems',
+            [
+                TextField::create(
+                    'ImportantTextHeader1',
+                    'Heading One'
+                ),
+                TextareaField::create(
+                    'ImportantTextDesc1',
+                    'Descripton One'
+                ),
+                TextField::create(
+                    'ImportantTextHeader2',
+                    'Heading Two'
+                ),
+                TextField::create(
+                    'ImportantTextHeader3',
+                    'Heading Three'
+                ),
             ]
         );
 
