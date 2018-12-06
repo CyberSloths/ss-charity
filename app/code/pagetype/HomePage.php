@@ -37,7 +37,8 @@ class HomePage extends Page
       'AccomStep1' => 'Varchar',
       'AccomStep2' => 'Varchar',
       'AccomStep3' => 'Varchar',
-      'CallToActionHeading' => 'Varchar'
+      'CallToActionHeading' => 'Varchar',
+      'CallToActionDesc' => 'Varchar',
     ];
 
     /**
@@ -138,6 +139,11 @@ class HomePage extends Page
                 TextField::create(
                     'CallToActionHeading',
                     'Section Heading'
+                ),
+
+                TextField::create(
+                    'CallToActionDesc',
+                    'Section Subtext'
                 ),
             ]
         );
