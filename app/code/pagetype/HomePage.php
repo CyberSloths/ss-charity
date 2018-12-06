@@ -187,9 +187,17 @@ class HomePage extends Page
                     'ImportantTextHeader2',
                     'Heading Two'
                 ),
+                TextareaField::create(
+                    'ImportantTextDesc2',
+                    'Descripton Two'
+                ),
                 TextField::create(
                     'ImportantTextHeader3',
                     'Heading Three'
+                ),
+                TextareaField::create(
+                    'ImportantTextDesc3',
+                    'Descripton Three'
                 ),
             ]
         );
