@@ -39,6 +39,7 @@ class HomePage extends Page
       'AccomStep3' => 'Varchar',
       'CallToActionHeading' => 'Varchar',
       'CallToActionDesc' => 'Varchar',
+      'CallToActionButton' => 'Varchar'
     ];
 
     /**
@@ -150,7 +151,12 @@ class HomePage extends Page
                 $callToActionImage = UploadField::create(
                     'CallToActionImage',
                     'CallToActionImage'
-                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.')
+                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.'),
+
+                TextField::create(
+                    'CallToActionButton',
+                    'Button Text'
+                ),
             ]
         );
 
