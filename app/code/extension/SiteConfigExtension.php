@@ -7,6 +7,7 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
@@ -24,6 +25,8 @@ class SiteConfigExtension extends DataExtension
         'Facebook' => 'Varchar',
         'FooterSentence1' => 'Varchar',
         'FooterSentence2' => 'Varchar',
+        'AlertTitle' => 'Varchar',
+        'AlertContent' => 'Text',
     ];
 
     /**
@@ -62,71 +65,85 @@ class SiteConfigExtension extends DataExtension
      */
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->addFieldToTab('Root.Main', TextField::create(
-            'HeaderButtonText',
-            'Header Button Text'
-        ));
+        // Main Tab
+        $fields->addFieldsToTab(
+            'Root.Main',
+            [
+                TextField::create(
+                    'PhoneNumber',
+                    'Phone Number'
+                ), TextField::create(
+                    'Email',
+                    'Email'
+                ), TextField::create(
+                    'Facebook',
+                    'Facebook'
+                )
+            ]
+        );
 
-        $fields->addFieldToTab('Root.Main', TreeDropdownField::create(
-            'HeaderButtonLinkID',
-            'Header Button Link',
-            SiteTree::class
-        ));
+        // Header Tab
+        $fields->addFieldsToTab(
+            'Root.Header',
+            [
+                TextField::create(
+                    'HeaderButtonText',
+                    'Header Button Text'
+                ), TreeDropdownField::create(
+                    'HeaderButtonLinkID',
+                    'Header Button Link',
+                    SiteTree::class
+                )
+            ]
+        );
 
-        $fields->addFieldToTab('Root.Main', TextField::create(
-            'PhoneNumber',
-            'Phone Number'
-        ));
-
-        $fields->addFieldToTab('Root.Main', TextField::create(
-            'Email',
-            'Email'
-        ));
-
-        $fields->addFieldToTab('Root.Main', TextField::create(
-            'Facebook',
-            'Facebook'
-        ));
-
-        $fields->addFieldToTab('Root.Main', TextField::create(
-            'FooterSentence1',
-            'Footer Sentence 1'
-        ));
-
-        $fields->addFieldToTab('Root.Main', TextField::create(
-            'FooterSentence2',
-            'Footer Sentence 2'
-        ));
-
-        $fields->addFieldToTab('Root.Main', $footerLogo = UploadField::create(
-            'FooterLogo',
-            'Footer Logo'
-        ));
-
-        $fields->addFieldToTab('Root.Main', $sponsorLogo1 = UploadField::create(
-            'SponsorLogo1',
-            'Sponsor Logo 1'
-        ));
-
-        $fields->addFieldToTab('Root.Main', $sponsorLogo2 = UploadField::create(
-            'SponsorLogo2',
-            'Sponsor Logo 2'
-        ));
-
-        $fields->addFieldToTab('Root.Main', $sponsorLogo3 = UploadField::create(
-            'SponsorLogo3',
-            'Sponsor Logo 3'
-        ));
-
-        $fields->addFieldToTab('Root.Main', $sponsorLogo4 = UploadField::create(
-            'SponsorLogo4',
-            'Sponsor Logo 4'
-        ));
+        // Footer Tab
+        $fields->addFieldsToTab(
+            'Root.Footer',
+            [
+                TextField::create(
+                    'FooterSentence1',
+                    'Footer Sentence 1'
+                ), TextField::create(
+                    'FooterSentence2',
+                    'Footer Sentence 2'
+                ), $footerLogo = UploadField::create(
+                    'FooterLogo',
+                    'Footer Logo'
+                ), $sponsorLogo1 = UploadField::create(
+                    'SponsorLogo1',
+                    'Sponsor Logo 1'
+                ), $sponsorLogo2 = UploadField::create(
+                    'SponsorLogo2',
+                    'Sponsor Logo 2'
+                ), $sponsorLogo3 = UploadField::create(
+                    'SponsorLogo3',
+                    'Sponsor Logo 3'
+                ), $sponsorLogo4 = UploadField::create(
+                    'SponsorLogo4',
+                    'Sponsor Logo 4'
+                )
+            ]
+        );
 
         $footerLogo->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $sponsorLogo1->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $sponsorLogo2->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $sponsorLogo3->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $sponsorLogo4->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+
+        // Alert Tab
+        $fields->addFieldsToTab(
+            'Root.Alert',
+            [
+                TextField::create(
+                    'AlertTitle',
+                    'Alert Title'
+                ), TextareaField::create(
+                    'AlertContent',
+                    'Alert Content'
+                )
+            ]
+        );
     }
 }
