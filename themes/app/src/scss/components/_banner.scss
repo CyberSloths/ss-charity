@@ -14,10 +14,6 @@
     height: 50%;
 }
 
-.banner--landing {
-    margin-bottom: 0;
-}
-
 .banner--image {
     padding-top: 226px;
     position: relative;
@@ -29,39 +25,34 @@
 
 .banner__heading {
     padding-top: 60%;
-    font-size: 24px;
 }
 
 .banner {
-    background-color: $gray;
+    background-color: $grey;
     padding: 16px 0 15px;
 }
 
 @media (min-width: 320px) {
     .banner__heading {
         padding-top: 50%;
-        font-size: 24px;
     }
 }
 
 @media (min-width: 358px) {
     .banner__heading {
         padding-top: 40%;
-        font-size: 24px;
     }
 }
 
 @media (min-width: 442px) {
     .banner__heading {
         padding-top: 30%;
-        font-size: 24px;
     }
 }
 
 @include media-breakpoint-up(sm) {
     .banner__heading {
         padding-top: 30%;
-        font-size: 28px;
     }
 
     .banner__text {
@@ -72,12 +63,7 @@
 
 @include media-breakpoint-up(md) {
     .banner__heading {
-        font-size: 30px;
         padding-top: 0;
-    }
-
-    .banner--landing {
-        margin-bottom: 0;
     }
 
     .banner--image {
@@ -96,7 +82,6 @@
 
 @include media-breakpoint-up(lg) {
     .banner__heading {
-        font-size: 35px;
         padding-top: 10%;
     }
 

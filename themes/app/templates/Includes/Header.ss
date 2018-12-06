@@ -31,7 +31,7 @@
             </div>
         </div>
         <div slot="button" class="main-nav__button">
-            <a class="btn btn-outline-secondary" href="$SiteConfig.HeaderButtonLink.Link" role="button">$SiteConfig.HeaderButtonText</a>
+            <a class="btn" href="$SiteConfig.HeaderButtonLink.Link" role="button">$SiteConfig.HeaderButtonText</a>
         </div>
     </main-nav>
 </header>

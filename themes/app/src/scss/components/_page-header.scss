@@ -5,3 +5,13 @@ $verticalGap: 15px;
     padding: $verticalGap 0;
     text-align: left;
 }
+
+.breadcrumb__parents {
+    a {
+        font-family: 'SourceSansPro', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: $dark-grey;
+        text-decoration: underline;
+    }
+}
