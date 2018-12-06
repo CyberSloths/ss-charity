@@ -152,7 +152,7 @@ class HomePage extends Page
 
                 $callToActionImage = UploadField::create(
                     'CallToActionImage',
-                    'CallToActionImage'
+                    'Call to action Image'
                 )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.'),
 
                 TextField::create(
