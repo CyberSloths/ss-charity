@@ -39,7 +39,7 @@ class HomePage extends Page
       'AccomStep3' => 'Varchar',
       'CallToActionHeading' => 'Varchar',
       'CallToActionDesc' => 'Varchar',
-      'CallToActionButton' => 'Varchar'
+      'CallToActionButton' => 'Varchar',
     ];
 
     /**
@@ -53,6 +53,7 @@ class HomePage extends Page
         'Accom2Link' => SiteTree::class,
         'Accom3Link' => SiteTree::class,
         'CallToActionImage' => Image::class,
+        'CallToActionLink' => SiteTree::class,
     ];
 
     /**
@@ -65,7 +66,8 @@ class HomePage extends Page
         'Accom1Link',
         'Accom2Link',
         'Accom3Link',
-        'CallToActionImage'
+        'CallToActionImage',
+        'CallToActionLink'
     ];
 
     /**
@@ -157,6 +159,11 @@ class HomePage extends Page
                     'CallToActionButton',
                     'Button Text'
                 ),
+                TreeDropdownField::create(
+                    'CallToActionLinkID',
+                    'Button Link',
+                    SiteTree::class
+                )
             ]
         );
 
