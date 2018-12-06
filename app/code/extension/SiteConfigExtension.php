@@ -65,66 +65,49 @@ class SiteConfigExtension extends DataExtension
      */
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->addFieldToTab('Root.Main', TextField::create(
-            'HeaderButtonText',
-            'Header Button Text'
-        ));
-
-        $fields->addFieldToTab('Root.Main', TreeDropdownField::create(
-            'HeaderButtonLinkID',
-            'Header Button Link',
-            SiteTree::class
-        ));
-
-        $fields->addFieldToTab('Root.Main', TextField::create(
-            'PhoneNumber',
-            'Phone Number'
-        ));
-
-        $fields->addFieldToTab('Root.Main', TextField::create(
-            'Email',
-            'Email'
-        ));
-
-        $fields->addFieldToTab('Root.Main', TextField::create(
-            'Facebook',
-            'Facebook'
-        ));
-
-        $fields->addFieldToTab('Root.Main', TextField::create(
-            'FooterSentence1',
-            'Footer Sentence 1'
-        ));
-
-        $fields->addFieldToTab('Root.Main', TextField::create(
-            'FooterSentence2',
-            'Footer Sentence 2'
-        ));
-
-        $fields->addFieldToTab('Root.Main', $footerLogo = UploadField::create(
-            'FooterLogo',
-            'Footer Logo'
-        ));
-
-        $fields->addFieldToTab('Root.Main', $sponsorLogo1 = UploadField::create(
-            'SponsorLogo1',
-            'Sponsor Logo 1'
-        ));
-
-        $fields->addFieldToTab('Root.Main', $sponsorLogo2 = UploadField::create(
-            'SponsorLogo2',
-            'Sponsor Logo 2'
-        ));
-
-        $fields->addFieldToTab('Root.Main', $sponsorLogo3 = UploadField::create(
-            'SponsorLogo3',
-            'Sponsor Logo 3'
-        ));
-
-        $fields->addFieldToTab('Root.Main', $sponsorLogo4 = UploadField::create(
-            'SponsorLogo4',
-            'Sponsor Logo 4'
-        ));
+        $fields->addFieldToTab(
+            'Root.Main',
+            [
+                TextField::create(
+                    'HeaderButtonText',
+                    'Header Button Text'
+                ), TreeDropdownField::create(
+                    'HeaderButtonLinkID',
+                    'Header Button Link',
+                    SiteTree::class
+                ), TextField::create(
+                    'PhoneNumber',
+                    'Phone Number'
+                ), TextField::create(
+                    'Email',
+                    'Email'
+                ), TextField::create(
+                    'Facebook',
+                    'Facebook'
+                ), TextField::create(
+                    'FooterSentence1',
+                    'Footer Sentence 1'
+                ), TextField::create(
+                    'FooterSentence2',
+                    'Footer Sentence 2'
+                ), $footerLogo = UploadField::create(
+                    'FooterLogo',
+                    'Footer Logo'
+                ), $sponsorLogo1 = UploadField::create(
+                    'SponsorLogo1',
+                    'Sponsor Logo 1'
+                ), $sponsorLogo2 = UploadField::create(
+                    'SponsorLogo2',
+                    'Sponsor Logo 2'
+                ), $sponsorLogo3 = UploadField::create(
+                    'SponsorLogo3',
+                    'Sponsor Logo 3'
+                ), $sponsorLogo4 = UploadField::create(
+                    'SponsorLogo4',
+                    'Sponsor Logo 4'
+                )
+            ]
+        );
 
         $footerLogo->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $sponsorLogo1->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
@@ -133,14 +116,17 @@ class SiteConfigExtension extends DataExtension
         $sponsorLogo4->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
 
         // Alert Tab
-        $fields->addFieldToTab('Root.Alert', TextField::create(
-            'AlertTitle',
-            'Alert Title'
-        ));
-
-        $fields->addFieldToTab('Root.Alert', TextareaField::create(
-            'AlertContent',
-            'Alert Content'
-        ));
+        $fields->addFieldToTab(
+            'Root.Alert',
+            [
+                TextField::create(
+                    'AlertTitle',
+                    'Alert Title'
+                ), TextareaField::create(
+                    'AlertContent',
+                    'Alert Content'
+                )
+            ]
+        );
     }
 }
