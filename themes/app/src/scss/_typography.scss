@@ -1,12 +1,161 @@
+$font-path: './webfonts';
+
 @font-face {
-    font-family: Federant;
+    font-family: 'SourceSansPro';
     font-style: normal;
-    font-weight: normal;
-    src: url('./webfonts/Federant-Regular.woff');
+    font-weight: 300;
+    src: url('#{$font-path}/SourceSansPro-Light.woff') format('woff');
 }
 
-body {
-    font-family: Federant, serif;
+@font-face {
+    font-family: 'SourceSansPro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('#{$font-path}/SourceSansPro-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SourceSansPro';
+    font-style: normal;
+    font-weight: 600;
+    src: url('#{$font-path}/SourceSansPro-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SourceSansPro';
+    font-style: normal;
+    font-weight: 700;
+    src: url('#{$font-path}/SourceSansPro-Bold.woff') format('woff');
+}
+
+h1 {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: $dark-grey;
+    line-height: 1.2;
+    margin: 8px 0;
+}
+
+h2 {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: $navy-blue;
+    line-height: 1.2;
+    margin: 8px 0;
+}
+
+h3 {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    color: $navy-blue;
+    line-height: 1.3;
+    margin: 8px 0;
+}
+
+h4 {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: $navy-blue;
+    line-height: 1.3;
+    margin: 8px 0;
+}
+
+h5 {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: $grey;
+    line-height: 1.3;
+    margin: 8px 0;
+}
+
+h6 {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: $grey;
+    line-height: 1.3;
+    margin: 8px 0;
+}
+
+a {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: $link-blue;
+    line-height: 1.3;
+    text-decoration: none;
+}
+
+p {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $dark-grey;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+li {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $dark-grey;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+blockquote {
+    padding-left: 13px;
+    border-left: 7px solid $red-orange;
+
+    p {
+        font-family: 'SourceSansPro', sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        color: $grey;
+        line-height: 1.25;
+    }
+}
+
+.btn {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: $red-orange;
+    background-color: white;
+    line-height: 1.1;
+    border-color: $orange;
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+
+    &:hover {
+        color: white;
+        background-color: $orange;
+    }
+}
+
+.caption {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: $dark-grey;
+    line-height: 1.2;
+    margin: 12px 0 20px;
+}
+
+.summary {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: $dark-grey;
+    line-height: 1.3;
 }
 
 .typography {
@@ -17,5 +166,24 @@ body {
 
     p {
         margin: 20px 0;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    .summary {
+        font-size: 28px;
+        line-height: 1.2;
     }
 }

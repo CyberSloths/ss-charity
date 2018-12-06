@@ -1,4 +1,4 @@
-$menuBorderColor: gray;
+$menuBorderColor: $grey;
 $menuBorderWidth: 2px;
 $verticalGap: 15px;
 
@@ -27,10 +27,13 @@ $verticalGap: 15px;
 
 .main-nav__menu-hamburger {
     background-color: transparent;
+    border-style: none;
+    color: $orange;
     padding: 0;
+    font-size: 30px;
 
     &:focus {
-        box-shadow: none;
+        outline: none;
     }
 }
 
@@ -65,20 +68,11 @@ $verticalGap: 15px;
 .main-nav__search {
     padding-top: $verticalGap;
     padding-bottom: $verticalGap;
-
-    input,
-    button {
-        border-radius: 0;
-    }
 }
 
 .main-nav__button {
     padding-top: $verticalGap;
     padding-bottom: $verticalGap;
-
-    a {
-        border-radius: 0;
-    }
 }
 
 @include media-breakpoint-up(md) {

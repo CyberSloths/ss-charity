@@ -502,7 +502,7 @@
         </fieldset>
 
         <div class="Actions">
-          <input type="submit" name="action_doForm" value="Submit" class="action btn btn-primary" id="Form_TestForm_action_doForm">
+          <input type="submit" name="action_doForm" value="Submit" class="action btn" id="Form_TestForm_action_doForm">
         </div>
       </form>
     </div>

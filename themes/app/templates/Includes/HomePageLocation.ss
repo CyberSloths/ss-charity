@@ -18,7 +18,7 @@
             <div class="col-md-6 text-md-left text-center">
                 <h2 class="location__heading">$CallToActionHeading</h2>
                 <p class="loaction__description">$CallToActionDesc</p>
-                <a class="loaction__button btn btn-primary" href="$CallToActionLink.Link" role="button">$CallToActionButton</a>
+                <a class="loaction__button btn" href="$CallToActionLink.Link" role="button">$CallToActionButton</a>
             </div>
         </div>
     </div>

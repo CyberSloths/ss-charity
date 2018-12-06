@@ -5,7 +5,7 @@
                 <a class="main-nav__logo col-md-6 col-6" href="/"><img/></a>
                 <div class="main-nav__right-menu col-md-6 col-6">
                     <button v-if="isTablet"
-                        class="main-nav__menu-hamburger btn"
+                        class="main-nav__menu-hamburger"
                         @click="hamClicked" type="button">
                         &#9776;
                     </button>
