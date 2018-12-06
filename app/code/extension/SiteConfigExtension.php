@@ -65,17 +65,11 @@ class SiteConfigExtension extends DataExtension
      */
     public function updateCMSFields(FieldList $fields)
     {
-        $fields->addFieldToTab(
+        // Main Tab
+        $fields->addFieldsToTab(
             'Root.Main',
             [
                 TextField::create(
-                    'HeaderButtonText',
-                    'Header Button Text'
-                ), TreeDropdownField::create(
-                    'HeaderButtonLinkID',
-                    'Header Button Link',
-                    SiteTree::class
-                ), TextField::create(
                     'PhoneNumber',
                     'Phone Number'
                 ), TextField::create(
@@ -84,7 +78,30 @@ class SiteConfigExtension extends DataExtension
                 ), TextField::create(
                     'Facebook',
                     'Facebook'
-                ), TextField::create(
+                )
+            ]
+        );
+
+        // Header Tab
+        $fields->addFieldsToTab(
+            'Root.Header',
+            [
+                TextField::create(
+                    'HeaderButtonText',
+                    'Header Button Text'
+                ), TreeDropdownField::create(
+                    'HeaderButtonLinkID',
+                    'Header Button Link',
+                    SiteTree::class
+                )
+            ]
+        );
+
+        // Footer Tab
+        $fields->addFieldsToTab(
+            'Root.Footer',
+            [
+                TextField::create(
                     'FooterSentence1',
                     'Footer Sentence 1'
                 ), TextField::create(
@@ -116,7 +133,7 @@ class SiteConfigExtension extends DataExtension
         $sponsorLogo4->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
 
         // Alert Tab
-        $fields->addFieldToTab(
+        $fields->addFieldsToTab(
             'Root.Alert',
             [
                 TextField::create(
