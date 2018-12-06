@@ -2,7 +2,7 @@
     <p class="breadcrumb__parents">
         <a href="$BaseURL">Home</a>
         <% loop $Pages %>
-            $Up.Delimiter.RAW
+            &rsaquo;
             <% if not $Last %>
                 <a href="$Link">$MenuTitle.XML</a>
             <% end_if %>

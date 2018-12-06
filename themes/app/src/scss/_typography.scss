@@ -1,12 +1,116 @@
+$font-path: './webfonts';
+
 @font-face {
-    font-family: Federant;
+    font-family: 'SourceSansPro';
     font-style: normal;
-    font-weight: normal;
-    src: url('./webfonts/Federant-Regular.woff');
+    font-weight: 300;
+    src: url('#{$font-path}/SourceSansPro-Light.woff') format('woff');
 }
 
-body {
-    font-family: Federant, serif;
+@font-face {
+    font-family: 'SourceSansPro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('#{$font-path}/SourceSansPro-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SourceSansPro';
+    font-style: normal;
+    font-weight: 600;
+    src: url('#{$font-path}/SourceSansPro-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SourceSansPro';
+    font-style: normal;
+    font-weight: 700;
+    src: url('#{$font-path}/SourceSansPro-Bold.woff') format('woff');
+}
+
+h1 {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: $dark-grey;
+}
+
+h2 {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: $navy-blue;
+}
+
+h3 {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    color: $navy-blue;
+}
+
+h4 {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: $navy-blue;
+}
+
+h5 {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: $grey;
+}
+
+h6 {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: $grey;
+}
+
+a {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: $link-blue;
+}
+
+p {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $dark-grey;
+}
+
+.btn {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: $red-orange;
+    text-transform: uppercase;
+}
+
+.image-caption {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: $dark-grey;
+}
+
+.summary {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: $dark-grey;
+}
+
+.block-quote {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: $grey;
 }
 
 .typography {
@@ -17,5 +121,35 @@ body {
 
     p {
         margin: 20px 0;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    h1 {
+        font-family: 'SourceSansPro', sans-serif;
+        font-weight: 700;
+        font-size: 42px;
+        color: $dark-grey;
+    }
+
+    h2 {
+        font-family: 'SourceSansPro', sans-serif;
+        font-weight: 400;
+        font-size: 32px;
+        color: $navy-blue;
+    }
+
+    h3 {
+        font-family: 'SourceSansPro', sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        color: $navy-blue;
+    }
+
+    .summary {
+        font-family: 'SourceSansPro', sans-serif;
+        font-weight: 300;
+        font-size: 28px;
+        color: $dark-grey;
     }
 }
