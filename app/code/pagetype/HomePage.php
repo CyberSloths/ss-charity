@@ -37,6 +37,9 @@ class HomePage extends Page
       'AccomStep1' => 'Varchar',
       'AccomStep2' => 'Varchar',
       'AccomStep3' => 'Varchar',
+      'CallToActionHeading' => 'Varchar',
+      'CallToActionDesc' => 'Varchar',
+      'CallToActionButton' => 'Varchar',
     ];
 
     /**
@@ -49,6 +52,8 @@ class HomePage extends Page
         'Accom1Link' => SiteTree::class,
         'Accom2Link' => SiteTree::class,
         'Accom3Link' => SiteTree::class,
+        'CallToActionImage' => Image::class,
+        'CallToActionLink' => SiteTree::class,
     ];
 
     /**
@@ -61,6 +66,8 @@ class HomePage extends Page
         'Accom1Link',
         'Accom2Link',
         'Accom3Link',
+        'CallToActionImage',
+        'CallToActionLink'
     ];
 
     /**
@@ -88,7 +95,6 @@ class HomePage extends Page
                     'BannerImage',
                     'Banner Image'
                 )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.')
-
             ]
         );
 
@@ -130,8 +136,40 @@ class HomePage extends Page
             ]
         );
 
+        // call-to-action configurations
+        $fields->addFieldsToTab(
+            'Root.CallToAction',
+            [
+                TextField::create(
+                    'CallToActionHeading',
+                    'Section Heading'
+                ),
+
+                TextField::create(
+                    'CallToActionDesc',
+                    'Section Subtext'
+                ),
+
+                $callToActionImage = UploadField::create(
+                    'CallToActionImage',
+                    'Call to action Image'
+                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.'),
+
+                TextField::create(
+                    'CallToActionButton',
+                    'Button Text'
+                ),
+                TreeDropdownField::create(
+                    'CallToActionLinkID',
+                    'Button Link',
+                    SiteTree::class
+                )
+            ]
+        );
+
         // Image upload validations
         $bannerImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+        $callToActionImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
 
         return $fields;
     }

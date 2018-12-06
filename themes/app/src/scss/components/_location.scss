@@ -1,0 +1,152 @@
+$gray3: #A1A1A1;
+
+.location__heading {
+    margin-left: 0;
+}
+
+.loaction__description {
+    display: none;
+}
+
+.loaction__button {
+    margin-left: 0;
+    margin-bottom: 35px;
+}
+
+.location_img {
+    padding-top: 0;
+    padding-bottom: 0;
+    display: none;
+}
+
+.location__sm-image {
+    display: block;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.location__sm-img-frame {
+    position: static;
+}
+
+.locations {
+    background-color: $gray3;
+    padding-top: 226px;
+    position: relative;
+}
+
+@media (min-width: 358px) {
+    .location__sm-image {
+        height: 60%;
+    }
+
+    .locations {
+        padding-top: 300px;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .location_img {
+        padding-top: 0;
+        padding-bottom: 0;
+        display: none;
+    }
+
+    .location__sm-image {
+        display: block;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .location_img {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: block;
+    }
+
+    .location__sm-image {
+        display: none;
+    }
+
+    .location__heading {
+        margin-left: 30px;
+    }
+
+    .loaction__description {
+        margin-left: 30px;
+        display: block;
+    }
+
+    .loaction__button {
+        margin-left: 30px;
+    }
+
+    .locations {
+        padding-top: 0;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .location_img {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: block;
+    }
+
+    .location__sm-image {
+        display: none;
+    }
+
+    .location__heading {
+        margin-left: 80px;
+    }
+
+    .loaction__description {
+        margin-left: 80px;
+        display: block;
+    }
+
+    .loaction__button {
+        margin-left: 80px;
+    }
+
+    .locations {
+        padding-top: 0;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .location_img {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: block;
+    }
+
+    .location__sm-image {
+        display: none;
+    }
+
+    .location__heading {
+        margin-left: 80px;
+    }
+
+    .loaction__description {
+        margin-left: 80px;
+        font-size: medium;
+        display: block;
+    }
+
+    .loaction__button {
+        margin-left: 80px;
+    }
+
+    .locations {
+        padding-top: 0;
+    }
+}
