@@ -1,3 +1,5 @@
+$gray3: #A1A1A1;
+
 .location__heading {
     margin-left: 0;
 }
@@ -9,9 +11,6 @@
 .loaction__button {
     margin-left: 0;
     margin-bottom: 35px;
-    background-color: $gray;
-    outline-color: $black;
-    color: $black;
 }
 
 .location_img {
@@ -81,7 +80,6 @@
 
     .loaction__description {
         margin-left: 30px;
-        font-size: medium;
         display: block;
     }
 
@@ -111,7 +109,6 @@
 
     .loaction__description {
         margin-left: 80px;
-        font-size: medium;
         display: block;
     }
 
