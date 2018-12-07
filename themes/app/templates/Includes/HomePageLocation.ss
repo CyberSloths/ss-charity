@@ -8,7 +8,7 @@
                 <source srcset="$CallToActionImage.Fill(339,275).URL()" media="(min-width: 768px)" />
                 <source srcset="$CallToActionImage.Fill(600,235).URL()" media="(min-width: 576px)" />
                 <source srcset="$CallToActionImage.Fill(600,235).URL()" media="(max-width: 575px)" />
-                <img src="$CallToActionImage.Fill(320,235).URL()" class="location_img" />
+                <img src="$CallToActionImage.Fill(320,235).URL()" class="location_img" alt="location image" />
                 </picture>
             </div>
             <div class="location__sm-img-frame col-md-5 offset-lg-1 order-md-12 order-sm-1 order-1">

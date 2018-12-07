@@ -8,6 +8,7 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\TextareaField;
 
 class HomePage extends Page
 {
@@ -40,6 +41,12 @@ class HomePage extends Page
       'CallToActionHeading' => 'Varchar',
       'CallToActionDesc' => 'Varchar',
       'CallToActionButton' => 'Varchar',
+      'ImportantTextHeader1' => 'Varchar',
+      'ImportantTextDesc1' => 'Text',
+      'ImportantTextHeader2' => 'Varchar',
+      'ImportantTextDesc2' => 'Text',
+      'ImportantTextHeader3' => 'Varchar',
+      'ImportantTextDesc3' => 'Text',
     ];
 
     /**
@@ -54,6 +61,9 @@ class HomePage extends Page
         'Accom3Link' => SiteTree::class,
         'CallToActionImage' => Image::class,
         'CallToActionLink' => SiteTree::class,
+        'Important1Link' => SiteTree::class,
+        'Important2Link' => SiteTree::class,
+        'Important3Link' => SiteTree::class,
     ];
 
     /**
@@ -67,7 +77,10 @@ class HomePage extends Page
         'Accom2Link',
         'Accom3Link',
         'CallToActionImage',
-        'CallToActionLink'
+        'CallToActionLink',
+        'Important1Link',
+        'Important2Link',
+        'Important3Link'
     ];
 
     /**
@@ -144,17 +157,14 @@ class HomePage extends Page
                     'CallToActionHeading',
                     'Section Heading'
                 ),
-
                 TextField::create(
                     'CallToActionDesc',
                     'Section Subtext'
                 ),
-
                 $callToActionImage = UploadField::create(
                     'CallToActionImage',
                     'Call to action Image'
                 )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.'),
-
                 TextField::create(
                     'CallToActionButton',
                     'Button Text'
@@ -167,9 +177,62 @@ class HomePage extends Page
             ]
         );
 
+        // call-to-action configurations
+        $fields->addFieldsToTab(
+            'Root.ImportantItems',
+            [
+                TextField::create(
+                    'ImportantTextHeader1',
+                    'Heading One'
+                ),
+                TreeDropdownField::create(
+                    'Important1LinkID',
+                    'Link 1',
+                    SiteTree::class
+                )->setDescription('This link will be applied to Header One'),
+                TextareaField::create(
+                    'ImportantTextDesc1',
+                    'Descripton One'
+                ),
+                TextField::create(
+                    'ImportantTextHeader2',
+                    'Heading Two'
+                ),
+                TreeDropdownField::create(
+                    'Important2LinkID',
+                    'Button Link',
+                    SiteTree::class
+                )->setDescription('This link will be applied to Header Two'),
+                TextareaField::create(
+                    'ImportantTextDesc2',
+                    'Descripton Two'
+                ),
+                TextField::create(
+                    'ImportantTextHeader3',
+                    'Heading Three'
+                ),
+                TreeDropdownField::create(
+                    'Important3LinkID',
+                    'Link1',
+                    SiteTree::class
+                )->setDescription('This link will be applied to Header Three'),
+                TextareaField::create(
+                    'ImportantTextDesc3',
+                    'Descripton Three'
+                ),
+            ]
+        );
+
         // Image upload validations
         $bannerImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $callToActionImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+
+        // Field reductions
+        $fields->removeFieldFromTab(
+            'Root.Main',
+            'Summary'
+        );
+        $fields->removeByName('PageFeature');
 
         return $fields;
     }
