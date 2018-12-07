@@ -187,7 +187,7 @@ class HomePage extends Page
                 ),
                 TreeDropdownField::create(
                     'Important1LinkID',
-                    'Link 1',
+                    'Link One',
                     SiteTree::class
                 )->setDescription('This link will be applied to Header One'),
                 TextareaField::create(
@@ -200,7 +200,7 @@ class HomePage extends Page
                 ),
                 TreeDropdownField::create(
                     'Important2LinkID',
-                    'Link 2',
+                    'Link Two',
                     SiteTree::class
                 )->setDescription('This link will be applied to Header Two'),
                 TextareaField::create(
@@ -213,7 +213,7 @@ class HomePage extends Page
                 ),
                 TreeDropdownField::create(
                     'Important3LinkID',
-                    'Link 3',
+                    'Link Three',
                     SiteTree::class
                 )->setDescription('This link will be applied to Header Three'),
                 TextareaField::create(
