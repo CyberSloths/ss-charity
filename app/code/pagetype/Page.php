@@ -50,7 +50,8 @@ class Page extends SiteTree
             [
                 TextareaField::create(
                     'Summary'
-                ), CompositeField::create(
+                ),
+                CompositeField::create(
                     $featureImage = UploadField::create(
                         'FeatureImage',
                         'Feature image'
@@ -62,7 +63,7 @@ class Page extends SiteTree
                         'IsDisplayed',
                         'Show feature image on page'
                     )
-                )
+                )->setName('PageFeature')
             ],
             'Content'
         );

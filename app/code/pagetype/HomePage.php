@@ -227,6 +227,13 @@ class HomePage extends Page
         $bannerImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $callToActionImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
 
+        // Field reductions
+        $fields->removeFieldFromTab(
+            'Root.Main',
+            'Summary'
+        );
+        $fields->removeByName('PageFeature');
+
         return $fields;
     }
 }

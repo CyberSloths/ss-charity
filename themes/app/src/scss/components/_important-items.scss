@@ -1,15 +1,15 @@
+.important-items {
+    background-color: $green;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 .important-items__box {
-    background-color: $gray2;
+    background-color: $grey;
     padding-top: 10px;
     padding-bottom: 10px;
     height: 180px;
     margin-bottom: 20px;
-}
-
-.important-items {
-    background-color: $gray;
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 
 .important-items__desc {
@@ -21,7 +21,6 @@
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-
 }
 
 @include media-breakpoint-up(sm) {
@@ -44,8 +43,4 @@
         height: 254px;
         margin-bottom: 0;
     }
-}
-
-.important-items__head {
-    text-decoration: underline;
 }
