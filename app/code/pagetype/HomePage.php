@@ -61,6 +61,9 @@ class HomePage extends Page
         'Accom3Link' => SiteTree::class,
         'CallToActionImage' => Image::class,
         'CallToActionLink' => SiteTree::class,
+        'Important1Link' => SiteTree::class,
+        'Important2Link' => SiteTree::class,
+        'Important3Link' => SiteTree::class,
     ];
 
     /**
@@ -74,7 +77,10 @@ class HomePage extends Page
         'Accom2Link',
         'Accom3Link',
         'CallToActionImage',
-        'CallToActionLink'
+        'CallToActionLink',
+        'Important1Link',
+        'Important2Link',
+        'Important3Link'
     ];
 
     /**
@@ -179,6 +185,11 @@ class HomePage extends Page
                     'ImportantTextHeader1',
                     'Heading One'
                 ),
+                TreeDropdownField::create(
+                    'Important1LinkID',
+                    'Link 1',
+                    SiteTree::class
+                )->setDescription('This link will be applied to Header One'),
                 TextareaField::create(
                     'ImportantTextDesc1',
                     'Descripton One'
@@ -187,6 +198,11 @@ class HomePage extends Page
                     'ImportantTextHeader2',
                     'Heading Two'
                 ),
+                TreeDropdownField::create(
+                    'Important2LinkID',
+                    'Button Link',
+                    SiteTree::class
+                )->setDescription('This link will be applied to Header Two'),
                 TextareaField::create(
                     'ImportantTextDesc2',
                     'Descripton Two'
@@ -195,6 +211,11 @@ class HomePage extends Page
                     'ImportantTextHeader3',
                     'Heading Three'
                 ),
+                TreeDropdownField::create(
+                    'Important3LinkID',
+                    'Link1',
+                    SiteTree::class
+                )->setDescription('This link will be applied to Header Three'),
                 TextareaField::create(
                     'ImportantTextDesc3',
                     'Descripton Three'
