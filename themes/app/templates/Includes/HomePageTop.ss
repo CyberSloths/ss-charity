@@ -1,7 +1,7 @@
 <div class="banner banner--landing banner--image">
     <div class="container">
         <div class="row align-items-center">
-            <div class="banner__text text-md-left text-sm-center col-md-6 order-md-1 order-sm-12 order-12">
+            <div class="banner__text text-md-left text-sm-center text-center col-md-6 order-md-1 order-sm-12 order-12">
                     <h1 class="banner__heading">$BannerHeading</h1>
                     <p class="banner__desc lead summary">$BannerDesc</p>
             </div>
