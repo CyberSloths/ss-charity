@@ -97,6 +97,10 @@ a {
     h5,
     h6 {
         color: $navy-blue;
+
+        &:hover {
+            color: $link-blue;
+        }
     }
 }
 
@@ -123,11 +127,129 @@ blockquote {
     border-left: 7px solid $red-orange;
 
     p {
-        font-family: 'SourceSansPro', sans-serif;
         font-weight: 300;
         font-size: 20px;
         color: $grey;
         line-height: 1.25;
+    }
+}
+
+form {
+    font-family: 'SourceSansPro', sans-serif;
+
+    label {
+        font-weight: 300;
+        font-size: 18px;
+        color: $grey;
+    }
+
+    .field {
+        margin-bottom: 12px;
+
+        > label {
+            margin-bottom: 4px;
+        }
+    }
+
+    .form-control {
+        font-weight: 400;
+        font-size: 18px;
+        border-color: $grey;
+        border-width: 1px;
+
+        &:focus {
+            border-color: lighten($link-blue, 30%);
+            box-shadow: 0 0 0 0.15rem lighten($link-blue, 30%);
+        }
+    }
+
+    .message {
+        font-weight: bold;
+    }
+
+    // if success
+    input.holder-good {
+        border-color: $success-green;
+        border-width: 2px;
+
+        &:focus {
+            border-color: lighten($success-green, 20%);
+            box-shadow: 0 0 0 0.15rem lighten($success-green, 20%);
+        }
+    }
+
+    .good {
+        color: $success-green;
+    }
+
+    // if warning
+    input.holder-warning {
+        border-color: $orange;
+        border-width: 2px;
+
+        &:focus {
+            border-color: lighten($orange, 20%);
+            box-shadow: 0 0 0 0.15rem lighten($orange, 20%);
+        }
+    }
+
+    .warning {
+        color: $red-orange;
+    }
+
+    // if failure
+    input.holder-bad {
+        border-color: $warning-red;
+        border-width: 2px;
+
+        &:focus {
+            border-color: lighten($warning-red, 30%);
+            box-shadow: 0 0 0 0.15rem lighten($warning-red, 30%);
+        }
+    }
+
+    .bad {
+        color: $warning-red;
+    }
+
+    // list of options
+    .optionset {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .checkbox,
+    .radio {
+        label {
+            font-weight: 400;
+        }
+    }
+}
+
+table {
+    font-family: 'SourceSansPro', sans-serif;
+    color: $dark-grey;
+    margin-bottom: 20px;
+
+    thead {
+        border-color: $orange;
+        border-style: solid;
+        border-width: 1px 0 1px;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    tbody {
+        font-weight: 400;
+        font-size: 16px;
+
+        tr:nth-child(2) {
+            background-color: $light-sand;
+        }
+    }
+
+    td {
+        padding: 10px 25px;
     }
 }
 
@@ -151,21 +273,23 @@ blockquote {
 }
 
 .caption {
-    font-family: 'SourceSansPro', sans-serif;
-    font-weight: 400;
     font-size: 14px;
-    color: $dark-grey;
     line-height: 1.2;
     margin-bottom: 24px;
 }
 
 .summary {
-    font-family: 'SourceSansPro', sans-serif;
     font-weight: 300;
     font-size: 22px;
-    color: $dark-grey;
-    line-height: 1.3;
     margin: 20px 0 16px;
+}
+
+.sidebar {
+    h2 {
+        font-weight: 700;
+        font-size: 20px;
+        color: $dark-grey;
+    }
 }
 
 .typography {
