@@ -24,7 +24,7 @@
 }
 
 .banner__heading {
-    padding-top: 60%;
+    padding-top: 80%;
 }
 
 .banner {
@@ -34,11 +34,11 @@
 
 @media (min-width: 320px) {
     .banner__heading {
-        padding-top: 50%;
+        padding-top: 80%;
     }
 }
 
-@media (min-width: 358px) {
+@media (min-width: 377px) {
     .banner__heading {
         padding-top: 40%;
     }
