@@ -3344,6 +3344,115 @@
             "time": "2018-11-07T04:57:46+00:00"
         },
         {
+            "name": "silverstripe/tagfield",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-tagfield.git",
+                "reference": "705c7fb525ea06b658153812bc9f69687b07c70b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-tagfield/zipball/705c7fb525ea06b658153812bc9f69687b07c70b",
+                "reference": "705c7fb525ea06b658153812bc9f69687b07c70b",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "^4.0",
+                "silverstripe/versioned": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "expose": [
+                    "css",
+                    "js"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\TagField\\": "src/",
+                    "SilverStripe\\TagField\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Christopher Pitt",
+                    "email": "chris@silverstripe.com",
+                    "homepage": "http://github.com/assertchris"
+                }
+            ],
+            "description": "Tag field for Silverstripe",
+            "keywords": [
+                "field",
+                "silverstripe",
+                "tag"
+            ],
+            "time": "2018-06-10T23:49:15+00:00"
+        },
+        {
+            "name": "silverstripe/taxonomy",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe/silverstripe-taxonomy.git",
+                "reference": "e16d0aeaa249a92089e6feaeb40ab2ad40d20250"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-taxonomy/zipball/e16d0aeaa249a92089e6feaeb40ab2ad40d20250",
+                "reference": "e16d0aeaa249a92089e6feaeb40ab2ad40d20250",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/admin": "^1.0.2",
+                "silverstripe/framework": "^4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "suggest": {
+                "symbiote/silverstripe-gridfieldextensions": "Allows sorting of TaxonomyTerm objects via drag-and-drop",
+                "undefinedoffset/sortablegridfield": "Allows sorting of TaxonomyTerm objects via drag-and-drop"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SilverStripe\\Taxonomy\\": "src/",
+                    "SilverStripe\\Taxonomy\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Curry",
+                    "email": "robert@silverstripe.com"
+                }
+            ],
+            "description": "Provide extra taxonomy for cataloguing the data.",
+            "keywords": [
+                "cwp",
+                "silverstripe"
+            ],
+            "time": "2018-06-17T22:42:50+00:00"
+        },
+        {
             "name": "silverstripe/vendor-plugin",
             "version": "1.3.3",
             "source": {
@@ -5401,6 +5510,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "silverstripe/fulltextsearch-localsolr": 20,
+        "silverstripe/taxonomy": 20,
         "lekoala/silverstripe-debugbar": 20
     },
     "prefer-stable": true,
