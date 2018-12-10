@@ -163,10 +163,6 @@ form {
         }
     }
 
-    .message {
-        font-weight: bold;
-    }
-
     // if success
     input.holder-good {
         border-color: $success-green;
@@ -226,13 +222,19 @@ form {
     }
 }
 
+select {
+    font-family: 'SourceSansPro', sans-serif;
+    font-weight: 400;
+    color: $grey;
+}
+
 table {
     font-family: 'SourceSansPro', sans-serif;
     color: $dark-grey;
     margin-bottom: 20px;
 
     thead {
-        border-color: $orange;
+        border-color: $sand;
         border-style: solid;
         border-width: 1px 0 1px;
         font-weight: 600;

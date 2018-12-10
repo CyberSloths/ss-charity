@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7bcad8d93453261c8e630dd59a0d61bd",
+    "content-hash": "5ca98a31efbac1be2faa6eba1695f801",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -88,6 +88,59 @@
                 "sdk"
             ],
             "time": "2018-11-26T09:00:47+00:00"
+        },
+        {
+            "name": "benmanu/silverstripe-simple-styleguide",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benmanu/silverstripe-simple-styleguide.git",
+                "reference": "4d7f6634ec07562ab34391d9d1b7a42caddd9da5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benmanu/silverstripe-simple-styleguide/zipball/4d7f6634ec07562ab34391d9d1b7a42caddd9da5",
+                "reference": "4d7f6634ec07562ab34391d9d1b7a42caddd9da5",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "^4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "installer-name": "simple-styleguide",
+                "expose": [
+                    "css",
+                    "js",
+                    "images"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenManu\\SimpleStyleguide\\": "src/",
+                    "BenManu\\SimpleStyleguide\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Manu",
+                    "email": "bmanu10@gmail.com"
+                }
+            ],
+            "description": "Provides a kitchen sink template useful for theme development.",
+            "homepage": "https://github.com/benmanu/silverstripe-simple-styleguide",
+            "keywords": [
+                "silverstripe",
+                "styleguide"
+            ],
+            "time": "2018-09-13T04:51:42+00:00"
         },
         {
             "name": "composer/ca-bundle",
