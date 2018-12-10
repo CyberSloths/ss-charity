@@ -1,0 +1,25 @@
+.page-preview {
+    border-color: $sand;
+    border-style: solid;
+    border-width: 1px 0 0;
+    padding: 25px 0;
+}
+
+.page-preview:first-child {
+    margin-top: 40px;
+}
+
+@include media-breakpoint-up(md) {
+    .page-preview {
+        display: flex;
+    }
+
+    .page-preview_image {
+        width: calc(35% - 20px);
+    }
+
+    .page-preview_text {
+        margin-left: 20px;
+        width: calc(65% - 20px);
+    }
+}
