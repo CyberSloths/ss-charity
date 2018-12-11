@@ -9,9 +9,17 @@
             <% end_if %>
             $Content
         </div>
-        <div class="offset-xl-1 col-xl-3 col-lg-4">
-            <% include Tags %>
-            <% include Alert %>
+        <div class="offset-xl-1 col-xl-3 col-lg-4 col-sm-12">
+            <div class="fluid-container">
+                <div class="row">
+                    <div class="news__base-alerts col-xl-12 col-lg-12 col-md-6 col-xs-12 d-flex">
+                        <% include Tags %>
+                    </div>
+                    <div class="news__base-alerts col-xl-12 col-lg-12 col-md-6 col-xs-12 d-flex">
+                        <% include Alert %>
+                    </div>
+                <div class="row">
+            </div>
         </div>
     </div>
 </div>

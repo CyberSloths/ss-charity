@@ -1,0 +1,27 @@
+.news__base-alerts {
+    flex-direction: column;
+}
+
+@include media-breakpoint-up(sm) {
+    .news__base-alerts {
+        flex-direction: column;
+   }
+}
+
+@include media-breakpoint-up(md) {
+    .news__base-alerts {
+        flex-direction: row;
+   }
+}
+
+@include media-breakpoint-up(lg) {
+    .news__base-alerts {
+        flex-direction: row;
+   }
+}
+
+@include media-breakpoint-up(xl) {
+   .news__base-alerts {
+        flex-direction: row;
+   }
+}

@@ -1,4 +1,4 @@
-<h1>TEST CONTROLLER PAGE</h1>
+<h1>News Listing Page</h1>
 
 <h2>Results for '$Title'</h2>
 
