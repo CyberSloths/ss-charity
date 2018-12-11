@@ -1,0 +1,4 @@
+SilverStripe\Taxonomy\TaxonomyTerm:
+  extensions:
+    - App\Extension\TaxonomyTermExtension
+

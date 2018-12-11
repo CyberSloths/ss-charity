@@ -232,6 +232,12 @@ class HomePage extends Page
             'Root.Main',
             'Summary'
         );
+
+        $fields->removeFieldFromTab(
+            'Root.Main',
+            'Terms'
+        );
+
         $fields->removeByName('PageFeature');
 
         return $fields;
