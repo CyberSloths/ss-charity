@@ -1,9 +1,11 @@
 <header>
     <main-nav>
-        <picture slot="logo">
-            <source srcset="$SiteConfig.HeaderLogo.ScaleHeight(40).URL()" media="(min-width: 768px)" />
-            <img src="$SiteConfig.HeaderLogo.ScaleHeight(35).URL()" alt="Logo" />
-        </picture>
+        <a slot="logo" href="$BaseHref">
+            <picture class="col-6">
+                <source srcset="$SiteConfig.HeaderLogo.ScaleHeight(40).URL()" media="(min-width: 768px)" />
+                <img src="$SiteConfig.HeaderLogo.ScaleHeight(35).URL()" alt="Logo" />
+            </picture>
+        </a>
         <form slot="form" action="$absoluteBaseURL\search/SearchForm" method="GET" class="main-nav__search input-group">
             <input type="text" class="form-control" placeholder="Search..." name="q" aria-label="Search" aria-describedby="main-nav-search">
             <div class="input-group-append">

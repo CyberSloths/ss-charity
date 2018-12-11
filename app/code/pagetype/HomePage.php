@@ -192,7 +192,7 @@ class HomePage extends Page
                 )->setDescription('This link will be applied to Header One'),
                 TextareaField::create(
                     'ImportantTextDesc1',
-                    'Descripton One'
+                    'Description One'
                 ),
                 TextField::create(
                     'ImportantTextHeader2',
@@ -205,7 +205,7 @@ class HomePage extends Page
                 )->setDescription('This link will be applied to Header Two'),
                 TextareaField::create(
                     'ImportantTextDesc2',
-                    'Descripton Two'
+                    'Description Two'
                 ),
                 TextField::create(
                     'ImportantTextHeader3',
@@ -218,7 +218,7 @@ class HomePage extends Page
                 )->setDescription('This link will be applied to Header Three'),
                 TextareaField::create(
                     'ImportantTextDesc3',
-                    'Descripton Three'
+                    'Description Three'
                 ),
             ]
         );
