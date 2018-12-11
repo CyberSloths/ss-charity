@@ -14,11 +14,7 @@ $verticalGap: 15px;
 }
 
 .main-nav__logo {
-    img {
-        background: url('./images/logo-small.png') no-repeat;
-        height: 50px;
-        width: 144px;
-    }
+    height: 35px;
 }
 
 .main-nav__right-menu {
@@ -77,11 +73,7 @@ $verticalGap: 15px;
 
 @include media-breakpoint-up(md) {
     .main-nav__logo {
-        img {
-            background: url('./images/logo.png') no-repeat;
-            height: 80px;
-            width: 231px;
-        }
+        height: 40px;
     }
 
     .main-nav__right-menu {

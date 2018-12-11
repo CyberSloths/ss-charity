@@ -1,14 +1,15 @@
 /**
  * Application variables
  */
-$light-sand: #F4F2F0;
-$sand: #DED9D3;
-$green: #AAD273;
+$sand: #D7D2CB;
+$light-sand: lighten($sand, 13%);
+$white-sand: lighten($sand, 17%);
+$green: #B7DD79;
 $success-green: #28A745;
 $warning-red: #DC3545;
-$red-orange: #F56200;
-$orange: #FD9242;
-$navy-blue: #364D67;
-$link-blue: #4B77AA;
+$orange: #FF7F32;
+$red-orange: darken($orange, 10%);
+$navy-blue: #003B5C;
+$link-blue: lighten($navy-blue, 17%);
 $grey: #666;
 $dark-grey: #444;

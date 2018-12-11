@@ -1,5 +1,6 @@
 <header>
     <main-nav>
+        <img slot="logo" class="main-nav__logo" src="$ThemeDir/dist/images/logo.svg" alt="Logo" />
         <form slot="form" action="$absoluteBaseURL\search/SearchForm" method="GET" class="main-nav__search input-group">
             <input type="text" class="form-control" placeholder="Search..." name="q" aria-label="Search" aria-describedby="main-nav-search">
             <div class="input-group-append">
