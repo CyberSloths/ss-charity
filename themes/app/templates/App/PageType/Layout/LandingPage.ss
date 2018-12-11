@@ -6,7 +6,7 @@
                 <div class="page-preview">
                     <% if $FeatureImage %>
                         <div class="typography page-preview_image">
-                            $FeatureImage
+                            <img src="$FeatureImage.Fill(800,600).URL()" alt="Feature Image" />
                         </div>
                     <% end_if %>
                     <div class="<% if $FeatureImage %>page-preview_text<% end_if %>">

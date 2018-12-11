@@ -61,7 +61,7 @@ class Page extends SiteTree
                     ),
                     CheckboxField::create(
                         'IsDisplayed',
-                        'Show feature image on page'
+                        'Show feature image on this page'
                     )
                 )->setName('PageFeature')
             ],
