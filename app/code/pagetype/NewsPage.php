@@ -3,8 +3,6 @@
 namespace App\PageType;
 
 use Page;
-use SilverStripe\Taxonomy\TaxonomyTerm;
-use SilverStripe\Forms\TreeMultiselectField;
 
 class NewsPage extends Page
 {

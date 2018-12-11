@@ -8,4 +8,3 @@ SilverStripe\Control\Director:
   rules:
     'profile//$Action//$ID': 'App\Controller\StaffPageController'
     'search//$Action': 'PageController'
-    # 'news-and-events/$Action/$ID!': 'App\Controller\CustomTaxonomyDirectoryController'

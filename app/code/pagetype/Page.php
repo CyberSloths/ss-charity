@@ -3,14 +3,11 @@
 use SilverStripe\Assets\Image;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\CheckboxField;
-use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\CompositeField;
 use SilverStripe\Taxonomy\TaxonomyTerm;
-use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\TreeMultiselectField;
-use SilverStripe\Forms\ListboxField;
 
 class Page extends SiteTree
 {
