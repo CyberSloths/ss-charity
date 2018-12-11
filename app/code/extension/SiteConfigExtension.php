@@ -35,6 +35,7 @@ class SiteConfigExtension extends DataExtension
      * @var array
      */
     private static $has_one = [
+        'HeaderLogo' => Image::class,
         'HeaderButtonLink' => SiteTree::class,
         'FooterLogo' => Image::class,
         'SponsorLogo1' => Image::class,
@@ -49,6 +50,7 @@ class SiteConfigExtension extends DataExtension
      * @var array
      */
     private static $owns = [
+        'HeaderLogo',
         'HeaderButtonLink',
         'FooterLogo',
         'SponsorLogo1',
@@ -86,6 +88,10 @@ class SiteConfigExtension extends DataExtension
         $fields->addFieldsToTab(
             'Root.Header',
             [
+                $headerLogo = UploadField::create(
+                    'HeaderLogo',
+                    'Header Logo'
+                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.'),
                 TextField::create(
                     'HeaderButtonText',
                     'Header Button Text'
@@ -110,22 +116,27 @@ class SiteConfigExtension extends DataExtension
                 ), $footerLogo = UploadField::create(
                     'FooterLogo',
                     'Footer Logo'
-                ), $sponsorLogo1 = UploadField::create(
+                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.'),
+                $sponsorLogo1 = UploadField::create(
                     'SponsorLogo1',
                     'Sponsor Logo 1'
-                ), $sponsorLogo2 = UploadField::create(
+                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.'),
+                $sponsorLogo2 = UploadField::create(
                     'SponsorLogo2',
                     'Sponsor Logo 2'
-                ), $sponsorLogo3 = UploadField::create(
+                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.'),
+                $sponsorLogo3 = UploadField::create(
                     'SponsorLogo3',
                     'Sponsor Logo 3'
-                ), $sponsorLogo4 = UploadField::create(
+                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.'),
+                $sponsorLogo4 = UploadField::create(
                     'SponsorLogo4',
                     'Sponsor Logo 4'
-                )
+                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.')
             ]
         );
 
+        $headerLogo->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $footerLogo->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $sponsorLogo1->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $sponsorLogo2->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);

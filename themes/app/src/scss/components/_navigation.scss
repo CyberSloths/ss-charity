@@ -13,10 +13,6 @@ $verticalGap: 15px;
     padding: $verticalGap 0;
 }
 
-.main-nav__logo {
-    height: 35px;
-}
-
 .main-nav__right-menu {
     text-align: right;
 }
@@ -72,10 +68,6 @@ $verticalGap: 15px;
 }
 
 @include media-breakpoint-up(md) {
-    .main-nav__logo {
-        height: 40px;
-    }
-
     .main-nav__right-menu {
         display: flex;
         flex-direction: row-reverse;

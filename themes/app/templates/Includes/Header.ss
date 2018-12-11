@@ -1,6 +1,9 @@
 <header>
     <main-nav>
-        <img slot="logo" class="main-nav__logo" src="$ThemeDir/dist/images/logo.svg" alt="Logo" />
+        <picture slot="logo">
+            <source srcset="$SiteConfig.HeaderLogo.ScaleHeight(40).URL()" media="(min-width: 768px)" />
+            <img src="$SiteConfig.HeaderLogo.ScaleHeight(35).URL()" alt="Logo" />
+        </picture>
         <form slot="form" action="$absoluteBaseURL\search/SearchForm" method="GET" class="main-nav__search input-group">
             <input type="text" class="form-control" placeholder="Search..." name="q" aria-label="Search" aria-describedby="main-nav-search">
             <div class="input-group-append">
