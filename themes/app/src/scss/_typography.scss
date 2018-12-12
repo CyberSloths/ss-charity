@@ -74,6 +74,7 @@ $font-path: './webfonts';
 
 body {
     font-family: 'SourceSansPro', sans-serif;
+    margin: 0;
 }
 
 @for $index from 1 through 6 {
