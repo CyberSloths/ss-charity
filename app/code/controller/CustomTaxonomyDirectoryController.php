@@ -13,6 +13,11 @@ use SilverStripe\Taxonomy\Controllers\TaxonomyDirectoryController;
 
 class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
 {
+    /**
+     * Allowed actions which can be accessed via request
+     *
+     * @var array
+     */
     private static $allowed_actions = [
         'showTags'
     ];
@@ -25,20 +30,20 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
      */
     public function showTags(HTTPRequest $request)
     {
-        $termString = $request->param('ID');
+        $termID = $request->param('ID');
 
         // Used to handle empty ID requests
-        $title = TaxonomyTerm::get()->byID($termString) ? TaxonomyTerm::get()->byID($termString)->Name : '';
+        $title = TaxonomyTerm::get()->byID($termID) ? TaxonomyTerm::get()->byID($termID)->Name : '';
 
-        $pages = Page::get()->filter(['Terms.Name' => $title]);
+        $pages = Page::get()->filter(['Terms.ID' => $termID]);
 
         return $this->customise(
             new ArrayData(
                 [
                     'Title' => $title,
-                    'Term' => $termString,
+                    'Term' => $termID,
                     'Pages' => $pages,
-                    'Breadcrumbs' => $this->renderBreadcrumb($termString)
+                    'Breadcrumbs' => $this->renderBreadcrumb($termID)
                 ]
             )
         )->renderWith([__CLASS__, "Page"]);
@@ -47,7 +52,7 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
     /**
      * Create URL which action will be performed on
      *
-     * @param [type] $action
+     * @param string $action
      * @return void
      */
     public function Link($action = null)

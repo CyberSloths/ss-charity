@@ -30,6 +30,11 @@ class Page extends SiteTree
         'FeatureImage' => Image::class,
     ];
 
+    /**
+     * Page relationship of many to many items
+     *
+     * @var array
+     */
     private static $many_many = [
         'Terms' => TaxonomyTerm::class,
     ];
