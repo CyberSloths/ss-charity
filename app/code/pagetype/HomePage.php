@@ -64,6 +64,10 @@ class HomePage extends Page
         'Important1Link' => SiteTree::class,
         'Important2Link' => SiteTree::class,
         'Important3Link' => SiteTree::class,
+        'SponsorLogo1' => Image::class,
+        'SponsorLogo2' => Image::class,
+        'SponsorLogo3' => Image::class,
+        'SponsorLogo4' => Image::class
     ];
 
     /**
@@ -80,7 +84,11 @@ class HomePage extends Page
         'CallToActionLink',
         'Important1Link',
         'Important2Link',
-        'Important3Link'
+        'Important3Link',
+        'SponsorLogo1',
+        'SponsorLogo2',
+        'SponsorLogo3',
+        'SponsorLogo4'
     ];
 
     /**
@@ -223,9 +231,35 @@ class HomePage extends Page
             ]
         );
 
+        $fields->addFieldsToTab(
+            'Root.Sponsors',
+            [
+                $sponsorLogo1 = UploadField::create(
+                    'SponsorLogo1',
+                    'Sponsor Logo 1'
+                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.'),
+                $sponsorLogo2 = UploadField::create(
+                    'SponsorLogo2',
+                    'Sponsor Logo 2'
+                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.'),
+                $sponsorLogo3 = UploadField::create(
+                    'SponsorLogo3',
+                    'Sponsor Logo 3'
+                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.'),
+                $sponsorLogo4 = UploadField::create(
+                    'SponsorLogo4',
+                    'Sponsor Logo 4'
+                )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.')
+            ]
+        );
+
         // Image upload validations
         $bannerImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $callToActionImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+        $sponsorLogo1->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+        $sponsorLogo2->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+        $sponsorLogo3->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+        $sponsorLogo4->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
 
         // Field reductions
         $fields->removeFieldFromTab(

@@ -1,26 +1,40 @@
-.color-bar__footer-partners {
-    background-color: $light-sand;
+footer {
+    background-color: $navy-blue;
+    padding: 30px 0;
+
+    p {
+        color: white;
+    }
+
+    img {
+        max-width: 65%;
+    }
 }
 
-.color-bar__footer-info {
-    background-color: $sand;
+@include media-breakpoint-up(sm) {
+    footer {
+        img {
+            max-width: 50%;
+        }
+    }
 }
 
-footer img {
-    width: 100px;
-    height: auto;
-    padding-top: 5%;
-    padding-bottom: 5%;
+@include media-breakpoint-up(md) {
+    footer {
+        img {
+            max-width: 80%;
+        }
+    }
 }
 
-.footer__partners {
-    width: 100%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
+@include media-breakpoint-up(lg) {
+    footer {
+        p {
+            margin: 0;
+        }
 
-.footer__info {
-    width: 100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+        img {
+            max-width: 100%;
+        }
+    }
 }
