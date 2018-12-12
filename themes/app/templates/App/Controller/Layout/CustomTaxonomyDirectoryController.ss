@@ -1,6 +1,6 @@
 <h1>News Listing Page</h1>
 
-<% if $Title != ''%>
+<% if $Title %>
     <h2>Results for '$Title'</h2>
 <% end_if %>
 
