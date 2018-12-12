@@ -2,16 +2,16 @@
     <nav class="main-nav">
         <div class="container">
             <div class="main-nav__top-menu row justify-content-between">
-                <a class="main-nav__logo col-md-6 col-6" href="/"><img/></a>
-                <div class="main-nav__right-menu col-md-6 col-6">
+                <slot name="logo"/>
+                <div class="main-nav__right-menu col-md-6 col-2">
                     <button v-if="isTablet"
                         class="main-nav__menu-hamburger"
                         @click="hamClicked" type="button">
                         &#9776;
                     </button>
                     <div v-if="!isMobile" class="main-nav__slot-group">
-                        <slot name="form"></slot>
-                        <slot v-if="!isTablet" name="button"></slot>
+                        <slot name="form"/>
+                        <slot v-if="!isTablet" name="button"/>
                     </div>
                 </div>
             </div>
@@ -20,7 +20,7 @@
             <div v-if="isMobile" class="main-nav__main-items">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 col-12">
+                        <div class="col-12">
                             <slot name="form"/>
                         </div>
                     </div>
@@ -31,7 +31,7 @@
             <div v-if="isTablet" class="main-nav__main-items">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 col-12">
+                        <div class="col-12">
                             <slot name="button"/>
                         </div>
                     </div>

@@ -13,14 +13,6 @@ $verticalGap: 15px;
     padding: $verticalGap 0;
 }
 
-.main-nav__logo {
-    img {
-        background: url('./images/logo-small.png') no-repeat;
-        height: 50px;
-        width: 144px;
-    }
-}
-
 .main-nav__right-menu {
     text-align: right;
 }
@@ -76,14 +68,6 @@ $verticalGap: 15px;
 }
 
 @include media-breakpoint-up(md) {
-    .main-nav__logo {
-        img {
-            background: url('./images/logo.png') no-repeat;
-            height: 80px;
-            width: 231px;
-        }
-    }
-
     .main-nav__right-menu {
         display: flex;
         flex-direction: row-reverse;

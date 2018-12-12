@@ -113,7 +113,7 @@ class HomePage extends Page
 
         // Accommodation configurations
         $fields->addFieldsToTab(
-            'Root.Accomodation',
+            'Root.Accommodation',
             [
                 TextField::create(
                     'AccomHeading',
@@ -149,7 +149,7 @@ class HomePage extends Page
             ]
         );
 
-        // call-to-action configurations
+        // Call-to-action configurations
         $fields->addFieldsToTab(
             'Root.CallToAction',
             [
@@ -160,7 +160,7 @@ class HomePage extends Page
                 TextField::create(
                     'CallToActionDesc',
                     'Section Subtext'
-                ),
+                )->setDescription('This text disappears on mobile screens that are below 768px.'),
                 $callToActionImage = UploadField::create(
                     'CallToActionImage',
                     'Call to action Image'
@@ -177,7 +177,7 @@ class HomePage extends Page
             ]
         );
 
-        // call-to-action configurations
+        // Important items configurations
         $fields->addFieldsToTab(
             'Root.ImportantItems',
             [
@@ -192,7 +192,7 @@ class HomePage extends Page
                 )->setDescription('This link will be applied to Header One'),
                 TextareaField::create(
                     'ImportantTextDesc1',
-                    'Descripton One'
+                    'Description One'
                 ),
                 TextField::create(
                     'ImportantTextHeader2',
@@ -205,7 +205,7 @@ class HomePage extends Page
                 )->setDescription('This link will be applied to Header Two'),
                 TextareaField::create(
                     'ImportantTextDesc2',
-                    'Descripton Two'
+                    'Description Two'
                 ),
                 TextField::create(
                     'ImportantTextHeader3',
@@ -218,7 +218,7 @@ class HomePage extends Page
                 )->setDescription('This link will be applied to Header Three'),
                 TextareaField::create(
                     'ImportantTextDesc3',
-                    'Descripton Three'
+                    'Description Three'
                 ),
             ]
         );

@@ -1,14 +1,51 @@
 /**
- * Application variables
+ * Colours
  */
-$light-sand: #F4F2F0;
-$sand: #DED9D3;
-$green: #AAD273;
+$sand: #D7D2CB;
+$light-sand: lighten($sand, 13%);
+$white-sand: lighten($sand, 17%);
+$green: #B7DD79;
 $success-green: #28A745;
 $warning-red: #DC3545;
-$red-orange: #F56200;
-$orange: #FD9242;
-$navy-blue: #364D67;
-$link-blue: #4B77AA;
+$orange: #FF7F32;
+$red-orange: darken($orange, 10%);
+$navy-blue: #003B5C;
+$link-blue: lighten($navy-blue, 17%);
 $grey: #666;
 $dark-grey: #444;
+
+/**
+ * Font Sizes
+ */
+$font-size-xxxxl: 70px;
+$font-size-xxxl: 42px;
+$font-size-xxl: 32px;
+$font-size-xl: 28px;
+$font-size-l: 26px;
+$font-size-m: 24px;
+$font-size-s: 22px;
+$font-size-xs: 20px;
+$font-size-xxs: 18px;
+$font-size-xxxs: 16px;
+$font-size-xxxxs: 14px;
+
+/**
+ * Font Weights
+ */
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+/**
+ * Line Heights
+ */
+$line-height-xxl: 1.5;
+$line-height-xl: 1.4;
+$line-height-l: 1.3;
+$line-height-mm: 1.25;
+$line-height-m: 1.2;
+$line-height-s: 1.1;
+$line-height-xs: 1;
+$line-height-xxs: 0.9;
+$line-height-xxxs: 0.8;
