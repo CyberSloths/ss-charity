@@ -83,7 +83,6 @@ class Page extends SiteTree
         // Image upload validations
         $featureImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
 
-        // var_dump($fields);
         return $fields;
     }
 }

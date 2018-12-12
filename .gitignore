@@ -19,3 +19,4 @@
 /vendor/
 /fulltextsearch-localsolr
 *.solr
+*ss-charity-error.log
