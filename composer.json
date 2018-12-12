@@ -15,7 +15,8 @@
         "silverstripe/elemental-bannerblock": "^1.0",
         "silverstripe/fulltextsearch-localsolr": "dev-master",
         "silverstripe/fulltextsearch": "^3.4",
-        "benmanu/silverstripe-simple-styleguide": "^2.0"
+        "benmanu/silverstripe-simple-styleguide": "^2.0",
+        "silverstripe/taxonomy": "^2.0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",

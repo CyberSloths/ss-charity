@@ -11,7 +11,7 @@
         <% require themedCSS("dist/app.min") %>
     <% end_if %>
 </head>
-<body>
+<body class="$ClassName">
     <div id="app">
         <% include Header %>
         <main>

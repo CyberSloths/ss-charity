@@ -4,8 +4,10 @@ use SilverStripe\Assets\Image;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\TextareaField;
-use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\CompositeField;
+use SilverStripe\Taxonomy\TaxonomyTerm;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\TreeMultiselectField;
 
 class Page extends SiteTree
 {
@@ -29,12 +31,22 @@ class Page extends SiteTree
     ];
 
     /**
+     * Page relationship of many to many items
+     *
+     * @var array
+     */
+    private static $many_many = [
+        'Terms' => TaxonomyTerm::class,
+    ];
+
+    /**
      * Determine ownership of asset to page in order to display
      *
      * @var array
      */
     private static $owns = [
         'FeatureImage',
+        'Terms'
     ];
 
     /**
@@ -63,7 +75,12 @@ class Page extends SiteTree
                         'IsDisplayed',
                         'Show feature image on this page'
                     )
-                )->setName('PageFeature')
+                )->setName('PageFeature'),
+                TreeMultiselectField::create(
+                    'Terms',
+                    'Tags',
+                    TaxonomyTerm::class
+                )
             ],
             'Content'
         );
