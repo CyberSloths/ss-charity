@@ -1,3 +1,0 @@
-infrastructure: ^3
-php_settings:
-  version: 7.1
