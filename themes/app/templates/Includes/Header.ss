@@ -2,8 +2,7 @@
     <main-nav>
         <a slot="logo" href="$BaseHref">
             <picture class="col-6">
-                <source srcset="$SiteConfig.HeaderLogo.ScaleHeight(40).URL()" media="(min-width: 768px)" />
-                <img src="$SiteConfig.HeaderLogo.ScaleHeight(35).URL()" alt="Logo" />
+                <img class="main-nav__logo" src="$SiteConfig.HeaderLogo.URL()" alt="Header Logo" />
             </picture>
         </a>
         <form slot="form" action="$absoluteBaseURL\search/SearchForm" method="GET" class="main-nav__search input-group">
