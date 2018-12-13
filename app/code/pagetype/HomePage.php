@@ -272,6 +272,11 @@ class HomePage extends Page
             'Terms'
         );
 
+        $fields->removeFieldFromTab(
+            'Root.Main',
+            'Content'
+        );
+
         $fields->removeByName('PageFeature');
 
         return $fields;

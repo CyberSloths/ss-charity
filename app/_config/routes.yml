@@ -6,5 +6,4 @@ After:
 ---
 SilverStripe\Control\Director:
   rules:
-    'profile//$Action//$ID': 'App\Controller\StaffPageController'
     'search//$Action': 'PageController'
