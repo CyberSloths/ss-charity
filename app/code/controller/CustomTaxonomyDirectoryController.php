@@ -14,6 +14,7 @@ use SilverStripe\Control\HTTPRequest;
 use SilverStripe\Taxonomy\TaxonomyTerm;
 use SilverStripe\Taxonomy\Controllers\TaxonomyDirectoryController;
 use App\PageType\NewsPage;
+use SilverStripe\ORM\DataObject;
 
 class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
 {
@@ -69,7 +70,7 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
                     'Breadcrumbs' => $this->renderBreadcrumb($termString)
                 ]
             )
-        )->renderWith([static::class, "Page"]);
+        )->renderWith([static::class, Page::class]);
     }
 
     /**
@@ -147,5 +148,17 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
         }
 
         return (string) $currentDisplayRange.'-'.$endRange ;
+    }
+
+    /**
+     * Title for all news listing pages
+     *
+     * @return void
+     */
+    public function getHeaderName()
+    {
+        $headerTitle = TaxonomyDirectory::get()->getHeaderName();
+
+        return $headerTitle;
     }
 }

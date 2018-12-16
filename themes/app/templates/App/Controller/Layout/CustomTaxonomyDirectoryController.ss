@@ -2,6 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="typography col-lg-8">
+            $getHeaderName()
             <p>Displaying
             <% if $PaginatedPages.TotalItems > 9 %>
                 <% loop $PaginatedPages.Pages %>
@@ -9,10 +10,6 @@
                         $Top.createPageRange($PageNum, $Top.PaginatedPages.TotalItems)
                     <% end_if %>
                 <% end_loop %>of $PaginatedPages.TotalItems</p>
-                <% if $Title == 'News and Events' %>
-                <% else_if $Title %>
-                    <h2>Results for '$Title'</h2>
-                <% end_if %>
             <% else %>
                 1-$PaginatedPages.TotalItems of $PaginatedPages.TotalItems </p>
             <% end_if %>

@@ -8,5 +8,9 @@
             <% end_if %>
         <% end_loop %>
     </p>
-    <h1 class="breadcrumb__child">$MenuTitle.XML</h1>
+    <% if $ClassName != SilverStripe\CMS\Model\SiteTree %>
+        <h1 class="breadcrumb__child">$MenuTitle.XML</h1>
+    <% else %>
+        <h1 class="breadcrumb__child">Results for </h1>
+    <% end_if %>
 <% end_if %>
