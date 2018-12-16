@@ -1,13 +1,14 @@
 <?php
 
 use SilverStripe\Assets\Image;
+use SilverStripe\ORM\PaginatedList;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\CompositeField;
 use SilverStripe\Taxonomy\TaxonomyTerm;
-use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Forms\TreeMultiselectField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class Page extends SiteTree
 {
