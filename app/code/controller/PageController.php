@@ -24,9 +24,16 @@ class PageController extends ContentController
      * @var array
      */
     private static $allowed_actions = [
-        'SearchForm'
+        'searchForm'
     ];
 
+    /**
+     * Called during construction, this is the method that builds the structure.
+     * Used instead of overriding __construct as we have specific execution order
+     * - code that has to be run before _and/or_ after this.
+     *
+     * @return void
+     */
     protected function init()
     {
         parent::init();
@@ -37,16 +44,21 @@ class PageController extends ContentController
     /**
      * Site search form
      *
-     * @return SearchForm
+     * @param HTTPRequest $request The request for search form
+     *
+     * @return searchForm
      */
-    public function SearchForm(HTTPRequest $request)
+    public function searchForm(HTTPRequest $request)
     {
         $query = SearchQuery::create()->addSearchTerm($request->getVar('q'));
+        $query->setStart($request->getVar('start'));
         $solrResult = SSCharityIndex::singleton()->search($query);
 
-        return $this->customise([
-            'Query' => $request->getVar('q'),
-            'SearchResult' => $solrResult,
-        ])->renderWith(['ResultsPage', 'Page']);
+        return $this->customise(
+            [
+                'Query' => $request->getVar('q'),
+                'SearchResult' => $solrResult,
+            ]
+        )->renderWith(['ResultsPage', 'Page']);
     }
 }

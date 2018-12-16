@@ -1,0 +1,32 @@
+.pagination__text {
+    margin: 0 8px;
+    padding: 10px;
+
+    &:first-child {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+}
+
+.pagination__pagenum {
+    background-color: $green;
+}
+
+.pagination__link {
+    display: block;
+
+    &.disabled {
+        cursor: not-allowed;
+        color: $sand;
+        pointer-events: none;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
