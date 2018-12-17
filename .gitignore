@@ -1,5 +1,5 @@
 *.DS_Store
-#/.env
+/.env
 /.idea
 /.nightwatch.custom.json
 /.storybook/.cache
@@ -20,3 +20,4 @@
 /fulltextsearch-localsolr
 *.solr
 *ss-charity-error.log
+*.sspak
