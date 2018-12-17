@@ -1,5 +1,6 @@
 .location__heading {
     margin-left: 0;
+    padding-bottom: 20px;
 }
 
 .loaction__description {
@@ -34,7 +35,7 @@
 }
 
 .locations {
-    background-color: $sand;
+    border-top: 1px solid $sand;
     padding-top: 226px;
     position: relative;
 }
@@ -74,6 +75,7 @@
 
     .location__heading {
         margin-left: 30px;
+        padding-bottom: 0;
     }
 
     .loaction__description {
@@ -103,6 +105,7 @@
 
     .location__heading {
         margin-left: 80px;
+        padding-bottom: 0;
     }
 
     .loaction__description {
@@ -132,11 +135,11 @@
 
     .location__heading {
         margin-left: 80px;
+        padding-bottom: 0;
     }
 
     .loaction__description {
         margin-left: 80px;
-        font-size: medium;
         display: block;
     }
 

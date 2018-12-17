@@ -14,10 +14,6 @@
     height: 50%;
 }
 
-h1 {
-    font-size: 32px;
-}
-
 .banner--image {
     padding-top: 226px;
     position: relative;
@@ -32,12 +28,8 @@ h1 {
 }
 
 .banner {
-    background-color: $grey;
+    background-color: $light-sand;
     padding: 16px 0 15px;
-}
-
-.banner__text h1 {
-    font-size: 32px;
 }
 
 @media (min-width: 320px) {
@@ -48,7 +40,7 @@ h1 {
 
 @media (min-width: 377px) {
     .banner__heading {
-        padding-top: 40%;
+        padding-top: 50%;
     }
 }
 
@@ -79,7 +71,7 @@ h1 {
     }
 
     .banner__image {
-        width: 45%;
+        width: 50%;
         height: 100%;
     }
 
@@ -121,7 +113,7 @@ h1 {
 
 @include media-breakpoint-up(xl) {
     .banner__image {
-        width: 45%;
+        width: 50%;
         height: 100%;
     }
 }
