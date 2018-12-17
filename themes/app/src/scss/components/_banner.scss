@@ -36,6 +36,10 @@ h1 {
     padding: 16px 0 15px;
 }
 
+.banner__text h1 {
+    font-size: 32px;
+}
+
 @media (min-width: 320px) {
     .banner__heading {
         padding-top: 80%;
@@ -83,8 +87,12 @@ h1 {
         padding: 20px 0;
     }
 
-    h1 {
+    .banner__text h1 {
         font-size: 60px;
+    }
+
+    .banner__text .summary {
+        font-size: 26px;
     }
 }
 
