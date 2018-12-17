@@ -5,7 +5,6 @@ namespace App\PageType;
 use Page;
 use App\PageType\NewsPage;
 use SilverStripe\CMS\Model\SiteTree;
-use SilverStripe\GraphQL\Controller;
 use SilverStripe\Taxonomy\TaxonomyTerm;
 use App\Controller\CustomTaxonomyDirectoryController;
 
