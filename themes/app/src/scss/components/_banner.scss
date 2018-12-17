@@ -28,7 +28,7 @@
 }
 
 .banner {
-    background-color: $light-sand;
+    background-color: $grey;
     padding: 16px 0 15px;
 }
 
@@ -40,7 +40,7 @@
 
 @media (min-width: 377px) {
     .banner__heading {
-        padding-top: 50%;
+        padding-top: 40%;
     }
 }
 
@@ -71,7 +71,7 @@
     }
 
     .banner__image {
-        width: 50%;
+        width: 45%;
         height: 100%;
     }
 
@@ -79,12 +79,8 @@
         padding: 20px 0;
     }
 
-    .banner__text h1 {
+    h1 {
         font-size: 60px;
-    }
-
-    .banner__text .summary {
-        font-size: 26px;
     }
 }
 
@@ -113,7 +109,7 @@
 
 @include media-breakpoint-up(xl) {
     .banner__image {
-        width: 50%;
+        width: 45%;
         height: 100%;
     }
 }
