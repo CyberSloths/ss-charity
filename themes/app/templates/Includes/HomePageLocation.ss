@@ -1,6 +1,6 @@
 <div class="locations">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row locations__frame align-items-center">
             <div class="col-md-6">
                 <picture class="location__img-frame">
                 <source srcset="$CallToActionImage.Fill(560,480).URL()" media="(min-width: 1200px)" />

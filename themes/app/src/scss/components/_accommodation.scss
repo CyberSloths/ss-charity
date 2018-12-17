@@ -1,23 +1,19 @@
 .accommodation {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .accommodation__desc {
     display: inline-block;
+    padding-top: 15px;
 }
 
 .accommodation__arrow {
-    padding-bottom: 0;
+    padding-right: 15px;
+    padding-left: 15px;
     padding-top: 0;
-    width: 30px;
+    width: 60px;
     transform: rotate(90deg);
-}
-
-.accommodation__desc h3 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 0%;
 }
 
 .accommodation__icon {
@@ -36,14 +32,8 @@
 @include media-breakpoint-up(sm) {
     .accommodation__arrow {
         padding-top: 80px;
-        width: 40px;
+        width: 60px;
         transform: rotate(0deg);
-    }
-
-    .accommodation__desc h3 {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-bottom: 0%;
     }
 
     .accommodation__icon {
@@ -58,7 +48,7 @@
     }
 
     .accommodation {
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
 
     .accommodation__arrow-frame {
@@ -69,14 +59,11 @@
 
 @include media-breakpoint-up(md) {
     .accommodation__arrow {
+        padding-right: 0;
+        padding-left: 0;
         padding-top: 80px;
         width: 40px;
         transform: rotate(0deg);
-    }
-
-    .accommodation__desc h3 {
-        padding-top: 30px;
-        padding-bottom: 30px;
     }
 
     .accommodation__icon {
@@ -95,7 +82,8 @@
     }
 
     .accommodation {
-        padding-bottom: 0;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
 
@@ -104,11 +92,6 @@
         padding-top: 101px;
         width: 50px;
         transform: rotate(0deg);
-    }
-
-    .accommodation__desc h3 {
-        padding-top: 30px;
-        padding-bottom: 30px;
     }
 
     .accommodation__icon {
@@ -123,10 +106,6 @@
     .accommodation__heading {
         padding-bottom: 20px;
     }
-
-    .accommodation {
-        padding-bottom: 0;
-    }
 }
 
 @include media-breakpoint-up(xl) {
@@ -134,11 +113,6 @@
         padding-top: 101px;
         width: 50px;
         transform: rotate(0deg);
-    }
-
-    .accommodation__desc h3 {
-        padding-top: 30px;
-        padding-bottom: 30px;
     }
 
     .accommodation__icon {
@@ -152,9 +126,5 @@
 
     .accommodation__heading {
         padding-bottom: 20px;
-    }
-
-    .accommodation {
-        padding-bottom: 0;
     }
 }

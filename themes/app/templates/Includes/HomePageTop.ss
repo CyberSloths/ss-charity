@@ -6,7 +6,7 @@
                     <p class="banner__desc lead summary">$BannerDesc</p>
             </div>
             <div class="banner__img-frame col-md-5 offset-lg-1 order-md-12 order-sm-1 order-1">
-                <div class="banner__image" style="background-image:url($BannerImage.Fill(1600,340).URL);">
+                <div class="banner__image" style="background-image:url($BannerImage.Fill(1280,720).URL);">
                 </div>
             </div>
         </div>

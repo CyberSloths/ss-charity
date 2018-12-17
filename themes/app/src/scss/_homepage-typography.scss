@@ -1,0 +1,62 @@
+.accommodation__heading {
+    font-size: $HM-accom-font-size-h2;
+    font-weight: $HM-font-weight-h2;
+}
+
+.accommodation__desc h3 {
+    font-size: $HM-font-size-h3;
+}
+
+.location__heading {
+    font-size: $HM-accom-font-size-h2;
+    font-weight: $HM-font-weight-h2;
+}
+
+.important-items__box h2 {
+    font-size: $HM-font-size-h2;
+    font-weight: $HM-font-weight-h2;
+}
+
+.accommodation__stage-header {
+    font-weight: $font-weight-bold;
+}
+
+@include media-breakpoint-up(sm) {
+    .accommodation__desc h3 {
+        font-size: $HM-font-size-h3-sm;
+    }
+
+    .banner__text h1 {
+        font-size: $HM-font-size-h1-sm;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .banner__text .summary {
+        font-size: $HM-font-size-summary;
+    }
+
+    .accommodation__heading {
+        font-size: $HM-accom-font-size-h2-md;
+        font-weight: $HM-font-weight-h2;
+    }
+
+    .accommodation__desc h3 {
+        font-size: $HM-font-size-h3-md;
+    }
+
+    .location__heading {
+        font-size: $HM-font-size-h2-md;
+        font-weight: $HM-font-weight-h2;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .banner__text h1 {
+        font-size: $HM-font-size-h1-xl;
+    }
+
+    .loaction__description {
+        font-size: $HM-font-size-paragraph;
+    }
+}
