@@ -61,9 +61,9 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
 
         $this->pages = NewsPage::get();
 
-        $terms = $this->setTerms();
-        $dates = $this->setDates();
-        $newsTitle = TaxonomyDirectory::get()->first()->Title;
+        $terms = $this->getTerms();
+        $dates = $this->getDates();
+        $newsTitle = $this->getNewsTitle();
 
         return $this->customise(
             new ArrayData(
@@ -95,9 +95,9 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
         $title = TaxonomyTerm::get()->byID($termID) ? TaxonomyTerm::get()->byID($termID)->Name : '';
 
         $this->pages = Page::get()->filter(['Terms.ID' => $termID]);
-        $terms = $this->setTerms();
-        $dates = $this->setDates();
-        $newsTitle = TaxonomyDirectory::get()->first()->Title;
+        $terms = $this->getTerms();
+        $dates = $this->getDates();
+        $newsTitle = $this->getNewsTitle();
 
         return $this->customise(
             new ArrayData(
@@ -142,7 +142,7 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
      *
      * @return array
      */
-    public function setTerms()
+    public function getTerms()
     {
         $terms = TaxonomyTerm::get()->filter(['Name:StartsWith:not' => '2']);
         return $terms;
@@ -153,9 +153,21 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
      *
      * @return array
      */
-    public function setDates()
+    public function getDates()
     {
         $dates = TaxonomyTerm::get()->filter(['Name:StartsWith' => '2']);
         return $dates;
+    }
+
+    /**
+     * Get page title of news listing page
+     *
+     * @return array
+     */
+    public function getNewsTitle()
+    {
+        $newsTitle = TaxonomyDirectory::get()->first()->Title;
+
+        return $newsTitle;
     }
 }
