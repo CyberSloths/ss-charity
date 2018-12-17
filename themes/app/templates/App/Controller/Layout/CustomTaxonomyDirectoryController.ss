@@ -6,7 +6,14 @@
             <% if $ClassName == SilverStripe\CMS\Model\SiteTree && $Title != '' %>
                 <p>Results for "$Title"</p>
             <% end_if %>
-            <% include PaginatedList %>
+            <% loop $PaginatedPages %>
+                <a href="$Link"><h2>$Title</h2></a>
+                <p>$Created.Format(dd) $Created.Month $Created.Year<p>
+                <p class="typography lead summary">$Summary</p>
+            <% end_loop %>
+            <% with $PaginatedPages %>
+                    <% include Pagination %>
+            <% end_with %>
         </div>
         <div class="offset-xl-1 col-xl-3 col-lg-4 col-sm-12">
             <div class="fluid-container">
