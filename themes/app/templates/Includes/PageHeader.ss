@@ -22,6 +22,7 @@
                     <div class="offset-lg-2 col-lg-8">
             <% end_if %>
             $Breadcrumbs
+            <h1 class="breadcrumb__child">$NewsTitle</h1>
             <% if $ClassName == "App\PageType\LandingPage" %>
                         $Summary
                     </div>

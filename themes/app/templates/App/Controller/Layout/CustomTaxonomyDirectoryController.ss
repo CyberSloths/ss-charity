@@ -1,17 +1,10 @@
-<% include PageHeader %>
+<% include PageHeader NewsTitle=$NewsTitle %>
 <div class="container">
     <div class="row">
         <div class="typography col-lg-8">
-            $getHeaderName()
-            <p>Displaying
-            <% if $PaginatedPages.TotalItems > 9 %>
-                <% loop $PaginatedPages.Pages %>
-                    <% if $CurrentBool %>
-                        $Top.createPageRange($PageNum, $Top.PaginatedPages.TotalItems)
-                    <% end_if %>
-                <% end_loop %>of $PaginatedPages.TotalItems</p>
-            <% else %>
-                1-$PaginatedPages.TotalItems of $PaginatedPages.TotalItems </p>
+            <p class="results__count">Displaying {$PaginatedPages.FirstItem} - {$PaginatedPages.LastItem} of {$PaginatedPages.TotalItems}</p>
+            <% if $ClassName == SilverStripe\CMS\Model\SiteTree && $Title != '' %>
+                <p>Results for "$Title"</p>
             <% end_if %>
             <% include PaginatedList %>
         </div>

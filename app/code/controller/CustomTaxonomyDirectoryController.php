@@ -14,7 +14,6 @@ use SilverStripe\Control\HTTPRequest;
 use SilverStripe\Taxonomy\TaxonomyTerm;
 use SilverStripe\Taxonomy\Controllers\TaxonomyDirectoryController;
 use App\PageType\NewsPage;
-use SilverStripe\ORM\DataObject;
 
 class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
 {
@@ -35,7 +34,11 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
     private $pages;
 
     /**
-     * Initialise pages list
+     * Called during construction, this is the method that builds the structure.
+     * Used instead of overriding __construct as we have specific execution order - code that has
+     * Used instead of overriding __construct as we have specific execution order
+     * to be run before _and/or_ after this.
+     * - code that has to be run before _and/or_ after this.
      *
      * @return void
      */
@@ -48,7 +51,8 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
     /**
      * Overriding original index function from vendor class
      *
-     * @param HTTPRequest $request
+     * @param HTTPRequest $request The action request
+     *
      * @return void
      */
     public function index(HTTPRequest $request)
@@ -56,12 +60,15 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
         $termString = $request->param('ID');
 
         $this->pages = NewsPage::get();
-        $terms = TaxonomyTerm::get()->filter(['Name:StartsWith:not' => '2']);
-        $dates = TaxonomyTerm::get()->filter(['Name:StartsWith' => '2']);
+
+        $terms = $this->setTerms();
+        $dates = $this->setDates();
+        $newsTitle = TaxonomyDirectory::get()->first()->Title;
 
         return $this->customise(
             new ArrayData(
                 [
+                    'NewsTitle' => $newsTitle,
                     'Title' => $termString,
                     'Term' => $termString,
                     'Pages' => $this->pages,
@@ -76,7 +83,8 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
     /**
      * This action allows for pages to be filtered by a desired term
      *
-     * @param HTTPRequest $request
+     * @param HTTPRequest $request The action request
+     *
      * @return void
      */
     public function showTags(HTTPRequest $request)
@@ -87,12 +95,14 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
         $title = TaxonomyTerm::get()->byID($termID) ? TaxonomyTerm::get()->byID($termID)->Name : '';
 
         $this->pages = Page::get()->filter(['Terms.ID' => $termID]);
-        $terms = TaxonomyTerm::get()->filter(['Name:StartsWith:not' => '2']);
-        $dates = TaxonomyTerm::get()->filter(['Name:StartsWith' => '2']);
+        $terms = $this->setTerms();
+        $dates = $this->setDates();
+        $newsTitle = TaxonomyDirectory::get()->first()->Title;
 
         return $this->customise(
             new ArrayData(
                 [
+                    'NewsTitle' => $newsTitle,
                     'Title' => $title,
                     'Term' => $termID,
                     'Pages' => $this->pages,
@@ -107,7 +117,8 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
     /**
      * Create URL which action will be performed on
      *
-     * @param string $action
+     * @param string $action The action to be performed
+     *
      * @return void
      */
     public function Link($action = null)
@@ -115,50 +126,36 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
         $link = Controller::join_links('news-and-events/', $action);
     }
 
-
     /**
-    * Returns a paginated list of all pages in the site.
-    */
+     * Returns a paginated list of all pages in the site.
+     *
+     * @return PaginatedList
+     */
     public function getPaginatedPages()
     {
         $filteredPages = new PaginatedList($this->pages, $this->getRequest());
-
         return $filteredPages;
     }
 
     /**
-     * Returns page range string
+     * Filters terms from date terms
      *
-     * @param int $currentPage
-     * @param int $totalItems
-     * @return void
+     * @return array
      */
-    public function createPageRange($currentPage, $totalItems)
+    public function setTerms()
     {
-        if ($currentPage != 1) {
-            $currentDisplayRange = ($currentPage - 1)*10;
-        } else {
-            $currentDisplayRange = 1;
-        }
-
-        $endRange = $currentPage * 10;
-
-        if ($totalItems - $endRange < 10 && $totalItems - $endRange < 0) {
-            $endRange = $totalItems;
-        }
-
-        return (string) $currentDisplayRange.'-'.$endRange ;
+        $terms = TaxonomyTerm::get()->filter(['Name:StartsWith:not' => '2']);
+        return $terms;
     }
 
     /**
-     * Title for all news listing pages
+     * Filters date terms from terms
      *
-     * @return void
+     * @return array
      */
-    public function getHeaderName()
+    public function setDates()
     {
-        $headerTitle = TaxonomyDirectory::get()->getHeaderName();
-
-        return $headerTitle;
+        $dates = TaxonomyTerm::get()->filter(['Name:StartsWith' => '2']);
+        return $dates;
     }
 }
