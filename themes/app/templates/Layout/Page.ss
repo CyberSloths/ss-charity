@@ -2,7 +2,6 @@
 <div class="container">
     <div class="row">
         <div class="typography col-lg-8">
-            <p class="lead summary">$Summary</p>
             <% if $FeatureImage && $IsDisplayed %>
                 <picture>
                     <source srcset="$FeatureImage.Fill(1920,1080).URL()" media="(min-width: 992px)" />

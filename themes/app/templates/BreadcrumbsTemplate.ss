@@ -8,5 +8,7 @@
             <% end_if %>
         <% end_loop %>
     </p>
-    <h1 class="breadcrumb__child">$MenuTitle.XML</h1>
+    <% if $ClassName != "App\PageType\TaxonomyDirectory" %>
+        <h1 class="breadcrumb__child">$MenuTitle.XML</h1>
+    <% end_if %>
 <% end_if %>

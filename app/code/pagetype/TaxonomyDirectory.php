@@ -20,7 +20,8 @@ class TaxonomyDirectory extends Page
     /**
      * Stage children for the listing page based of terms
      *
-     * @param boolean $showAll
+     * @param boolean $showAll Flag to show all children pages
+     *
      * @return void
      */
     public function stageChildren($showAll = false)
@@ -36,8 +37,9 @@ class TaxonomyDirectory extends Page
     /**
      * Pass all children of the listing page to stage step
      *
-     * @param boolean $showAll
-     * @param boolean $onlyDeletedFromStage
+     * @param boolean $showAll              Flag to show all children pages
+     * @param boolean $onlyDeletedFromStage Pages not related to term are removed
+     *
      * @return void
      */
     public function liveChildren($showAll = false, $onlyDeletedFromStage = false)

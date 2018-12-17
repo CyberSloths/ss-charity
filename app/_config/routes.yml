@@ -7,3 +7,4 @@ After:
 SilverStripe\Control\Director:
   rules:
     'search//$Action': 'PageController'
+    'news-and-events//$Action': 'App\Controller\CustomTaxonomyDirectoryController'
