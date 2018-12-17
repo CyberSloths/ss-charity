@@ -33,9 +33,7 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
 
     /**
      * Called during construction, this is the method that builds the structure.
-     * Used instead of overriding __construct as we have specific execution order - code that has
      * Used instead of overriding __construct as we have specific execution order
-     * to be run before _and/or_ after this.
      * - code that has to be run before _and/or_ after this.
      *
      * @return void
