@@ -58,6 +58,7 @@ class PageController extends ContentController
             [
                 'Query' => $request->getVar('q'),
                 'SearchResult' => $solrResult,
+                'SearchPageTitle' => "Search Results"
             ]
         )->renderWith(['ResultsPage', 'Page']);
     }
