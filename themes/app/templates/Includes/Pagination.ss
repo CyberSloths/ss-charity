@@ -1,5 +1,5 @@
 <% if $MoreThanOnePage %>
-    <div class="d-flex py-4">
+    <div class="d-flex flex-row py-4">
         <p class="pagination__text">
             <a class="pagination__link <% if not $NotFirstPage %>disabled<% end_if %>" href="$BaseHref$PrevLink">
                 &larr;

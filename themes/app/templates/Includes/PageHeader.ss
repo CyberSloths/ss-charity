@@ -1,13 +1,13 @@
 <div class="page-header">
     <div class="container">
-        <% if $ClassName == "SilverStripe\CMS\Model\SiteTree" %>
+        <% if $SearchPageTitle %>
             <div class="row">
                 <div class="col-lg-8">
                     <p class="breadcrumb__parents">
                         <a href="$BaseURL">Home</a>
                         &rsaquo;
                     </p>
-                    <h1 class="breadcrumb__child">Search Results</h1>
+                    <h1 class="breadcrumb__child">$SearchPageTitle</h1>
                     <form class="input-group" action="$absoluteBaseURL\search/SearchForm" method="GET">
                         <input type="text" class="form-control" placeholder="Search..." name="q" aria-label="Search" aria-describedby="search-page-search">
                         <div class="input-group-append">
