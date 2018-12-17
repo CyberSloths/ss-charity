@@ -1,7 +1,6 @@
 <?php
 
 use SilverStripe\Assets\Image;
-use SilverStripe\ORM\PaginatedList;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\TextareaField;
