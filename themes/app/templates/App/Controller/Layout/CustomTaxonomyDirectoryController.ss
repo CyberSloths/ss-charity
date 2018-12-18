@@ -4,7 +4,7 @@
         <div class="typography col-lg-8">
             <p class="results__count">Displaying {$PaginatedPages.FirstItem} - {$PaginatedPages.LastItem} of {$PaginatedPages.TotalItems}</p>
             <% if $ClassName == SilverStripe\CMS\Model\SiteTree && $Title != '' %>
-                <p>Results for "$Title"</p>
+                <p>$checkTitle($Title)</p>
             <% end_if %>
             <% loop $PaginatedPages %>
                 <a href="$Link"><h2>$Title</h2></a>
