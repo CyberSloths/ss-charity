@@ -1,3 +1,7 @@
+.accommodation__step {
+    word-spacing: 9999999px;
+}
+
 .accommodation {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -6,13 +10,16 @@
 .accommodation__desc {
     display: inline-block;
     padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 
 .accommodation__arrow {
-    padding-right: 15px;
+    padding-right: 30px;
     padding-left: 15px;
     padding-top: 0;
-    width: 60px;
+    width: 70px;
     transform: rotate(90deg);
 }
 
@@ -26,13 +33,15 @@
 }
 
 .accommodation__heading {
-    padding-bottom: 0;
+    padding-bottom: 15px;
 }
 
 @include media-breakpoint-up(sm) {
     .accommodation__arrow {
+        padding-right: 0;
+        padding-left: 0;
         padding-top: 80px;
-        width: 60px;
+        width: 35px;
         transform: rotate(0deg);
     }
 
@@ -54,6 +63,11 @@
     .accommodation__arrow-frame {
         padding-left: 0%;
         padding-right: 0%;
+    }
+
+    .accommodation__desc {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 

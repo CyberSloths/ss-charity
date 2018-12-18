@@ -9,7 +9,7 @@
 
 .important-items__box {
     border: 3px solid $green;
-    padding: 25px 15px;
+    padding: 25px 30px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -31,6 +31,7 @@
 
     .important-items__box {
         margin-bottom: 0;
+        padding: 25px 15px;
     }
 
     .important-items__desc {

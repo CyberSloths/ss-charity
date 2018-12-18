@@ -28,7 +28,7 @@ h1 {
 }
 
 .banner__heading {
-    padding-top: 80%;
+    padding-top: 90%;
 }
 
 .banner {
@@ -38,7 +38,7 @@ h1 {
 
 @media (min-width: 320px) {
     .banner__heading {
-        padding-top: 80%;
+        padding-top: 90%;
     }
 }
 
@@ -50,15 +50,11 @@ h1 {
 
 @media (min-width: 442px) {
     .banner__heading {
-        padding-top: 30%;
+        padding-top: 35%;
     }
 }
 
 @include media-breakpoint-up(sm) {
-    .banner__heading {
-        padding-top: 30%;
-    }
-
     .banner__text {
         padding-top: 3%;
         padding-bottom: 3%;
