@@ -55,7 +55,7 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
     {
         $termString = $request->param('ID');
 
-        $this->pages = NewsPage::get();
+        $this->pages = NewsPage::get()->sort('Created', 'desc');
 
         $terms = $this->getTerms();
         $dates = $this->getDates();
@@ -90,7 +90,7 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
         // Used to handle empty ID requests
         $title = TaxonomyTerm::get()->byID($termID) ? TaxonomyTerm::get()->byID($termID)->Name : '';
 
-        $this->pages = Page::get()->filter(['Terms.ID' => $termID]);
+        $this->pages = Page::get()->filter(['Terms.ID' => $termID])->sort('Created', 'desc');
         $terms = $this->getTerms();
         $dates = $this->getDates();
         $newsTitle = $this->getNewsTitle();
