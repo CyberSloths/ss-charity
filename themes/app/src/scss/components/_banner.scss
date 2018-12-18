@@ -71,7 +71,7 @@ h1 {
     }
 
     .banner__image {
-        width: 45%;
+        width: 50%;
         height: 100%;
     }
 
@@ -109,7 +109,7 @@ h1 {
 
 @include media-breakpoint-up(xl) {
     .banner__image {
-        width: 45%;
+        width: 50%;
         height: 100%;
     }
 }
