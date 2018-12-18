@@ -24,14 +24,14 @@
     font-weight: $font-weight-semibold;
 }
 
-.main-footer__sentence2 p {
-    text-decoration: underline;
-    font-weight: $font-weight-semibold;
-    padding-bottom: 10px;
-}
-
 .main-footer__sentence2 {
     margin-top: 0;
+
+    p {
+        text-decoration: underline;
+        font-weight: $font-weight-semibold;
+        padding-bottom: 10px;
+    }
 }
 
 @include media-breakpoint-up(sm) {
