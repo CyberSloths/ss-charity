@@ -45,10 +45,6 @@
 }
 
 @include media-breakpoint-up(md) {
-    .main-footer__sentence2 {
-        margin-top: -70px;
-    }
-
     .main-footer__text {
         font-size: $font-size-xxxs;
     }
