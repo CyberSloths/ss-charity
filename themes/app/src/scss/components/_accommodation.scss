@@ -78,12 +78,12 @@
     }
 
     .accommodation__heading {
-        padding-bottom: 20px;
+        padding-bottom: 50px;
     }
 
     .accommodation {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
 }
 
@@ -102,10 +102,6 @@
     .accommodation__stage {
         padding-top: 0;
     }
-
-    .accommodation__heading {
-        padding-bottom: 20px;
-    }
 }
 
 @include media-breakpoint-up(xl) {
@@ -122,9 +118,5 @@
 
     .accommodation__stage {
         padding-top: 0;
-    }
-
-    .accommodation__heading {
-        padding-bottom: 20px;
     }
 }

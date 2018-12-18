@@ -1,6 +1,6 @@
 .important-items {
     background-color: $white-sand;
-    padding: 50px 0;
+    padding: 70px 0;
 }
 
 .d-flex {
@@ -8,8 +8,8 @@
 }
 
 .important-items__box {
-    background-color: $grey;
-    padding: 10px 0;
+    border: 3px solid $green;
+    padding: 25px 15px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -24,7 +24,6 @@
     }
 
     .important-items__box {
-        padding: 10px;
         margin-bottom: 0;
     }
 
