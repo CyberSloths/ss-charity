@@ -1,5 +1,12 @@
+.locations__frame {
+    padding-top: 0;
+    padding-bottom: 70px;
+}
+
 .location__heading {
     margin-left: 0;
+    padding-bottom: 20px;
+    padding-top: 40px;
 }
 
 .loaction__description {
@@ -34,18 +41,22 @@
 }
 
 .locations {
-    background-color: $sand;
+    border-top: 1px solid $sand;
     padding-top: 226px;
     position: relative;
 }
 
 @media (min-width: 358px) {
     .location__sm-image {
-        height: 60%;
+        height: 50%;
     }
 
     .locations {
-        padding-top: 300px;
+        padding-top: 280px;
+    }
+
+    .location__heading {
+        padding-top: 0;
     }
 }
 
@@ -58,6 +69,17 @@
 
     .location__sm-image {
         display: block;
+    }
+
+    .location__heading {
+        margin-left: 0;
+        padding-bottom: 20px;
+        padding-top: 0;
+    }
+
+    .locations__frame {
+        padding-top: 0;
+        padding-bottom: 70px;
     }
 }
 
@@ -88,6 +110,11 @@
     .locations {
         padding-top: 0;
     }
+
+    .locations__frame {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
 }
 
 @include media-breakpoint-up(lg) {
@@ -116,6 +143,10 @@
 
     .locations {
         padding-top: 0;
+    }
+
+    .locations__text {
+        padding-right: 60px;
     }
 }
 

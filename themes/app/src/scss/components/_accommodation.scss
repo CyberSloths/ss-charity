@@ -1,23 +1,26 @@
+.accommodation__step {
+    word-spacing: 9999999px;
+}
+
 .accommodation {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .accommodation__desc {
     display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 
 .accommodation__arrow {
-    padding-bottom: 0;
+    padding-right: 30px;
+    padding-left: 15px;
     padding-top: 0;
-    width: 30px;
+    width: 70px;
     transform: rotate(90deg);
-}
-
-.accommodation__desc h3 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 0%;
 }
 
 .accommodation__icon {
@@ -30,20 +33,16 @@
 }
 
 .accommodation__heading {
-    padding-bottom: 0;
+    padding-bottom: 15px;
 }
 
 @include media-breakpoint-up(sm) {
     .accommodation__arrow {
+        padding-right: 0;
+        padding-left: 0;
         padding-top: 80px;
-        width: 40px;
+        width: 35px;
         transform: rotate(0deg);
-    }
-
-    .accommodation__desc h3 {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-bottom: 0%;
     }
 
     .accommodation__icon {
@@ -58,25 +57,27 @@
     }
 
     .accommodation {
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
 
     .accommodation__arrow-frame {
         padding-left: 0%;
         padding-right: 0%;
     }
+
+    .accommodation__desc {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 @include media-breakpoint-up(md) {
     .accommodation__arrow {
+        padding-right: 0;
+        padding-left: 0;
         padding-top: 80px;
-        width: 40px;
+        width: 35px;
         transform: rotate(0deg);
-    }
-
-    .accommodation__desc h3 {
-        padding-top: 30px;
-        padding-bottom: 30px;
     }
 
     .accommodation__icon {
@@ -91,11 +92,12 @@
     }
 
     .accommodation__heading {
-        padding-bottom: 20px;
+        padding-bottom: 50px;
     }
 
     .accommodation {
-        padding-bottom: 0;
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
 }
 
@@ -106,11 +108,6 @@
         transform: rotate(0deg);
     }
 
-    .accommodation__desc h3 {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
     .accommodation__icon {
         width: 202;
         height: 202;
@@ -118,14 +115,6 @@
 
     .accommodation__stage {
         padding-top: 0;
-    }
-
-    .accommodation__heading {
-        padding-bottom: 20px;
-    }
-
-    .accommodation {
-        padding-bottom: 0;
     }
 }
 
@@ -136,11 +125,6 @@
         transform: rotate(0deg);
     }
 
-    .accommodation__desc h3 {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-
     .accommodation__icon {
         width: 202px;
         height: 202px;
@@ -148,13 +132,5 @@
 
     .accommodation__stage {
         padding-top: 0;
-    }
-
-    .accommodation__heading {
-        padding-bottom: 20px;
-    }
-
-    .accommodation {
-        padding-bottom: 0;
     }
 }

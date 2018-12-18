@@ -28,37 +28,33 @@ h1 {
 }
 
 .banner__heading {
-    padding-top: 80%;
+    padding-top: 90%;
 }
 
 .banner {
-    background-color: $grey;
+    background-color: $light-sand;
     padding: 16px 0 15px;
 }
 
 @media (min-width: 320px) {
     .banner__heading {
-        padding-top: 80%;
+        padding-top: 90%;
     }
 }
 
 @media (min-width: 377px) {
     .banner__heading {
-        padding-top: 40%;
+        padding-top: 50%;
     }
 }
 
 @media (min-width: 442px) {
     .banner__heading {
-        padding-top: 30%;
+        padding-top: 40%;
     }
 }
 
 @include media-breakpoint-up(sm) {
-    .banner__heading {
-        padding-top: 30%;
-    }
-
     .banner__text {
         padding-top: 3%;
         padding-bottom: 3%;
@@ -83,8 +79,8 @@ h1 {
         padding: 20px 0;
     }
 
-    h1 {
-        font-size: 60px;
+    .banner__text {
+        padding-right: 60px;
     }
 }
 
@@ -102,7 +98,7 @@ h1 {
     }
 
     .banner__image {
-        width: 45%;
+        width: 50%;
         height: 100%;
     }
 
