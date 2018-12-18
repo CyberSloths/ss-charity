@@ -1,6 +1,6 @@
 .important-items {
     background-color: $white-sand;
-    padding: 70px 0;
+    padding: 0;
 }
 
 .d-flex {
@@ -16,6 +16,12 @@
 
 .important-items__desc {
     display: none;
+}
+
+@include media-breakpoint-up(sm) {
+    .important-items {
+        padding: 70px 0;
+    }
 }
 
 @include media-breakpoint-up(md) {

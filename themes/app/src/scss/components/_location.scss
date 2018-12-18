@@ -1,5 +1,5 @@
 .locations__frame {
-    padding-top: 70px;
+    padding-top: 0;
     padding-bottom: 70px;
 }
 
@@ -46,11 +46,11 @@
 
 @media (min-width: 358px) {
     .location__sm-image {
-        height: 60%;
+        height: 50%;
     }
 
     .locations {
-        padding-top: 300px;
+        padding-top: 280px;
     }
 }
 
@@ -63,6 +63,10 @@
 
     .location__sm-image {
         display: block;
+    }
+
+    .locations__frame {
+        padding-top: 70px;
     }
 }
 
