@@ -1,66 +1,51 @@
 <template>
     <nav class="main-nav">
-        <div class="container">
-            <div class="main-nav__top-menu row justify-content-between">
+        <div class="main-nav__custom-container container">
+            <div class="main-nav__top-menu justify-content-between row">
                 <slot name="logo"/>
-                <div class="main-nav__right-menu col-md-6 col-2">
-                    <button v-if="isTablet"
-                        class="main-nav__menu-hamburger"
-                        @click="hamClicked" type="button">
-                        &#9776;
-                    </button>
-                    <div v-if="!isMobile" class="main-nav__slot-group">
+                <div class="main-nav__right-menu col-lg-6">
+                    <div class="main-nav__non-desktop-display main-nav__ham-container">
+                        <button class="main-nav__menu-hamburger"
+                            @click="hamClicked" type="button">
+                            <slot name="hamburger"/>
+                        </button>
+                    </div>
+                    <div class="main-nav__slot-group">
                         <slot name="form"/>
-                        <slot v-if="!isTablet" name="button"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div v-if="menuDisplay" class="main-nav__main-menu">
-            <div v-if="isMobile" class="main-nav__main-items">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <slot name="form"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <slot v-if="isTablet" name="pages-mobile"/>
-            <slot v-else-if="!isTablet" name="pages-desktop"/>
-            <div v-if="isTablet" class="main-nav__main-items">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
+                        <div class="main-nav__desktop-display">
                             <slot name="button"/>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="main-nav__main-menu">
+            <div :class="['main-nav__main-items', 'main-nav__mobile-display',
+                          'main-nav__pages-mobile',
+                        { 'main-nav__pages-mobile--active': menuDisplay }]">
+                <slot name="form"/>
+            </div>
+            <div :class="['main-nav__pages-mobile',
+                        { 'main-nav__pages-mobile--active': menuDisplay }]">
+                <slot name="pages-mobile"/>
+            </div>
+            <div class="main-nav__desktop-display">
+                <slot name="pages-desktop"/>
+            </div>
+            <div :class="['main-nav__main-items', 'main-nav__pages-mobile',
+                        { 'main-nav__pages-mobile--active': menuDisplay }]">
+                <slot name="button"/>
+            </div>
+        </div>
     </nav>
 </template>
 
 <script>
-    const tablet = 768;
-    const desktop = 992;
-
     export default {
         name: 'main-nav',
         data: () => ({
-            isMobile: document.body.clientWidth < tablet,
-            isTablet: document.body.clientWidth < desktop,
-            menuDisplay: document.body.clientWidth >= desktop,
+            menuDisplay: false,
         }),
-        mounted() {
-            this.$nextTick(() => {
-                window.addEventListener('resize', () => {
-                    this.isMobile = document.body.clientWidth < tablet;
-                    this.isTablet = document.body.clientWidth < desktop;
-                    this.menuDisplay = document.body.clientWidth >= desktop;
-                });
-            });
-        },
         methods: {
             hamClicked() {
                 this.menuDisplay = !this.menuDisplay;
