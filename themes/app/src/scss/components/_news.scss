@@ -1,3 +1,18 @@
+.news {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.news__date {
+    margin-bottom: 0;
+    font-size: $font-size-xxxxs;
+}
+
+.news__summary {
+    margin-top: 0;
+    padding-top: 10px;
+}
+
 .news__base-alerts {
     flex-direction: column;
 }
@@ -11,5 +26,16 @@
 @include media-breakpoint-up(md) {
     .news__base-alerts {
         flex-direction: row;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .news__sidebar {
+        margin-top: 20px;
+    }
+
+    .news {
+        padding-top: 45px;
+        padding-bottom: 50px;
     }
 }
