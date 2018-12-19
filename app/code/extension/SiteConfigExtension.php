@@ -105,6 +105,9 @@ class SiteConfigExtension extends DataExtension
                 ), TextField::create(
                     'FooterSentence2',
                     'Footer Sentence 2'
+                ), TextField::create(
+                    'FooterSentence2Link',
+                    'Footer Sentence 2 Link'
                 ), $footerLogo = UploadField::create(
                     'FooterLogo',
                     'Footer Logo'
