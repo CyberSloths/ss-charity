@@ -1,19 +1,20 @@
 .locations__frame {
     padding-top: 0;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
 }
 
 .location__heading {
     margin-left: 0;
-    padding-bottom: 20px;
     padding-top: 40px;
+    padding-bottom: 20px;
 }
 
-.loaction__description {
+.location__description {
     display: none;
+    padding-bottom: 18px;
 }
 
-.loaction__button {
+.location__button {
     margin-left: 0;
     margin-bottom: 35px;
 }
@@ -41,7 +42,7 @@
 }
 
 .locations {
-    border-top: 1px solid $sand;
+    border-top: none;
     padding-top: 226px;
     position: relative;
 }
@@ -73,7 +74,6 @@
 
     .location__heading {
         margin-left: 0;
-        padding-bottom: 20px;
         padding-top: 0;
     }
 
@@ -96,19 +96,21 @@
 
     .location__heading {
         margin-left: 30px;
+        padding-bottom: 0;
     }
 
-    .loaction__description {
+    .location__description {
         margin-left: 30px;
         display: block;
     }
 
-    .loaction__button {
+    .location__button {
         margin-left: 30px;
     }
 
     .locations {
         padding-top: 0;
+        border-top: 1px solid $sand;
     }
 
     .locations__frame {
@@ -132,12 +134,12 @@
         margin-left: 80px;
     }
 
-    .loaction__description {
+    .location__description {
         margin-left: 80px;
         display: block;
     }
 
-    .loaction__button {
+    .location__button {
         margin-left: 80px;
     }
 
@@ -165,13 +167,13 @@
         margin-left: 80px;
     }
 
-    .loaction__description {
+    .location__description {
         margin-left: 80px;
         font-size: medium;
         display: block;
     }
 
-    .loaction__button {
+    .location__button {
         margin-left: 80px;
     }
 

@@ -1,6 +1,7 @@
 .important-items {
-    background-color: $white-sand;
-    padding: 0;
+    background-color: $light-sand;
+    padding-top: 70px;
+    padding-bottom: 50px;
 }
 
 .d-flex {
@@ -13,10 +14,32 @@
     padding: 25px 30px;
     margin-bottom: 20px;
     text-align: center;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 .important-items__desc {
     display: none;
+}
+
+.important-item__headers {
+    &::after {
+        content: '';
+        background: url('../dist/images/arrow-intext.svg') center 12px no-repeat;
+
+        @include media-breakpoint-up(lg) {
+            background: url('../dist/images/arrow-intext.svg') center 15px no-repeat;
+        }
+
+        padding-left: 30px;
+        display: inline;
+    }
+
+    &:hover::after {
+        background-image: url('../dist/images/arrow-intext-link.svg');
+    }
 }
 
 @include media-breakpoint-up(sm) {
@@ -32,7 +55,7 @@
 
     .important-items__box {
         margin-bottom: 0;
-        padding: 25px 15px;
+        padding: 25px;
     }
 
     .important-items__desc {
