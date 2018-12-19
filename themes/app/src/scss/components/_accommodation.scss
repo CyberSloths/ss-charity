@@ -19,11 +19,11 @@
     &:hover {
         color: $navy-blue;
         text-decoration: none;
-    }
 
-    &:hover .accommodation__step {
-        color: $navy-blue;
-        text-decoration: underline;
+        .accommodation__step {
+            color: $navy-blue;
+            text-decoration: underline;
+        }
     }
 }
 
