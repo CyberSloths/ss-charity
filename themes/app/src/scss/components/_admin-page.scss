@@ -1,0 +1,50 @@
+.admin-page {
+    margin: 55px 0 65px;
+
+    .message {
+        font-size: $font-size-xxs;
+        margin-bottom: 40px;
+    }
+}
+
+#MemberLoginForm_LoginForm {
+    @extend .typography;
+
+    div {
+        &.field {
+            margin-bottom: 25px;
+        }
+    }
+
+    input {
+        &.text,
+        &.action {
+            @extend .form-control;
+        }
+
+        &.text {
+            font-weight: $font-weight-regular;
+            font-size: $font-size-xxs;
+            border-color: $grey;
+            border-width: 1px;
+            color: $grey;
+
+            &:focus {
+                border-color: lighten($link-blue, 30%);
+                box-shadow: 0 0 0 0.15rem lighten($link-blue, 30%);
+                color: $grey;
+            }
+        }
+
+        &.action {
+            @extend .btn;
+
+            margin-bottom: 28px;
+            width: initial;
+        }
+    }
+}
+
+#ForgotPassword {
+    margin: 0;
+}
