@@ -1,6 +1,6 @@
 .important-items {
-    background-color: $white-sand;
-    padding: 0;
+    background-color: $light-sand;
+    padding: 70px 0;
 }
 
 .d-flex {
@@ -15,8 +15,23 @@
     text-align: center;
 }
 
+.important-items__box a {
+    text-decoration: none;
+}
+
 .important-items__desc {
     display: none;
+}
+
+.important-item__headers::after {
+    content: '';
+    background: url('../dist/images/arrow-intext.svg') center center no-repeat;
+    padding-left: 30px;
+    display: inline;
+
+    &:hover {
+      background-image: url('../dist/images/arrow-intext-link.svg');
+    }
 }
 
 @include media-breakpoint-up(sm) {
@@ -32,7 +47,7 @@
 
     .important-items__box {
         margin-bottom: 0;
-        padding: 25px 15px;
+        padding: 25px 25px;
     }
 
     .important-items__desc {

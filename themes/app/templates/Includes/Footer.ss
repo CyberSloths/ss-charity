@@ -2,14 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-3 col-lg-4 col-sm-6">
-                <p class="main-footer__text main-footer__info">
-                    <img class="main-footer__icons" src="$ThemeDir/dist/images/phone.svg" alt="Phone icon"/>
-                    $SiteConfig.PhoneNumber</br>
-                    <img class="main-footer__icons" src="$ThemeDir/dist/images/email.svg" alt="Email icon"/>
-                    $SiteConfig.Email</br>
-                    <img class="main-footer__icons" src="$ThemeDir/dist/images/facebook.svg" alt="Facebook icon"/>
-                    $SiteConfig.Facebook
-                </p>
+                    <div class="main-footer__info"><img class="main-footer__icons" src="$ThemeDir/dist/images/phone.svg" alt="Phone icon"/><p class="main-footer__text main-footer__details">$SiteConfig.PhoneNumber</p></div>
+                    <div class="main-footer__info"><img class="main-footer__icons" src="$ThemeDir/dist/images/email.svg" alt="Email icon"/><p class="main-footer__text main-footer__details">$SiteConfig.Email</p></div>
+                    <div class="main-footer__info"><img class="main-footer__icons" src="$ThemeDir/dist/images/facebook.svg" alt="Facebook icon"/><p class="main-footer__text main-footer__details">$SiteConfig.Facebook</p></div>
             </div>
             <div class="col-xl-3 col-lg-4 col-sm-6 main-footer__sentence1">
                 <p class="main-footer__text">$SiteConfig.FooterSentence1</p>
