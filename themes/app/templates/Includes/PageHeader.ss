@@ -5,7 +5,7 @@
                 <div class="col-lg-8">
                     <p class="breadcrumb__parents">
                         <a href="$BaseURL">Home</a>
-                        &rsaquo;
+                        <span class="breadcrumb__arrow">&rsaquo;</span>
                     </p>
                     <h1 class="breadcrumb__child">$SearchPageTitle</h1>
                     <form class="input-group" action="$absoluteBaseURL\search/SearchForm" method="GET">
