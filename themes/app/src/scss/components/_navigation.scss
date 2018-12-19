@@ -1,9 +1,3 @@
-.main-nav {
-    border-color: $sand;
-    border-style: solid;
-    border-width: 0 0 1px;
-}
-
 .main-nav__top-menu {
     align-items: center;
     padding: 18px 0;
@@ -40,7 +34,6 @@
 .main-nav__main-menu {
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(80, 80, 80, 0.4);
-    margin-top: 1.4px;
     position: absolute;
     width: 100%;
     z-index: 1;
@@ -55,6 +48,10 @@
     border-color: $sand;
     border-style: solid;
     border-width: 0 0 1px;
+
+    &:first-child {
+        border-width: 1px 0 1px;
+    }
 
     li {
         list-style: none;
@@ -197,10 +194,6 @@
 }
 
 @include media-breakpoint-up(lg) {
-    .main-nav {
-        border-style: none;
-    }
-
     .main-nav__pages-mobile--active {
         display: none;
     }
