@@ -13,10 +13,10 @@
     padding: 25px 30px;
     margin-bottom: 20px;
     text-align: center;
-}
 
-.important-items__box a {
-    text-decoration: none;
+    a {
+        text-decoration: none;
+    }
 }
 
 .important-items__desc {
@@ -26,7 +26,12 @@
 .important-item__headers {
     &::after {
         content: '';
-        background: url('../dist/images/arrow-intext.svg') center center no-repeat;
+        background: url('../dist/images/arrow-intext.svg') center 12px no-repeat;
+
+        @include media-breakpoint-up(lg) {
+            background: url('../dist/images/arrow-intext.svg') center 15px no-repeat;
+        }
+
         padding-left: 30px;
         display: inline;
     }

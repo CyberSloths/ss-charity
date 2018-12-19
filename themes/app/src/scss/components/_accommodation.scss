@@ -1,5 +1,6 @@
 .accommodation__step {
     word-spacing: 9999999px;
+    text-decoration: none;
 }
 
 .accommodation {
@@ -13,6 +14,17 @@
     padding-bottom: 15px;
     margin-left: 70px;
     margin-right: 70px;
+    text-decoration: none;
+
+    &:hover {
+        color: $navy-blue;
+        text-decoration: none;
+    }
+
+    &:hover .accommodation__step {
+        color: $navy-blue;
+        text-decoration: underline;
+    }
 }
 
 .accommodation__arrow {
@@ -30,6 +42,14 @@
 
 .accommodation__stage {
     padding-top: 20px;
+}
+
+.accommodation__stage-header {
+    text-decoration: none;
+
+    &:hover {
+        color: $navy-blue;
+    }
 }
 
 .accommodation__heading {

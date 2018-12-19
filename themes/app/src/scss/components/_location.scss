@@ -5,12 +5,13 @@
 
 .location__heading {
     margin-left: 0;
-    padding-bottom: 20px;
     padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 .loaction__description {
     display: none;
+    padding-bottom: 18px;
 }
 
 .loaction__button {
@@ -41,7 +42,7 @@
 }
 
 .locations {
-    border-top: 1px solid $sand;
+    border-top: none;
     padding-top: 226px;
     position: relative;
 }
@@ -73,7 +74,6 @@
 
     .location__heading {
         margin-left: 0;
-        padding-bottom: 20px;
         padding-top: 0;
     }
 
@@ -96,6 +96,7 @@
 
     .location__heading {
         margin-left: 30px;
+        padding-bottom: 0;
     }
 
     .loaction__description {
@@ -109,6 +110,7 @@
 
     .locations {
         padding-top: 0;
+        border-top: 1px solid $sand;
     }
 
     .locations__frame {
