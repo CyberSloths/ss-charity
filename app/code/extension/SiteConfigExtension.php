@@ -27,6 +27,7 @@ class SiteConfigExtension extends DataExtension
         'FooterSentence2' => 'Varchar',
         'AlertTitle' => 'Varchar',
         'AlertContent' => 'Text',
+        'FacebookLink' => 'Varchar',
     ];
 
     /**
@@ -72,7 +73,10 @@ class SiteConfigExtension extends DataExtension
                 ), TextField::create(
                     'Facebook',
                     'Facebook'
-                )
+                ), TextField::create(
+                    'FacebookLink',
+                    'Facebook Link'
+                )->setDescription('Full link to facebook page required.')
             ]
         );
 

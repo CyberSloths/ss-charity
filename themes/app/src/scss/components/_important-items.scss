@@ -23,14 +23,16 @@
     display: none;
 }
 
-.important-item__headers::after {
-    content: '';
-    background: url('../dist/images/arrow-intext.svg') center center no-repeat;
-    padding-left: 30px;
-    display: inline;
+.important-item__headers {
+    &::after {
+        content: '';
+        background: url('../dist/images/arrow-intext.svg') center center no-repeat;
+        padding-left: 30px;
+        display: inline;
+    }
 
-    &:hover {
-      background-image: url('../dist/images/arrow-intext-link.svg');
+    &:hover::after {
+        background-image: url('../dist/images/arrow-intext-link.svg');
     }
 }
 
