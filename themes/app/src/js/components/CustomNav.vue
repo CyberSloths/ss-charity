@@ -19,17 +19,21 @@
                 </div>
             </div>
         </div>
-        <div :class="['main-nav__main-menu', { 'main-nav__main-menu--active': menuDisplay }]">
-            <div class="main-nav__mobile-display main-nav__main-items">
+        <div class="main-nav__main-menu">
+            <div :class="['main-nav__main-items', 'main-nav__mobile-display',
+                          'main-nav__pages-mobile',
+                        { 'main-nav__pages-mobile--active': menuDisplay }]">
                 <slot name="form"/>
             </div>
-            <div class="main-nav__non-desktop-display">
+            <div :class="['main-nav__pages-mobile',
+                        { 'main-nav__pages-mobile--active': menuDisplay }]">
                 <slot name="pages-mobile"/>
             </div>
             <div class="main-nav__desktop-display">
                 <slot name="pages-desktop"/>
             </div>
-            <div class="main-nav__non-desktop-display main-nav__main-items">
+            <div :class="['main-nav__main-items', 'main-nav__pages-mobile',
+                        { 'main-nav__pages-mobile--active': menuDisplay }]">
                 <slot name="button"/>
             </div>
         </div>
@@ -37,12 +41,10 @@
 </template>
 
 <script>
-    const desktop = 992;
-
     export default {
         name: 'main-nav',
         data: () => ({
-            menuDisplay: document.body.clientWidth >= desktop,
+            menuDisplay: false,
         }),
         methods: {
             hamClicked() {

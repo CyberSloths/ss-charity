@@ -40,7 +40,6 @@
 .main-nav__main-menu {
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(80, 80, 80, 0.4);
-    display: none;
     margin-top: 1.4px;
     position: absolute;
     width: 100%;
@@ -50,10 +49,6 @@
         margin-bottom: 0;
         padding-inline-start: 0;
     }
-}
-
-.main-nav__main-menu--active {
-    display: block;
 }
 
 .main-nav__main-items {
@@ -116,6 +111,14 @@
 
 .main-nav__slot-group {
     display: none;
+}
+
+.main-nav__pages-mobile {
+    display: none;
+}
+
+.main-nav__pages-mobile--active {
+    display: block;
 }
 
 @include media-breakpoint-up(sm) {
@@ -199,8 +202,8 @@
         border-style: none;
     }
 
-    .main-nav__main-menu--active {
-        display: block;
+    .main-nav__pages-mobile--active {
+        display: none;
     }
 
     .main-nav__non-desktop-display {
