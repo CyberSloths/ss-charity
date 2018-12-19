@@ -12,7 +12,7 @@
             <a class="alert-box__tags btn" href='$BaseHref\news-and-events/' role="button"><p>All</p></a>
         <% end_if %>
         <% loop $Terms %>
-            <a class="alert-box__tags btn" href='$BaseHref\news-and-events/showTags/$ID' role="button"><p>$Name</p></a>
+            <div id="tag-$ID"><a class="alert-box__tags btn" href='$BaseHref\news-and-events/showTags/$ID' role="button"><p>$Name</p></a></div>
         <% end_loop %>
     <% else %>
         <p>No associated tags.</p>
