@@ -8,10 +8,12 @@
                         <span class="breadcrumb__arrow">&rsaquo;</span>
                     </p>
                     <h1 class="breadcrumb__child">$SearchPageTitle</h1>
-                    <form class="input-group" action="$absoluteBaseURL\search/SearchForm" method="GET">
-                        <input type="text" class="form-control" placeholder="Search..." name="q" aria-label="Search" aria-describedby="search-page-search">
+                    <form class="input-group search-page__search" action="$absoluteBaseURL\search/SearchForm" method="GET">
+                        <input type="text" class="form-control" placeholder="Search" name="q" aria-label="Search" aria-describedby="search-page-search">
                         <div class="input-group-append">
-                            <button id="search-page-search" class="btn btn-outline-secondary" type="submit" aria-label="Search button">&#x1F50D;</button>
+                            <button id="search-page-search" class="btn search-page__search-button" type="submit" aria-label="Search button">
+                                <img class="search-page__search-logo" src="$ThemeDir/dist/images/search-grey.svg" alt="Search Icon (Grey)"/>
+                            </button>
                         </div>
                     </form>
                 </div>
