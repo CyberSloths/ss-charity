@@ -1,5 +1,5 @@
 <% if $MoreThanOnePage %>
-    <div class="d-flex flex-row pagination">
+    <div class="d-flex flex-row align-items-center pagination">
         <a class="pagination__link <% if not $NotFirstPage %>disabled<% end_if %>" href="$BaseHref$PrevLink">
             <img class="pagination__prev"
                 src="<% if not $NotFirstPage %>$ThemeDir/dist/images/arrow-sand.svg<% else %>$ThemeDir/dist/images/arrow.svg<% end_if %>"
