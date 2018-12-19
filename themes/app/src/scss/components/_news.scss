@@ -17,6 +17,17 @@
     flex-direction: column;
 }
 
+.results__count {
+    font-size: $font-size-xxxs;
+    padding-top: 45px;
+    padding-bottom: 30px;
+}
+
+.news-listing__title {
+    font-size: $font-size-m;
+    color: $link-blue;
+}
+
 @include media-breakpoint-up(sm) {
     .news__base-alerts {
         flex-direction: column;

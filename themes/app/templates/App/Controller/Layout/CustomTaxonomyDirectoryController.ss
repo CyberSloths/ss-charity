@@ -7,9 +7,9 @@
                 <p>$checkTitle($Title)</p>
             <% end_if %>
             <% loop $PaginatedPages %>
-                <a href="$Link"><h2>$Title</h2></a>
+                <a href="$Link"><h2 class="news-listing__title">$Title</h2></a>
                 <p>$Created.Format(dd) $Created.Month $Created.Year<p>
-                <p class="typography lead summary">$Summary</p>
+                <p class="typography summary">$Summary</p>
             <% end_loop %>
             <% with $PaginatedPages %>
                     <% include Pagination %>
