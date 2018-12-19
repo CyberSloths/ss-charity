@@ -26,6 +26,12 @@
 .news-listing__title {
     font-size: $font-size-m;
     color: $link-blue;
+    text-decoration: none;
+    font-weight: $font-weight-regular;
+}
+
+.news-listing__link:hover {
+    text-decoration: none;
 }
 
 @include media-breakpoint-up(sm) {
