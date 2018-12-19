@@ -1,11 +1,18 @@
 .news {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 55px;
+    padding-bottom: 0;
+}
+
+.news__date {
+    font-size: $font-size-xxxxs;
+    color: $grey;
+    margin-bottom: 4px;
 }
 
 .news__summary {
     margin-top: 0;
-    padding-top: 10px;
+    padding-top: 0;
+    padding-bottom: 50px;
 }
 
 .news__base-alerts {
@@ -59,12 +66,8 @@
 }
 
 @include media-breakpoint-up(lg) {
-    .news__sidebar {
-        margin-top: 20px;
-    }
-
     .news {
-        padding-top: 45px;
+        padding-top: 55px;
         padding-bottom: 50px;
     }
 }
