@@ -27,6 +27,32 @@
     color: $navy-blue;
 }
 
+.search-page__search {
+    margin-top: 28px;
+
+    .form-control {
+        border-color: $sand;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-xxs;
+        color: $grey;
+    }
+}
+
+.search-page__search-button {
+    border-color: $sand;
+    border-width: 0.5px 0.5px 0.5px 0;
+    padding: 10px;
+
+    &:hover {
+        background-color: white;
+    }
+}
+
+.search-page__search-logo {
+    height: $font-size-xxs;
+    width: auto;
+}
+
 @include media-breakpoint-up(sm) {
     .page-header {
         padding: 50px 0;

@@ -1,0 +1,27 @@
+.results-page__main-heading {
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-xl;
+    margin-top: 55px;
+}
+
+.results-page__result-heading {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-m;
+    color: $link-blue;
+    margin-bottom: 6px;
+}
+
+.results-page__result-text {
+    margin-bottom: 25px;
+}
+
+.results-page__alert {
+    margin-bottom: 30px;
+}
+
+@include media-breakpoint-up(lg) {
+    .results-page__alert {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+}

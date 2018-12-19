@@ -1,6 +1,15 @@
+.pagination {
+    padding-top: 35px;
+    padding-bottom: 40px;
+
+    @include media-breakpoint-up(lg) {
+        padding-bottom: 60px;
+    }
+}
+
 .pagination__text {
     margin: 0 8px;
-    padding: 10px;
+    padding: 10px 14px;
 
     &:first-child {
         margin-left: 0;
@@ -10,6 +19,12 @@
     &:last-child {
         margin-right: 0;
         padding: 10px 0;
+    }
+
+    a {
+        font-weight: $font-weight-regular;
+        font-size: $font-size-xs;
+        color: $dark-grey;
     }
 }
 
@@ -22,11 +37,25 @@
 
     &.disabled {
         cursor: not-allowed;
-        color: $sand;
         pointer-events: none;
     }
 
     &:hover {
         text-decoration: none;
     }
+}
+
+.pagination__prev,
+.pagination__next {
+    height: 15px;
+    width: auto;
+}
+
+.pagination__prev {
+    transform: rotate(180deg);
+    margin-right: 10px;
+}
+
+.pagination__next {
+    margin-left: 10px;
 }
