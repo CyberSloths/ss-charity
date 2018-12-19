@@ -1,6 +1,8 @@
 <div class="page-header">
     <div class="container">
-        <% if $SearchPageTitle %>
+        <% if $Form %>
+            <h1 class="breadcrumb__child">Admin Login</h1>
+        <% else_if $SearchPageTitle %>
             <div class="row">
                 <div class="col-lg-8">
                     <p class="breadcrumb__parents">

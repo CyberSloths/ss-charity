@@ -212,21 +212,45 @@ form {
         font-size: $font-size-xxs;
         border-color: $grey;
         border-width: 1px;
+        color: $grey;
 
         &:focus {
             border-color: lighten($link-blue, 30%);
             box-shadow: 0 0 0 0.15rem lighten($link-blue, 30%);
+            color: $grey;
         }
-    }
 
-    // if success
-    input.holder-good {
-        border-color: $success-green;
-        border-width: 2px;
+        // if success
+        &.holder-good {
+            border-color: $success-green;
+            border-width: 2px;
 
-        &:focus {
-            border-color: lighten($success-green, 20%);
-            box-shadow: 0 0 0 0.15rem lighten($success-green, 20%);
+            &:focus {
+                border-color: lighten($success-green, 20%);
+                box-shadow: 0 0 0 0.15rem lighten($success-green, 20%);
+            }
+        }
+
+        // if warning
+        &.holder-warning {
+            border-color: $orange;
+            border-width: 2px;
+
+            &:focus {
+                border-color: lighten($orange, 20%);
+                box-shadow: 0 0 0 0.15rem lighten($orange, 20%);
+            }
+        }
+
+        // if failure
+        &.holder-bad {
+            border-color: $warning-red;
+            border-width: 2px;
+
+            &:focus {
+                border-color: lighten($warning-red, 30%);
+                box-shadow: 0 0 0 0.15rem lighten($warning-red, 30%);
+            }
         }
     }
 
@@ -234,30 +258,8 @@ form {
         color: $success-green;
     }
 
-    // if warning
-    input.holder-warning {
-        border-color: $orange;
-        border-width: 2px;
-
-        &:focus {
-            border-color: lighten($orange, 20%);
-            box-shadow: 0 0 0 0.15rem lighten($orange, 20%);
-        }
-    }
-
     .warning {
         color: $red-orange;
-    }
-
-    // if failure
-    input.holder-bad {
-        border-color: $warning-red;
-        border-width: 2px;
-
-        &:focus {
-            border-color: lighten($warning-red, 30%);
-            box-shadow: 0 0 0 0.15rem lighten($warning-red, 30%);
-        }
     }
 
     .bad {
@@ -393,7 +395,8 @@ table {
         }
     }
 
-    p {
+    p,
+    label {
         &.left {
             text-align: left;
         }
