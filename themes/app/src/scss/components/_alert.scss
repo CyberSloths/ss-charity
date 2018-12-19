@@ -7,6 +7,14 @@ $gap: 25px;
     width: 100%;
 }
 
+.alert-box__title {
+    line-height: $line-height-m;
+}
+
+.alert-box__paragraph {
+    margin-bottom: 8px;
+}
+
 @include media-breakpoint-up(lg) {
     .alert-box {
         margin-top: $gap;
