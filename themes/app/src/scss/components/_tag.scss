@@ -1,0 +1,17 @@
+.tag-box {
+    border: 3px solid $orange;
+    margin-bottom: $gap;
+    padding: $gap;
+    width: 100%;
+}
+
+.tag-box__tag--current {
+    background-color: $orange;
+    color: $white;
+}
+
+@include media-breakpoint-up(lg) {
+    .tag-box {
+        margin-top: $gap;
+    }
+}
