@@ -1,8 +1,6 @@
-$verticalGap: 15px;
-
 .page-header {
-    background-color: silver;
-    padding: $verticalGap 0;
+    background-color: $light-sand;
+    padding: 30px 0;
     text-align: left;
 
     .btn {
@@ -11,10 +9,26 @@ $verticalGap: 15px;
 }
 
 .breadcrumb__parents {
+    margin-bottom: 0;
+
     a {
+        color: $navy-blue;
         font-weight: $font-weight-regular;
         font-size: $font-size-xxxxs;
-        color: $dark-grey;
         text-decoration: underline;
+
+        &:hover {
+            color: $link-blue;
+        }
+    }
+}
+
+.breadcrumb__arrow {
+    color: $navy-blue;
+}
+
+@include media-breakpoint-up(sm) {
+    .page-header {
+        padding: 50px 0;
     }
 }

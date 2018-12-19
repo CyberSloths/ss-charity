@@ -13,3 +13,11 @@
         flex-direction: row;
     }
 }
+
+.alert-box__title {
+    line-height: $line-height-m;
+}
+
+.alert-box__paragraph {
+    margin-bottom: 8px;
+}
