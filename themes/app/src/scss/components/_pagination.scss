@@ -29,7 +29,13 @@
 }
 
 .pagination__pagenum {
-    background-color: $green;
+    &:hover {
+        background-color: $sand;
+    }
+
+    &.current {
+        background-color: $green;
+    }
 }
 
 .pagination__link {

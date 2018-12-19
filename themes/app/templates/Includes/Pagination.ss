@@ -7,12 +7,12 @@
         </a>
         <% loop $PaginationSummary %>
             <% if $CurrentBool %>
-                <p class="pagination__text pagination__pagenum">
+                <p class="pagination__text pagination__pagenum current">
                     <a class="pagination__link" href="$BaseHref$Link" title="View page {$PageNum}">$PageNum</a>
                 </p>
             <% else %>
                 <% if $PageNum %>
-                    <p class="pagination__text <% if $isCurrent %>pagination__pagenum<% end_if %>">
+                    <p class="pagination__text pagination__pagenum">
                         <a class="pagination__link" href="$BaseHref$Link" title="View page {$PageNum}">$PageNum</a>
                     </p>
                 <% else %>
