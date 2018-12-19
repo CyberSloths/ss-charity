@@ -181,10 +181,10 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
             if (is_numeric($title[$i])) {
                 $date .= $title[$i];
             } else {
-                return "News tagged with ".$title;
+                return "News tagged with \"".$title."\"";
             }
         }
 
-        return "News in ".$date;
+        return "News in \"".$date."\"";
     }
 }

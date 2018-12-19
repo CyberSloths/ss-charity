@@ -2,14 +2,14 @@
 <div class="container">
     <div class="row">
         <div class="typography col-lg-8">
-            <p class="results__count">Displaying {$PaginatedPages.FirstItem} - {$PaginatedPages.LastItem} of {$PaginatedPages.TotalItems}</p>
+            <p class="news-listing__count">Displaying {$PaginatedPages.FirstItem} - {$PaginatedPages.LastItem} of {$PaginatedPages.TotalItems}</p>
             <% if $ClassName == SilverStripe\CMS\Model\SiteTree && $Title != '' %>
-                <p>$checkTitle($Title)</p>
+                <p class="news-listing__results">$checkTitle($Title)</p>
             <% end_if %>
             <% loop $PaginatedPages %>
                 <a class="news-listing__link" href="$Link"><h2 class="news-listing__title">$Title</h2></a>
-                <p>$Created.Format(dd) $Created.Month $Created.Year</p>
-                <p class="typography summary">$Summary</p>
+                <p class="news-listing__date">$Created.Format(dd) $Created.Month $Created.Year</p>
+                <p class="news-listing__result-text">$Summary.LimitWordCount(30)</p>
             <% end_loop %>
             <% with $PaginatedPages %>
                     <% include Pagination %>

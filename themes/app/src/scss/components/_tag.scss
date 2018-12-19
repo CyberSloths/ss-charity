@@ -1,17 +1,38 @@
 .tag-box {
-    border: 3px solid $orange;
+    border: 3px solid $green;
     margin-bottom: $gap;
     padding: $gap;
     width: 100%;
-}
+    margin-top: 0;
 
-.tag-box__tag--current {
-    background-color: $orange;
-    color: $white;
+    h2 {
+        font-size: $font-size-xs;
+        font-weight: $font-weight-bold;
+        margin-left: 4px;
+    }
+
+    p {
+        margin-bottom: 0;
+        font-size: $font-size-xxxxs;
+        font-weight: $font-weight-regular;
+        text-transform: lowercase;
+        text-transform: capitalize;
+    }
+
+    .tag-box__link {
+        border-style: none;
+        background-color: $light-sand;
+        margin: 4px;
+    }
+
+    .tag-box__tag--current {
+        background-color: $green;
+    }
 }
 
 @include media-breakpoint-up(lg) {
     .tag-box {
-        margin-top: $gap;
+        margin-top: 55px;
+        margin-bottom: 10px;
     }
 }
