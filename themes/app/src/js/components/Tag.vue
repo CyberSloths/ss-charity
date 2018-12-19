@@ -14,6 +14,11 @@
             if (this.tagID !== '') {
                 const element = document.getElementById(`tag-${this.tagID}`);
                 element.className += ' tag-box__tag--current';
+            } else {
+                let element = document.getElementById('tag-all-years');
+                element.className += ' tag-box__tag--current';
+                element = document.getElementById('tag-all-terms');
+                element.className += ' tag-box__tag--current';
             }
         },
     };
