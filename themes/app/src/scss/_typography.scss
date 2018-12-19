@@ -103,8 +103,8 @@ h1 {
 h2 {
     font-weight: $font-weight-regular;
     font-size: $font-size-xl;
-    line-height: $line-height-s;
     color: $dark-grey;
+    line-height: $line-height-s;
 
     @include media-breakpoint-up(md) {
         font-size: $font-size-xxl;
@@ -114,8 +114,8 @@ h2 {
 h3 {
     font-weight: $font-weight-semibold;
     font-size: $font-size-l;
-    line-height: $line-height-m;
     color: $dark-grey;
+    line-height: $line-height-m;
 
     @include media-breakpoint-up(md) {
         font-size: $font-size-xl;
@@ -125,22 +125,22 @@ h3 {
 h4 {
     font-weight: $font-weight-regular;
     font-size: $font-size-m;
-    line-height: $line-height-l;
     color: $grey;
+    line-height: $line-height-l;
 }
 
 h5 {
     font-weight: $font-weight-bold;
     font-size: $font-size-xs;
-    line-height: $line-height-l;
     color: $grey;
+    line-height: $line-height-l;
 }
 
 h6 {
     font-weight: $font-weight-semibold;
     font-size: $font-size-xxs;
-    line-height: $line-height-l;
     color: $grey;
+    line-height: $line-height-l;
 }
 
 a {
