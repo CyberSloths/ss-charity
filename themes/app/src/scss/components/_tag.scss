@@ -1,6 +1,6 @@
 .tag-box {
     border: 3px solid $green;
-    margin-bottom: $gap;
+    margin-bottom: 30px;
     padding: $gap;
     width: 100%;
     margin-top: 0;
@@ -22,11 +22,15 @@
     .tag-box__link {
         border-style: none;
         background-color: $light-sand;
-        margin: 5px;
+        margin: 5px 2px;
     }
 
     .tag-box__tag--current {
         background-color: $green;
+    }
+
+    .tag-box__tags {
+        padding-top: 25px;
     }
 }
 

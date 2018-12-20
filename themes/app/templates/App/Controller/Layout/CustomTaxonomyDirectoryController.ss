@@ -1,6 +1,6 @@
 <% include PageHeader NewsTitle=$NewsTitle %>
 <div class="container">
-    <div class="row">
+    <div class="news-listing row">
         <div class="typography col-lg-8">
             <p class="news-listing__count">Displaying {$PaginatedPages.FirstItem} - {$PaginatedPages.LastItem} of {$PaginatedPages.TotalItems}</p>
             <% if $ClassName == SilverStripe\CMS\Model\SiteTree && $Title != '' %>

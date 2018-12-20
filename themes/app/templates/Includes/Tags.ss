@@ -1,6 +1,6 @@
 <tag-box>
     <% if $ClassName != "App\PageType\NewsPage" %>
-        <h2>Years</h2>
+        <h2 class="tag-box__years">Years</h2>
         <a id="tag-all-years" class="tag-box__link btn" href='$BaseHref\news-and-events/' role="button">
             <p>All</p>
         </a>
@@ -10,7 +10,7 @@
             </a>
         <% end_loop %>
     <% end_if %>
-    <h2>Tags</h2>
+    <h2 class="tag-box__tags">Tags</h2>
     <% if $Terms%>
         <% if $ClassName != "App\PageType\NewsPage" %>
             <a id="tag-all-terms" class="tag-box__link btn" href='$BaseHref\news-and-events/' role="button">
