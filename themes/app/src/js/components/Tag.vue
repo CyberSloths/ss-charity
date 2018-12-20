@@ -11,6 +11,10 @@
             tagID: window.location.pathname.substr(window.location.pathname.lastIndexOf('/') + 1),
         }),
         mounted() {
+            if (this.tagID !== 'news-and-events-2') {
+                const element = document.querySelector(".main-nav__links-desktop[href='/news-and-events-2/']");
+                element.className += ' current';
+            }
             if (document.getElementsByTagName('body')[0].id === 'App\\PageType\\NewsPage') {
                 const elements = document.getElementsByClassName('tag-box__news');
                 for (let i = 0; i < elements.length; i += 1) {

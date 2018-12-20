@@ -31,7 +31,7 @@
             <div class="d-flex justify-content-between">
                 <% loop $Menu(1) %>
                     <% if $MenuTitle != "Home" %>
-                        <a class="main-nav__links $LinkingMode" href="$Link">
+                        <a class="main-nav__links main-nav__links-desktop $LinkingMode" href="$Link">
                             <span>$MenuTitle</span>
                         </a>
                     <% end_if %>
