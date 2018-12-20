@@ -27,14 +27,13 @@
 .important-item__headers {
     &::after {
         content: '';
+        display: inline;
+        padding-left: 30px;
         background: url('../dist/images/arrow-intext.svg') center 12px no-repeat;
 
         @include media-breakpoint-up(lg) {
             background: url('../dist/images/arrow-intext.svg') center 15px no-repeat;
         }
-
-        padding-left: 30px;
-        display: inline;
     }
 
     &:hover::after {
