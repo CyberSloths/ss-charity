@@ -28,6 +28,7 @@ class SiteConfigExtension extends DataExtension
         'AlertTitle' => 'Varchar',
         'AlertContent' => 'Text',
         'FacebookLink' => 'Varchar',
+        'FooterSentence2Link' => 'Varchar'
     ];
 
     /**
