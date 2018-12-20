@@ -301,7 +301,7 @@ table {
         font-weight: $font-weight-regular;
         font-size: $font-size-xxxs;
 
-        tr:nth-child(2) {
+        tr:nth-child(even) {
             background-color: $light-sand;
         }
     }

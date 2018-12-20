@@ -5,7 +5,7 @@
             <p>All</p>
         </a>
         <% loop $Dates %>
-            <a id="tag-$ID" class="tag-box__link btn" href='$BaseHref\news-and-events/showTags/$ID' role="button">
+            <a id="tag-$ID" class="tag-box__link tag-box__news btn" href='$BaseHref\news-and-events/showTags/$ID' role="button">
                 <p>$Name</p>
             </a>
         <% end_loop %>
@@ -22,7 +22,7 @@
             </a>
         <% end_if %>
         <% loop $Terms %>
-            <a id="tag-$ID" class="tag-box__link btn" href='$BaseHref\news-and-events/showTags/$ID' role="button">
+            <a id="tag-$ID" class="tag-box__link tag-box__news btn" href='$BaseHref\news-and-events/showTags/$ID' role="button">
                 <p>$Name</p>
             </a>
         <% end_loop %>
