@@ -1,0 +1,48 @@
+.tag-box {
+    border: 3px solid $green;
+    margin-bottom: 25px;
+    padding: $gap;
+    width: 100%;
+    margin-top: 0;
+
+    h2 {
+        font-size: $font-size-xs;
+        font-weight: $font-weight-bold;
+        margin-left: 5px;
+        margin-top: 0;
+    }
+
+    p {
+        margin-bottom: 0;
+        font-size: $font-size-xxxxs;
+        font-weight: $font-weight-regular;
+        text-transform: lowercase;
+        text-transform: capitalize;
+    }
+
+    .tag-box__link {
+        border-style: none;
+        background-color: $light-sand;
+        margin: 5px 2px;
+        padding: 10px 15px;
+    }
+
+    .tag-box__tag--current {
+        background-color: $green;
+    }
+
+    .tag-box__tags {
+        padding-top: 25px;
+    }
+
+    .tag-box__tags-news {
+        padding-top: 0;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .tag-box {
+        margin-top: 55px;
+        margin-bottom: 10px;
+    }
+}

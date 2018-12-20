@@ -1,9 +1,9 @@
 <% include PageHeader %>
 <div class="container">
-    <div class="row">
-        <div class="typography col-lg-8">
-            <p>$Created.Format(dd) $Created.Month $Created.Year<p>
-            <p class="lead summary">$Summary</p>
+    <div class="news__frame row">
+        <div class="news typography col-lg-8">
+            <p class="news__date">$Created.Format(dd) $Created.Month $Created.Year</p>
+            <p class="news__summary summary">$Summary</p>
             <% if $FeatureImage && $IsDisplayed %>
                 <picture>
                     <source srcset="$FeatureImage.Fill(1920,1080).URL()" media="(min-width: 992px)" />
@@ -12,7 +12,7 @@
             <% end_if %>
             $Content
         </div>
-        <div class="offset-xl-1 col-xl-3 col-lg-4 col-sm-12">
+        <div class="news__sidebar offset-xl-1 col-xl-3 col-lg-4 col-sm-12">
             <div class="fluid-container">
                 <div class="row">
                     <div class="news__base-alerts col-lg-12 col-md-6 d-flex">

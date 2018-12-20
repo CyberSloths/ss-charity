@@ -1,7 +1,7 @@
 .results-page__main-heading {
     font-weight: $font-weight-semibold;
     font-size: $font-size-xl;
-    margin-top: 55px;
+    margin-top: 35px;
 }
 
 .results-page__result-heading {
@@ -17,6 +17,12 @@
 
 .results-page__alert {
     margin-bottom: 30px;
+}
+
+@include media-breakpoint-up(md) {
+    .results-page__main-heading {
+        margin-top: 55px;
+    }
 }
 
 @include media-breakpoint-up(lg) {

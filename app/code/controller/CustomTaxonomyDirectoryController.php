@@ -166,4 +166,25 @@ class CustomTaxonomyDirectoryController extends TaxonomyDirectoryController
 
         return $newsTitle;
     }
+
+    /**
+     * Returns a customised string regarding if a date or tag is clicked
+     *
+     * @param string $title The term clicked
+     *
+     * @return string
+     */
+    public function checkTitle(string $title)
+    {
+        $length = strlen($title);
+        for ($i = 0, $date = ''; $i < $length; $i++) {
+            if (is_numeric($title[$i])) {
+                $date .= $title[$i];
+            } else {
+                return "News tagged with \"".$title."\"";
+            }
+        }
+
+        return "News in \"".$date."\"";
+    }
 }
