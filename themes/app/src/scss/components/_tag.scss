@@ -1,6 +1,6 @@
 .tag-box {
     border: 3px solid $green;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     padding: $gap;
     width: 100%;
     margin-top: 0;
@@ -9,6 +9,7 @@
         font-size: $font-size-xs;
         font-weight: $font-weight-bold;
         margin-left: 5px;
+        margin-top: 0;
     }
 
     p {
@@ -23,6 +24,7 @@
         border-style: none;
         background-color: $light-sand;
         margin: 5px 2px;
+        padding: 10px 15px;
     }
 
     .tag-box__tag--current {
@@ -31,6 +33,10 @@
 
     .tag-box__tags {
         padding-top: 25px;
+    }
+
+    .tag-box__tags-news {
+        padding-top: 0;
     }
 }
 

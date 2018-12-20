@@ -1,6 +1,6 @@
 <% include PageHeader %>
 <div class="container">
-    <div class="row">
+    <div class="news__frame row">
         <div class="news typography col-lg-8">
             <p class="news__date">$Created.Format(dd) $Created.Month $Created.Year</p>
             <p class="news__summary summary">$Summary</p>

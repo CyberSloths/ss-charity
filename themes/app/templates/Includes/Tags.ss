@@ -10,7 +10,11 @@
             </a>
         <% end_loop %>
     <% end_if %>
-    <h2 class="tag-box__tags">Tags</h2>
+    <% if $ClassName != "App\PageType\NewsPage" %>
+        <h2 class="tag-box__tags">Tags</h2>
+    <% else %>
+        <h2 class="tag-box__tags-news">Tags</h2>
+    <% end_if %>
     <% if $Terms%>
         <% if $ClassName != "App\PageType\NewsPage" %>
             <a id="tag-all-terms" class="tag-box__link btn" href='$BaseHref\news-and-events/' role="button">
