@@ -11,16 +11,17 @@
             tagID: window.location.pathname.substr(window.location.pathname.lastIndexOf('/') + 1),
         }),
         mounted() {
-            if (this.tagID !== 'news-and-events-2') {
-                const element = document.querySelector(".main-nav__links-desktop[href='/news-and-events-2/']");
+            const bodyID = document.getElementsByTagName('body')[0].id;
+            if (bodyID !== 'App\\PageType\\TaxonomyDirectory') {
+                const element = document.getElementById('news-page');
                 element.className += ' current';
             }
-            if (document.getElementsByTagName('body')[0].id === 'App\\PageType\\NewsPage') {
+            if (bodyID === 'App\\PageType\\NewsPage') {
                 const elements = document.getElementsByClassName('tag-box__news');
                 for (let i = 0; i < elements.length; i += 1) {
                     elements[i].className += ' tag-box__tag--current';
                 }
-            } else if (this.tagID === '' || this.tagID === 'news-and-events' || this.tagID === 'news-and-events-2') {
+            } else if (this.tagID === '' || this.tagID === 'news-and-events' || bodyID === 'App\\PageType\\TaxonomyDirectory') {
                 let element = document.getElementById('tag-all-years');
                 element.className += ' tag-box__tag--current';
                 element = document.getElementById('tag-all-terms');

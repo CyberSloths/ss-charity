@@ -16,7 +16,7 @@
         </form>
         <ul slot="pages-mobile">
             <% loop $Menu(1) %>
-                <% if $MenuTitle != "Home" %>
+                <% if $ClassName != "App\PageType\HomePage" %>
                     <div class="main-nav__main-items">
                         <li class="main-nav__lists">
                             <a class="main-nav__links" href="$Link">
@@ -30,8 +30,10 @@
         <div slot="pages-desktop" class="container">
             <div class="d-flex justify-content-between">
                 <% loop $Menu(1) %>
-                    <% if $MenuTitle != "Home" %>
-                        <a class="main-nav__links main-nav__links-desktop $LinkingMode" href="$Link">
+                    <% if $ClassName != "App\PageType\HomePage" %>
+                        <a <% if $ClassName == "App\PageType\TaxonomyDirectory" %>id="news-page"<% end_if %>
+                        class="main-nav__links main-nav__links-desktop $LinkingMode"
+                        href="$Link">
                             <span>$MenuTitle</span>
                         </a>
                     <% end_if %>
