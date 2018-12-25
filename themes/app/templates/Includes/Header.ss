@@ -1,7 +1,7 @@
 <header>
     <main-nav>
         <img slot="hamburger" src="$ThemeDir/dist/images/hamburger.svg" alt="Hamburger Icon"/>
-        <a slot="logo" href="$BaseHref">
+        <a slot="logo" href="$baseURL">
             <picture class="col-lg-6">
                 <img class="main-nav__logo" src="$SiteConfig.HeaderLogo.URL()" alt="Header Logo" />
             </picture>
@@ -16,7 +16,7 @@
         </form>
         <ul slot="pages-mobile">
             <% loop $Menu(1) %>
-                <% if $ClassName != "App\PageType\HomePage" %>
+                <% if $baseURL != $Link %>
                     <div class="main-nav__main-items">
                         <li class="main-nav__lists">
                             <a class="main-nav__links" href="$Link">
@@ -30,7 +30,7 @@
         <div slot="pages-desktop" class="container">
             <div class="d-flex justify-content-between">
                 <% loop $Menu(1) %>
-                    <% if $ClassName != "App\PageType\HomePage" %>
+                    <% if $baseURL != $Link %>
                         <a <% if $ClassName == "App\PageType\TaxonomyDirectory" %>id="news-page"<% end_if %>
                         class="main-nav__links main-nav__links-desktop $LinkingMode"
                         href="$Link">

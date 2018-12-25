@@ -1,6 +1,6 @@
 <% if $Pages %>
     <p class="breadcrumb__parents">
-        <a href="$BaseURL">Home</a>
+        <a href="$baseURL">Home</a>
         <% loop $Pages %>
             <span class="breadcrumb__arrow">&rsaquo;</span>
             <% if not $Last %>

@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <p class="breadcrumb__parents">
-                        <a href="$BaseURL">Home</a>
+                        <a href="$baseURL">Home</a>
                         <span class="breadcrumb__arrow">&rsaquo;</span>
                     </p>
                     <h1 class="breadcrumb__child">$SearchPageTitle</h1>
