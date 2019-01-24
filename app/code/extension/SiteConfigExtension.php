@@ -7,10 +7,8 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
 use Sheadawson\Linkable\Models\Link;
-use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\TextareaField;
 use Sheadawson\Linkable\Forms\LinkField;
-use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
 class SiteConfigExtension extends DataExtension

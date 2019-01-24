@@ -6,9 +6,7 @@ use Page;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\TextField;
 use Sheadawson\Linkable\Models\Link;
-use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\TextareaField;
-use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use Sheadawson\Linkable\Forms\LinkField;
 
