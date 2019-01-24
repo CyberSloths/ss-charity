@@ -3,26 +3,26 @@
         <div class="row">
             <div class="col-md-4 d-flex important-items__columns">
                 <div class="important-items__box">
-                    <a href="$Important1Link.Link">
-                        <h2 class="important-item__headers">$ImportantTextHeader1</h2>
+                    <a href="$ImportantHeader1.getLinkURL" $ImportantHeader1.getTargetAttr>
+                        <h2 class="important-item__headers">$ImportantHeader1.Title</h2>
                     </a>
-                    <p class="important-items__desc">$ImportantTextDesc1</p>
+                    <p class="important-items__desc">$ImportantDesc1</p>
                 </div>
             </div>
             <div class="col-md-4 d-flex important-items__columns">
                 <div class="important-items__box">
-                    <a href="$Important2Link.Link">
-                        <h2 class="important-item__headers">$ImportantTextHeader2</h2>
+                    <a href="$ImportantHeader2.getLinkURL" $ImportantHeader2.getTargetAttr>
+                        <h2 class="important-item__headers">$ImportantHeader2.Title</h2>
                     </a>
-                    <p class="important-items__desc">$ImportantTextDesc2</p>
+                    <p class="important-items__desc">$ImportantDesc2</p>
                 </div>
             </div>
             <div class="col-md-4 d-flex important-items__columns">
                 <div class="important-items__box">
-                    <a href="$Important3Link.Link">
-                        <h2 class="important-item__headers">$ImportantTextHeader3</h2>
+                    <a href="$ImportantHeader3.getLinkURL" $ImportantHeader3.getTargetAttr>
+                        <h2 class="important-item__headers">$ImportantHeader3.Title</h2>
                     </a>
-                    <p class="important-items__desc">$ImportantTextDesc3</p>
+                    <p class="important-items__desc">$ImportantDesc3</p>
                 </div>
             </div>
         </div>

@@ -66,7 +66,7 @@ class Page extends SiteTree
                 CompositeField::create(
                     $featureImage = UploadField::create(
                         'FeatureImage',
-                        'Feature image'
+                        ''
                     )->setDescription(
                         'Only supports <strong>jpg, jpeg, png</strong> filetypes.
                         </br>Recommended dimensions 1920 x 1080 px.'
@@ -75,7 +75,7 @@ class Page extends SiteTree
                         'IsDisplayed',
                         'Show feature image on this page'
                     )
-                )->setName('PageFeature'),
+                )->setName('PageFeature')->setTitle('Feature image'),
                 TreeMultiselectField::create(
                     'Terms',
                     'Tags',

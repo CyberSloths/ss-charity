@@ -2,22 +2,28 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-3 col-lg-4 col-sm-6">
-                <a href="tel:$SiteConfig.PhoneNumber">
+                <a href="$SiteConfig.PhoneNumber.getLinkURL">
                     <div class="main-footer__info">
                         <img class="main-footer__icons" src="$ThemeDir/dist/images/phone.svg" alt="Phone icon"/>
-                        <p class="main-footer__text main-footer__details">$SiteConfig.PhoneNumber</p>
+                        <p class="main-footer__text main-footer__details">$SiteConfig.PhoneNumber.Title</p>
                     </div>
                 </a>
-                <a href="mailto:$SiteConfig.Email">
+                <a href="$SiteConfig.Email.getLinkURL">
                     <div class="main-footer__info">
                         <img class="main-footer__icons" src="$ThemeDir/dist/images/email.svg" alt="Email icon"/>
-                        <p class="main-footer__text main-footer__details">$SiteConfig.Email</p>
+                        <p class="main-footer__text main-footer__details">$SiteConfig.Email.Title</p>
                     </div>
                 </a>
-                <a href="$SiteConfig.FacebookLink">
+                <a href="https://www.facebook.com/{$SiteConfig.FacebookUser}">
                     <div class="main-footer__info">
                         <img class="main-footer__icons" src="$ThemeDir/dist/images/facebook.svg" alt="Facebook icon"/>
-                        <p class="main-footer__text main-footer__details">$SiteConfig.Facebook</p>
+                        <p class="main-footer__text main-footer__details">
+                            <% if $SiteConfig.FacebookTitle %>
+                                $SiteConfig.FacebookTitle
+                            <% else %>
+                                $SiteConfig.FacebookUser
+                            <% end_if %>
+                        </p>
                     </div>
                 </a>
             </div>

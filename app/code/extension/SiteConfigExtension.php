@@ -6,8 +6,10 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
+use Sheadawson\Linkable\Models\Link;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Forms\TextareaField;
+use Sheadawson\Linkable\Forms\LinkField;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 
@@ -19,15 +21,12 @@ class SiteConfigExtension extends DataExtension
      * @var array
      */
     private static $db = [
-        'HeaderButtonText' => 'Varchar',
-        'PhoneNumber' => 'Varchar',
-        'Email' => 'Varchar',
-        'Facebook' => 'Varchar',
+        'FacebookTitle' => 'Varchar',
+        'FacebookUser' => 'Varchar',
         'FooterSentence1' => 'Varchar',
         'FooterSentence2' => 'Varchar',
         'AlertTitle' => 'Varchar',
         'AlertContent' => 'Text',
-        'FacebookLink' => 'Varchar',
         'FooterSentence2Link' => 'Varchar'
     ];
 
@@ -37,8 +36,10 @@ class SiteConfigExtension extends DataExtension
      * @var array
      */
     private static $has_one = [
+        'PhoneNumber' => Link::class,
+        'Email' => Link::class,
         'HeaderLogo' => Image::class,
-        'HeaderButtonLink' => SiteTree::class,
+        'HeaderButton' => Link::class,
         'FooterLogo' => Image::class
     ];
 
@@ -49,7 +50,6 @@ class SiteConfigExtension extends DataExtension
      */
     private static $owns = [
         'HeaderLogo',
-        'HeaderButtonLink',
         'FooterLogo'
     ];
 
@@ -65,21 +65,30 @@ class SiteConfigExtension extends DataExtension
         $fields->addFieldsToTab(
             'Root.Main',
             [
-                TextField::create(
-                    'PhoneNumber',
+                $phoneNumber = LinkField::create(
+                    'PhoneNumberID',
                     'Phone Number'
-                ), TextField::create(
-                    'Email',
+                ),
+                $email = LinkField::create(
+                    'EmailID',
                     'Email'
-                ), TextField::create(
-                    'Facebook',
-                    'Facebook'
-                ), TextField::create(
-                    'FacebookLink',
-                    'Facebook Link'
-                )->setDescription('Full link to facebook page required.')
+                ),
+                TextField::create(
+                    'FacebookTitle',
+                    'Facebook Title'
+                ),
+                TextField::create(
+                    'FacebookUser',
+                    'Facebook UID or username'
+                )->setDescription(
+                    'Facebook link (everything after the "https://www.facebook.com/", '
+                    .'e.g. https://www.facebook.com/username or https://www.facebook.com/pages/108510539573)'
+                )
             ]
         );
+
+        $phoneNumber->setAllowedTypes(['Phone']);
+        $email->setAllowedTypes(['Email']);
 
         // Header Tab
         $fields->addFieldsToTab(
@@ -89,16 +98,15 @@ class SiteConfigExtension extends DataExtension
                     'HeaderLogo',
                     'Header Logo'
                 )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.'),
-                TextField::create(
-                    'HeaderButtonText',
-                    'Header Button Text'
-                ), TreeDropdownField::create(
-                    'HeaderButtonLinkID',
-                    'Header Button Link',
-                    SiteTree::class
+                $headerButton = LinkField::create(
+                    'HeaderButtonID',
+                    'Header Button'
                 )
             ]
         );
+
+        $headerLogo->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+        $headerButton->setAllowedTypes(['SiteTree']);
 
         // Footer Tab
         $fields->addFieldsToTab(
@@ -120,7 +128,6 @@ class SiteConfigExtension extends DataExtension
             ]
         );
 
-        $headerLogo->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
         $footerLogo->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
 
         // Alert Tab
