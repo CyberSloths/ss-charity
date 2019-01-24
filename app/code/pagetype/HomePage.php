@@ -5,10 +5,12 @@ namespace App\PageType;
 use Page;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\TextField;
+use Sheadawson\Linkable\Models\Link;
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TreeDropdownField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Forms\TextareaField;
+use Sheadawson\Linkable\Forms\LinkField;
 
 class HomePage extends Page
 {
@@ -35,18 +37,11 @@ class HomePage extends Page
       'BannerHeading' => 'Varchar',
       'BannerDesc' => 'Varchar',
       'AccomHeading' => 'Varchar',
-      'AccomStep1' => 'Varchar',
-      'AccomStep2' => 'Varchar',
-      'AccomStep3' => 'Varchar',
       'CallToActionHeading' => 'Varchar',
       'CallToActionDesc' => 'Varchar',
-      'CallToActionButton' => 'Varchar',
-      'ImportantTextHeader1' => 'Varchar',
-      'ImportantTextDesc1' => 'Text',
-      'ImportantTextHeader2' => 'Varchar',
-      'ImportantTextDesc2' => 'Text',
-      'ImportantTextHeader3' => 'Varchar',
-      'ImportantTextDesc3' => 'Text',
+      'ImportantDesc1' => 'Text',
+      'ImportantDesc2' => 'Text',
+      'ImportantDesc3' => 'Text',
     ];
 
     /**
@@ -56,18 +51,18 @@ class HomePage extends Page
      */
     private static $has_one = [
         'BannerImage' => Image::class,
-        'Accom1Link' => SiteTree::class,
-        'Accom2Link' => SiteTree::class,
-        'Accom3Link' => SiteTree::class,
+        'Accommodation1' => Link::class,
+        'Accommodation2' => Link::class,
+        'Accommodation3' => Link::class,
         'CallToActionImage' => Image::class,
-        'CallToActionLink' => SiteTree::class,
-        'Important1Link' => SiteTree::class,
-        'Important2Link' => SiteTree::class,
-        'Important3Link' => SiteTree::class,
-        'SponsorLogo1' => Image::class,
-        'SponsorLogo2' => Image::class,
-        'SponsorLogo3' => Image::class,
-        'SponsorLogo4' => Image::class
+        'CallToActionButton' => Link::class,
+        'ImportantHeader1' => Link::class,
+        'ImportantHeader2' => Link::class,
+        'ImportantHeader3' => Link::class,
+        'PartnerLogo1' => Image::class,
+        'PartnerLogo2' => Image::class,
+        'PartnerLogo3' => Image::class,
+        'PartnerLogo4' => Image::class
     ];
 
     /**
@@ -77,18 +72,11 @@ class HomePage extends Page
      */
     private static $owns = [
         'BannerImage',
-        'Accom1Link',
-        'Accom2Link',
-        'Accom3Link',
         'CallToActionImage',
-        'CallToActionLink',
-        'Important1Link',
-        'Important2Link',
-        'Important3Link',
-        'SponsorLogo1',
-        'SponsorLogo2',
-        'SponsorLogo3',
-        'SponsorLogo4'
+        'PartnerLogo1',
+        'PartnerLogo2',
+        'PartnerLogo3',
+        'PartnerLogo4'
     ];
 
     /**
@@ -119,6 +107,8 @@ class HomePage extends Page
             ]
         );
 
+        $bannerImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+
         // Accommodation configurations
         $fields->addFieldsToTab(
             'Root.Accommodation',
@@ -127,35 +117,24 @@ class HomePage extends Page
                     'AccomHeading',
                     'Section Heading'
                 ),
-                TextField::create(
-                    'AccomStep1',
+                $accommodation1 = LinkField::create(
+                    'Accommodation1ID',
                     'Stage 1'
                 ),
-                TreeDropdownField::create(
-                    'Accom1LinkID',
-                    'Stage 1 Link',
-                    SiteTree::class
-                ),
-                TextField::create(
-                    'AccomStep2',
+                $accommodation2 = LinkField::create(
+                    'Accommodation2ID',
                     'Stage 2'
                 ),
-                TreeDropdownField::create(
-                    'Accom2LinkID',
-                    'Stage 2 Link',
-                    SiteTree::class
-                ),
-                TextField::create(
-                    'AccomStep3',
+                $accommodation3 = LinkField::create(
+                    'Accommodation3ID',
                     'Stage 3'
-                ),
-                TreeDropdownField::create(
-                    'Accom3LinkID',
-                    'Stage 3 Link',
-                    SiteTree::class
                 )
             ]
         );
+
+        $accommodation1->setAllowedTypes(['SiteTree']);
+        $accommodation2->setAllowedTypes(['SiteTree']);
+        $accommodation3->setAllowedTypes(['SiteTree']);
 
         // Call-to-action configurations
         $fields->addFieldsToTab(
@@ -171,95 +150,79 @@ class HomePage extends Page
                 )->setDescription('This text disappears on mobile screens that are below 768px.'),
                 $callToActionImage = UploadField::create(
                     'CallToActionImage',
-                    'Call to action Image'
+                    'Call to Action Image'
                 )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.</br>Recommended dimensions 1920 x 1080 px.'),
-                TextField::create(
-                    'CallToActionButton',
-                    'Button Text'
-                ),
-                TreeDropdownField::create(
-                    'CallToActionLinkID',
-                    'Button Link',
-                    SiteTree::class
+                $callToActionButton = LinkField::create(
+                    'CallToActionButtonID',
+                    'Call to Action Button'
                 )
             ]
         );
+
+        $callToActionImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+        $callToActionButton->setAllowedTypes(['SiteTree']);
 
         // Important items configurations
         $fields->addFieldsToTab(
             'Root.ImportantItems',
             [
-                TextField::create(
-                    'ImportantTextHeader1',
+                $importantHeader1 = LinkField::create(
+                    'ImportantHeader1ID',
                     'Heading One'
                 ),
-                TreeDropdownField::create(
-                    'Important1LinkID',
-                    'Link One',
-                    SiteTree::class
-                )->setDescription('This link will be applied to Header One'),
                 TextareaField::create(
-                    'ImportantTextDesc1',
+                    'ImportantDesc1',
                     'Description One'
                 ),
-                TextField::create(
-                    'ImportantTextHeader2',
+                $importantHeader2 = LinkField::create(
+                    'ImportantHeader2ID',
                     'Heading Two'
                 ),
-                TreeDropdownField::create(
-                    'Important2LinkID',
-                    'Link Two',
-                    SiteTree::class
-                )->setDescription('This link will be applied to Header Two'),
                 TextareaField::create(
-                    'ImportantTextDesc2',
+                    'ImportantDesc2',
                     'Description Two'
                 ),
-                TextField::create(
-                    'ImportantTextHeader3',
+                $importantHeader3 = LinkField::create(
+                    'ImportantHeader3ID',
                     'Heading Three'
                 ),
-                TreeDropdownField::create(
-                    'Important3LinkID',
-                    'Link Three',
-                    SiteTree::class
-                )->setDescription('This link will be applied to Header Three'),
                 TextareaField::create(
-                    'ImportantTextDesc3',
+                    'ImportantDesc3',
                     'Description Three'
                 ),
             ]
         );
 
+        $importantHeader1->setAllowedTypes(['SiteTree']);
+        $importantHeader2->setAllowedTypes(['SiteTree']);
+        $importantHeader3->setAllowedTypes(['SiteTree']);
+
         $fields->addFieldsToTab(
-            'Root.Sponsors',
+            'Root.Partners',
             [
-                $sponsorLogo1 = UploadField::create(
-                    'SponsorLogo1',
-                    'Sponsor Logo 1'
+                $partnerLogo1 = UploadField::create(
+                    'PartnerLogo1',
+                    'Partner Logo 1'
                 )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.'),
-                $sponsorLogo2 = UploadField::create(
-                    'SponsorLogo2',
-                    'Sponsor Logo 2'
+                $partnerLogo2 = UploadField::create(
+                    'PartnerLogo2',
+                    'Partner Logo 2'
                 )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.'),
-                $sponsorLogo3 = UploadField::create(
-                    'SponsorLogo3',
-                    'Sponsor Logo 3'
+                $partnerLogo3 = UploadField::create(
+                    'PartnerLogo3',
+                    'Partner Logo 3'
                 )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.'),
-                $sponsorLogo4 = UploadField::create(
-                    'SponsorLogo4',
-                    'Sponsor Logo 4'
+                $partnerLogo4 = UploadField::create(
+                    'PartnerLogo4',
+                    'Partner Logo 4'
                 )->setDescription('Only supports <strong>jpg, jpeg, png</strong> filetypes.')
             ]
         );
 
-        // Image upload validations
-        $bannerImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
-        $callToActionImage->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
-        $sponsorLogo1->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
-        $sponsorLogo2->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
-        $sponsorLogo3->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
-        $sponsorLogo4->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+        $partnerLogo1->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+        $partnerLogo2->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+        $partnerLogo3->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
+        $partnerLogo4->getValidator()->setAllowedExtensions(['jpg','jpeg','png']);
 
         // Field reductions
         $fields->removeFieldFromTab(

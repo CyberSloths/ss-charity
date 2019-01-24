@@ -41,7 +41,9 @@
             </div>
         </div>
         <div slot="button" class="main-nav__button">
-            <a class="btn" href="$SiteConfig.HeaderButtonLink.Link" role="button">$SiteConfig.HeaderButtonText</a>
+            <a class="btn" href="$SiteConfig.HeaderButton.getLinkURL" role="button" $SiteConfig.HeaderButton.getTargetAttr>
+                $SiteConfig.HeaderButton.Title
+            </a>
         </div>
     </main-nav>
 </header>
